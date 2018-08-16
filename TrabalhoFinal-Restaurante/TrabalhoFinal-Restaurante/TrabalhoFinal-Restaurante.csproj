@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Bootstrap\css\bootstrap-reboot.css" />
@@ -90,6 +91,8 @@
     <Content Include="Bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
+=======
+>>>>>>> fe209bf16e014e4bbc6c800a0368032ea823aeb8
     <Content Include="DataBase\Clientes.sql" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
@@ -99,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
 
     <Compile Include="DataBase\BancoDados.cs" />
 
@@ -109,10 +113,23 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\RestauranteRepositorio.cs" />
+=======
+    <Compile Include="DataBase\BancoDados.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clientes.cs" />
+    <Compile Include="Models\funcionarios.cs" />
+    <Compile Include="Models\pratos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repocitorio.cs" />
+    <Compile Include="Repositorios\RestauranteRepositorio.cs" />
+>>>>>>> fe209bf16e014e4bbc6c800a0368032ea823aeb8
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+<<<<<<< HEAD
     <Content Include="Bootstrap\css\.DS_Store" />
     <Content Include="Bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="Bootstrap\css\bootstrap-grid.min.css.map" />
@@ -126,6 +143,8 @@
     <Content Include="Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Master.cshtml" />
+=======
+>>>>>>> fe209bf16e014e4bbc6c800a0368032ea823aeb8
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -135,7 +154,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD
     <Folder Include="Models\" />
+=======
+    <Folder Include="Controllers\" />
+>>>>>>> fe209bf16e014e4bbc6c800a0368032ea823aeb8
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
