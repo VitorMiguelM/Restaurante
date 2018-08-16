@@ -138,13 +138,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
-<<<<<<< HEAD
+
 
     
-=======
+
   
    
->>>>>>> 6e5fd57dc26c32b253ad3aa56f2cc217746efcd7
+
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
