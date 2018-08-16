@@ -1,4 +1,3 @@
-C:\Users\105013\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\bin\TrabalhoFinal-Restaurante.dll.config
 C:\Users\105013\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\bin\TrabalhoFinal-Restaurante.dll
 C:\Users\105013\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\bin\TrabalhoFinal-Restaurante.pdb
 C:\Users\105013\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\bin\System.Web.Helpers.dll
