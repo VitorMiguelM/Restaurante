@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TrabalhoFinal_Restaurante.Models
 {
-    public class pratos
+    public class Pratos
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome não pode ser vazio")]
