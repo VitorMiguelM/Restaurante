@@ -11,7 +11,7 @@ namespace TrabalhoFinal_Restaurante.Controllers
         // GET: Cliente
         public ActionResult Index()
         {
-            ViewBag.TitluoPagina = "Restaurante NoName";
+            ViewBag.TitluoPagina = "Restaurante ";
             return View();
         }
     }
