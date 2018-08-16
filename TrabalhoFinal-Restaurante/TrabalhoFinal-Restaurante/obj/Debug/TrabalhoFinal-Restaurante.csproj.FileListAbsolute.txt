@@ -20,3 +20,6 @@ C:\Users\104967\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaura
 C:\Users\104967\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\obj\Debug\TrabalhoFinal-Restaurante.csproj.CoreCompileInputs.cache
 C:\Users\104967\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\obj\Debug\TrabalhoFinal-Restaurante.dll
 C:\Users\104967\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\obj\Debug\TrabalhoFinal-Restaurante.pdb
+C:\Users\104965\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\obj\Debug\TrabalhoFinal-Restaurante.csprojResolveAssemblyReference.cache
+C:\Users\104965\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\obj\Debug\TrabalhoFinal-Restaurante.dll
+C:\Users\104965\Documents\GitHub\entra21-c-sharp-grupo-03\TrabalhoFinal-Restaurante\TrabalhoFinal-Restaurante\obj\Debug\TrabalhoFinal-Restaurante.pdb
