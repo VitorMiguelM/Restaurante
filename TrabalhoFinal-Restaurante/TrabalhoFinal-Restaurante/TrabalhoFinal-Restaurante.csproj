@@ -99,11 +99,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
+    <Compile Include="DataBase\BancoDados.cs" />
+=======
     <Compile Include="Controllers\ClienteController.cs" />
+>>>>>>> f4006ed5b79f57ddc475c72f6be027e873c89a0a
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\RestauranteRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
