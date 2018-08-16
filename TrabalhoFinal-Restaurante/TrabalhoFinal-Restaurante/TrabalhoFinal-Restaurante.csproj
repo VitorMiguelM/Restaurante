@@ -96,6 +96,7 @@
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repocitorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

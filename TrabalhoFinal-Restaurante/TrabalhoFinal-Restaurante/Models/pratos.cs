@@ -17,9 +17,10 @@ namespace TrabalhoFinal_Restaurante.Models
         public string ModoDePreparo { get; set; }
          [Required(ErrorMessage = "propiedades não pode ser vazio")]
         public string PropiedadesNaturais { get; set; }
-
-        public double  preco { get; set; 
+         [Required(ErrorMessage = "Preso não pode ser vazio")]
+         public double preco { get; set; }
 
         public string descricao { get; set; }
+
     }
 }
