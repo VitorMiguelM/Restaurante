@@ -17,6 +17,14 @@ namespace TrabalhoFinal_Restaurante.DataBase
 
         }
 
-        public SqlCommand
+        public SqlCommand ObterConexcao()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            return command;
+        }
+
     }
 }

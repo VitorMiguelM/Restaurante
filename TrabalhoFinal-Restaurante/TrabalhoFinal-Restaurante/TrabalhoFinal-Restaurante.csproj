@@ -14,11 +14,6 @@
     <RootNamespace>TrabalhoFinal_Restaurante</RootNamespace>
     <AssemblyName>TrabalhoFinal-Restaurante</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,7 +75,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
     <Content Include="Bootstrap\css\bootstrap-grid.css" />
     <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Bootstrap\css\bootstrap-reboot.css" />
@@ -91,8 +89,12 @@
     <Content Include="Bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Bootstrap\js\bootstrap.js" />
     <Content Include="Bootstrap\js\bootstrap.min.js" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
     <Content Include="DataBase\Clientes.sql" />
+    <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
     <Content Include="DataBase\TrabalhoFinal.mdf" />
@@ -101,7 +103,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
 
     <Compile Include="DataBase\BancoDados.cs" />
 
@@ -112,7 +117,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\RestauranteRepositorio.cs" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
     <Compile Include="DataBase\BancoDados.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -121,9 +129,12 @@
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repocitorio.cs" />
     <Compile Include="Repositorios\RestauranteRepositorio.cs" />
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -142,7 +153,10 @@
     <Content Include="Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Master.cshtml" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,12 +167,15 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+<<<<<<< HEAD
 
     <Folder Include="Controllers\" />
 
+=======
+    <Folder Include="Controllers\" />
+>>>>>>> 9766c805a8fa3ec171021e3c95b4124603b608bf
   </ItemGroup>
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
