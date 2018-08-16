@@ -34,10 +34,56 @@ namespace TrabalhoFinal.Repositorio
             return pratos;
         }
 
-        /*public int Cadastrar(Pratos pratos)
+        public int Cadastrar(Pratos pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES"
-        }*/
+            command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES_NUTRICIONAIS, @PRECO, @DESCRICAO)";
+            command.Parameters.AddWithValue("@NOME", pratos.Nome);
+            command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
+            command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.PropiedadesNaturais);
+            command.Parameters.AddWithValue("@PRECO", pratos.preco);
+            command.Parameters.AddWithValue("@DESCRICAO", pratos.descricao);
+            int id = Convert.ToInt32(command.ExecuteScalar().ToString());
+            return id;
+        }
+
+        public bool Alterar(Pratos pratos)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "UPDATE pratos SET nome = @NOME, modo_preparo = @MODO_PREPARO, propriedades_nutricionais = @PROPRIEDADES_NUTRICIONAIS, preco = @PRECO, descricao = @DESCRICAO WHERE id = @ID";
+            command.Parameters.AddWithValue("@NOME", pratos.Nome);
+            command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
+            command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.PropiedadesNaturais);
+            command.Parameters.AddWithValue("@PRECO", pratos.preco);
+            command.Parameters.AddWithValue("@DESCRICAO", pratos.descricao);
+            command.Parameters.AddWithValue("@ID", pratos.Id);
+            return command.ExecuteNonQuery() == 1;
+        }
+
+        public bool Excluir(int id)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "DELETE FROM pratos WHERE id = @ID";
+            command.Parameters.AddWithValue("@ID", id);
+            return command.ExecuteNonQuery() == 1;
+        }
+
+        public Pratos ObterPeloId(int id)
+        {
+            Pratos prato = null;
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "SELECT nome, modo_preparo, propriedades_nutricionais, preco, descricao FROM pratos WHERE id = @ID";
+            command.Parameters.AddWithValue("@ID", id);
+            DataTable table = new DataTable();
+            table.Load(command.ExecuteReader());
+            if (table.Rows.Count == 1)
+            {
+                prato = new Pratos();
+                prato.Id = id;
+                prato.Nome = table.Rows[0][0].ToString();
+                prato.ModoDePreparo = table.Rows[0][1].ToString();
+            }
+
+        }
     }
 }
