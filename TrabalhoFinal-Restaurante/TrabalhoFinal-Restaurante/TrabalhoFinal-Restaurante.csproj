@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\Clientes.sql" />
+    <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
     <Content Include="DataBase\TrabalhoFinal.mdf" />
@@ -97,7 +98,6 @@
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repocitorio.cs" />
     <Compile Include="Repositorios\RestauranteRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>

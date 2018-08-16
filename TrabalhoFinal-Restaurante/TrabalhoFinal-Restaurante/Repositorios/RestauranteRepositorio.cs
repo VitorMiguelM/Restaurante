@@ -11,16 +11,16 @@ namespace TrabalhoFinal_Restaurante.Repositorio
 {
     public class RestauranteRepositorio
     {
-        public List<pratos> ObterTodos()
+        public List<Pratos> ObterTodos()
         {
-            List<pratos> Pratos = new List<pratos>();
+            List<Pratos> pratos = new List<Pratos>();
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "SELECT id, nome, modo_preparo, propriedade_nutricional, preco, descricao FROM pratos";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
             {
-                pratos pratos = new pratos()
+                Pratos prato = new Pratos()
                 {
                     Id = Convert.ToInt32(linha[0].ToString()),
                     Nome = linha[1].ToString(),
@@ -29,9 +29,15 @@ namespace TrabalhoFinal_Restaurante.Repositorio
                     preco = Convert.ToDouble(linha[4].ToString()),
                     descricao = linha[5].ToString()
                 };
-                Pratos.Add(pratos);
+                pratos.Add(prato);
             }
-            return
+            return pratos;
         }
+
+        /*public int Cadastrar(Pratos pratos)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES"
+        }*/
     }
 }
