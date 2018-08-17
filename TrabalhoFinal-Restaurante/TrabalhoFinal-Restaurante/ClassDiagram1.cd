@@ -4,10 +4,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using TrabalhoFinal.DataBase;
-using TrabalhoFinal.Models;
+using TrabalhoFinal_Restaurante.DataBase;
+using TrabalhoFinal_Restaurante.Models;
 
-namespace TrabalhoFinal.Repositorio
+namespace TrabalhoFinal_Restaurante.Repositorio
 {
     public class RestauranteRepositorio
     {
@@ -37,7 +37,7 @@ namespace TrabalhoFinal.Repositorio
         {
             SqlCommand comando = new BancoDados().ObterConexao();
             comando.CommandText = @"INSERT  INTO restaurante(Nome ,Modo_Preparo,Propiedades_Naturais,Preco,E-mail,Telefone-Celular)output INSERT.ID VALUES(@NOME,@MODO_PREPARO,@PROPIEDADES_NATURAIS,@PRECO,@e-MAIL,@TELEFOMNE_CELULAR)";
-            comando.Parameters.AddWithValue("@NOME",prato.Nome)
+            comando.Parameters.AddWithValue("@NOME", prato.Nome);
             return id;
         }
 
