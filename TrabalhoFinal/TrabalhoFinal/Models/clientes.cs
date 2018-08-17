@@ -22,9 +22,7 @@ namespace TrabalhoFinal.Models
         [MaxLength(100, ErrorMessage = "Senha deve conter no máximo 100 caracteres")]
         public string Senha { get; set; }
         [Required(ErrorMessage = "Celular não pode ser vazio")]
-       
         public double Celular { get; set; }
- 
         public string DataNacimento{ get; set; }
          [Required(ErrorMessage = "CPF não pode ser vazio")]
         public double CPF { get; set; }
@@ -38,5 +36,7 @@ namespace TrabalhoFinal.Models
         public string Logadouro { get; set; }
          [Required(ErrorMessage = "CEP não pode ser vazio")]
         public string cep { get; set; }
+         [RegularExpression(@"^([0-9a-zA-Z]([\+\-_\.][0-9a-zA-Z]+)*)+@(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]*\.)+[a-zA-Z0-9]{2,3})$", ErrorMessage = "Informe um email válido.")]
+         public string Email { get; set; }
     }
 }

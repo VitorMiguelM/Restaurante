@@ -12,6 +12,26 @@
 </head>
 <body>
     <div> 
+        <form action="/Restaurante/Store"method="post" onsubmit="validarFormulario();">
+            <div class="form-group"id="div-campo-nome">
+                <label for="campo-nome">Nome Completo</label>
+                <input type="text"class="form-control"nome="Restaurante.Nome"id="campe-nome"placeholder="Digite seu nome completo"required="requiret"onfocus="validarCampoNome" 
+                       value="@ViewBag.Restaurante.Nome"/>
+                @Html.ValidationMessage("Restaurante.Nome", new { @class="text-danger"})
+            </div>
+            <div class="form-group">
+                <label for="Campo-Login">Logen</label>
+                <input type="text" class="from-control" nome="Restairante.Login" id="campo-Login" required="required" value="@ViewBag.Restaurante.login" />
+              
+                @Html.ValidationMessageFor("Restaurante.Login", new { @class = "text-danger" })
+
+
+                <div>
+
+
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
