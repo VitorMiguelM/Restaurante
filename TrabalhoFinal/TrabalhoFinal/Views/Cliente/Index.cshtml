@@ -35,10 +35,22 @@
                     <input form="campo-salario"class="form-control"nome="Restaurante.Senha"id="campo-senha"placeholder="Senha"required="requiret"onfocus="validarCampoSenha"value="@ViewBag.Restaurante.Senha" />
                 </div>
       <div class="form-group">
-          <label for="Canpo-Telefone">Telefone Celelar</label>
-          <input form="campo-telefone"class="form-control"nome="Restautante.Telefone"id="campo.Telefone"placeholder=""
+          <label for="Campo-Telefone">Telefone Celelar</label>
+          <input form="Dampo-Telefone"class="form-control"nome="Restautante.Telefone"id="Campo.Telefone"placeholder="Digite seu Telefone Celular"required="required"onfocus="ValidarCampoTelefone"value="@ViewBag.Restaurante.Telefone"/>
+
             </div>
-        </form>
+       <div class="form-group">
+          <label for="Campo-Data-Nacimeto">Data De Nacimento</label>
+            <input form="Campo-Data-Nacimento"class="form-control"nome="Restaurante.Data.Nacimento"id="Campo.Data.Nacimeto"placeholder="Digite sua data de nacimento"required="required"onfocus="ValidarCampoDataNacimento"value="@ViewBag.Restaurante.DataNacimento" />
+       </div>
+    <div class="form-group">
+        <label for="Campo-Cpf">CPF</label>
+        <input form="Campo-Cpf" class="form-control" nome="Restaurate.Cpf" id="Campo.Cpf" placeholder="Digite Seu CPF" required="required" onfocus="ValidarCampoCpf" value="@ViewBag.Restaurante.CPF" />
     </div>
+  <div class="form-group">
+      <label for="Campo-Estado">Estado</label>
+      <input form="Campo-Estado"class="form-control"nome="Restaurante.Estado"id="Campo.Estado"placeholder="Estado"required="required"onfocus="ValidarCampoEstado"value="@ViewBag.Restaurante."
+  </div>
+   </form>
 </body>
 </html>
