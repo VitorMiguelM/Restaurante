@@ -33,6 +33,13 @@ namespace TrabalhoFinal.Repositorio
             }
             return pratos;
         }
+        public int Cadastro(Pratos prato)
+        {
+            SqlCommand comando = new BancoDados().ObterConexao();
+            comando.CommandText = @"INSERT  INTO restaurante(Nome ,Modo_Preparo,Propiedades_Naturais,Preco,E-mail,Telefone-Celular)output INSERT.ID VALUES(@NOME,@MODO_PREPARO,@PROPIEDADES_NATURAIS,@PRECO,@e-MAIL,@TELEFOMNE_CELULAR)";
+            comando.Parameters.AddWithValue("@NOME",prato.Nome)
+            return id;
+        }
 
         public int Cadastrar(Pratos pratos)
         {

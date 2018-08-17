@@ -7,20 +7,18 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{12A6CE4A-2822-4302-BECF-857B2E06530D}</ProjectGuid>
+    <ProjectGuid>{B8A0DDAF-AF3E-4ED9-AF85-EB0C0633ACE5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TrabalhoFinal</RootNamespace>
-    <AssemblyName>TrabalhoFinal</AssemblyName>
+    <RootNamespace>TrabalhoFinal_Restaurante</RootNamespace>
+    <AssemblyName>TrabalhoFinal-Restaurante</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <Use64BitIISExpress />
-    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -82,16 +80,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Bootstrap\css\bootstrap-grid.css" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap.css" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap.min.css" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.js" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Bootstrap\css\bootstrap.css" />
+    <Content Include="Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Bootstrap\js\bootstrap.js" />
+    <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="DataBase\Clientes.sql" />
     <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="DataBase\Funcionarios.sql" />
@@ -102,8 +100,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\PratosController.cs" />
+    <Compile Include="DataBase\BancoDados.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataBase\BancoDados.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -112,24 +113,24 @@
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositorios\RestauranteRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Bootstrap\css\.DS_Store" />
+    <Content Include="Bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Bootstrap\css\bootstrap.css.map" />
+    <Content Include="Bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Bootstrap\js\bootstrap.js.map" />
+    <Content Include="Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Master.cshtml" />
-    <Content Include="App_Data\Bootstrap\css\.DS_Store" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap.css.map" />
-    <Content Include="App_Data\Bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.js.map" />
-    <Content Include="App_Data\Bootstrap\js\bootstrap.min.js.map" />
+    <Compile Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -138,10 +139,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Pratos\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Repositorios\" />
   </ItemGroup>
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -153,9 +155,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50227</DevelopmentServerPort>
+          <DevelopmentServerPort>62047</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50227/</IISUrl>
+          <IISUrl>http://localhost:62047/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
