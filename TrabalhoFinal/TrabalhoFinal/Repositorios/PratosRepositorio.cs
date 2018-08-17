@@ -33,13 +33,6 @@ namespace TrabalhoFinal.Repositorio
             }
             return pratos;
         }
-        public int Cadastro(Pratos prato)
-        {
-            SqlCommand comando = new BancoDados().ObterConexao();
-            comando.CommandText = @"INSERT  INTO restaurante(Nome ,Modo_Preparo,Propiedades_Naturais,Preco,E-mail,Telefone-Celular)output INSERT.ID VALUES(@NOME,@MODO_PREPARO,@PROPIEDADES_NATURAIS,@PRECO,@e-MAIL,@TELEFOMNE_CELULAR)";
-            comando.Parameters.AddWithValue("@NOME",prato.Nome)
-            return id;
-        }
 
         public int Cadastrar(Pratos pratos)
         {
@@ -89,8 +82,11 @@ namespace TrabalhoFinal.Repositorio
                 prato.Id = id;
                 prato.Nome = table.Rows[0][0].ToString();
                 prato.ModoDePreparo = table.Rows[0][1].ToString();
+                prato.PropiedadesNaturais = table.Rows[0][2].ToString();
+                prato.preco = Convert.ToDouble(table.Rows[0][3].ToString());
+                prato.descricao = table.Rows[0][4].ToString();
             }
-
+            return prato;
         }
     }
 }

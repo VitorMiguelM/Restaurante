@@ -112,7 +112,8 @@
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositorios\RestauranteRepositorio.cs" />
+    <Compile Include="Repositorios\ClientesRepositorio.cs" />
+    <Compile Include="Repositorios\PratosRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
