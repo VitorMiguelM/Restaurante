@@ -75,6 +75,14 @@ namespace TrabalhoFinal.Repositorios
             return command.ExecuteNonQuery() == 1;
         }
 
+        public bool Excluir(int id)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "DELETE FROM clientes WHERE id = @ID";
+            command.Parameters.AddWithValue("@ID", id);
+            return command.ExecuteNonQuery() == 1;
+        }
+
         public Clientes ObterPeloId(int id)
         {
             Clientes cliente = null;
