@@ -11,25 +11,32 @@
     <title>Início</title>
 </head>
 <body>
-    <div> 
-        <form action="/Restaurante/Store"method="post" onsubmit="validarFormulario();">
-            <div class="form-group"id="div-campo-nome">
+    <div>
+        <form action="/Restaurante/Store" method="post" onsubmit="validarFormulario();">
+            <div class="form-group" id="div-campo-nome">
                 <label for="campo-nome">Nome Completo</label>
-                <input type="text"class="form-control"nome="Restaurante.Nome"id="campe-nome"placeholder="Digite seu nome completo"required="requiret"onfocus="validarCampoNome" 
-                       value="@ViewBag.Restaurante.Nome"/>
-                @Html.ValidationMessage("Restaurante.Nome", new { @class="text-danger"})
+                <input type="text" class="form-control" nome="Restaurante.Nome" id="campe-nome" placeholder="Digite seu nome completo" required="requiret" onfocus="validarCampoNome"
+                       value="@ViewBag.Restaurante.Nome" />
+                @Html.ValidationMessage("Restaurante.Nome", new { @class = "text-danger" })
             </div>
-            <div class="form-group">
-                <label for="Campo-Login">Logen</label>
-                <input type="text" class="from-control" nome="Restairante.Login" id="campo-Login" required="required" value="@ViewBag.Restaurante.login" />
-              
-                @Html.ValidationMessageFor("Restaurante.Login", new { @class = "text-danger" })
-
-
-                <div>
-
-
+        </div>
+        <div class="form-group">
+        <label class="control-label col-md-2" for="Login">Login</label>
+        <div class="col-md-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input class="form-control text-box single-line" data-val="true" data-val-required="Informe o nome do usuário" id="Login" name="Login" type="text" value="clajmcardoso" />
+            </div>
+            <p style="padding: 0px 50px"><span class="field-validation-valid text-danger" data-valmsg-for="Login" data-valmsg-replace="true"></span></p>
+             </div>
+          </div>
+                <div class="form-group">
+             <label for="campo-senha">Senha</label>
+                    <input form="campo-salario"class="form-control"nome="Restaurante.Senha"id="campo-senha"placeholder="Senha"required="requiret"onfocus="validarCampoSenha"value="@ViewBag.Restaurante.Senha" />
                 </div>
+      <div class="form-group">
+          <label for="Canpo-Telefone">Telefone Celelar</label>
+          <input form="campo-telefone"class="form-control"nome="Restautante.Telefone"id="campo.Telefone"placeholder=""
             </div>
         </form>
     </div>
