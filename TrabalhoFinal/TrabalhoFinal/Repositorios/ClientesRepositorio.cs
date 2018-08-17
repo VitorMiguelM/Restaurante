@@ -42,7 +42,45 @@ namespace TrabalhoFinal.Repositorios
         public int Cadastrar(Clientes clientes)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO clientes(nome_completo, login, senha, celular, data_nascimento, cpf, estado, cidade, logradoro"
+            command.CommandText = @"INSERT INTO clientes(nome_completo, login, senha, celular, data_nascimento, cpf, estado, cidade, logradoro, cep) OUTPUT INSERTED.ID VALUES (@NOME_COMPLETO, @LOGIN, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @LOGRADOURO, @CEP)";
+            command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
+            command.Parameters.AddWithValue("@LOGIN", clientes.Login);
+            command.Parameters.AddWithValue("@SENHA", clientes.Senha);
+            command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
+            command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNacimento);
+            command.Parameters.AddWithValue("@CPF", clientes.CPF);
+            command.Parameters.AddWithValue("@ESTADO", clientes.Estado);
+            command.Parameters.AddWithValue("@CIDADE", clientes.Cidade);
+            command.Parameters.AddWithValue("@LOGRADOURO", clientes.Logadouro);
+            command.Parameters.AddWithValue("@CEP", clientes.cep);
+            int id = Convert.ToInt32(command.ExecuteScalar().ToString());
+            return id;
+        }
+
+        public bool Alterar(Clientes clientes)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "UPDATE clientes SET nome_completo = @NOME_COMPLETO, login = @LOGIN, senha = @SENHA, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, logradouro = @LOGRADOURO, cep = @CEP WHERE id = @ID";
+            command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
+            command.Parameters.AddWithValue("@LOGIN", clientes.Login);
+            command.Parameters.AddWithValue("@SENHA", clientes.Senha);
+            command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
+            command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNacimento);
+            command.Parameters.AddWithValue("@CPF", clientes.CPF);
+            command.Parameters.AddWithValue("@ESTADO", clientes.Estado);
+            command.Parameters.AddWithValue("@CIDADE", clientes.Cidade);
+            command.Parameters.AddWithValue("@LOGRADOURO", clientes.Logadouro);
+            command.Parameters.AddWithValue("@CEP", clientes.cep);
+            command.Parameters.AddWithValue("@ID", clientes.Id);
+            return command.ExecuteNonQuery() == 1;
+        }
+
+        public bool Excluir(int id)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "DELETE FROM clientes WHERE id = @ID";
+            command.Parameters.AddWithValue("@ID", id);
+            return command.ExecuteNonQuery() == 1;
         }
 
         public Clientes ObterPeloId(int id)
