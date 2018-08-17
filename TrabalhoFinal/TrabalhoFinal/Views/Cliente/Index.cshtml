@@ -20,16 +20,7 @@
                 @Html.ValidationMessage("Restaurante.Nome", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group">
-        <label class="control-label col-md-2" for="Login">Login</label>
-        <div class="col-md-10">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input class="form-control text-box single-line" data-val="true" data-val-required="Informe o nome do usuário" id="Login" name="Login" type="text" value="clajmcardoso" />
-            </div>
-            <p style="padding: 0px 50px"><span class="field-validation-valid text-danger" data-valmsg-for="Login" data-valmsg-replace="true"></span></p>
-             </div>
-          </div>
+        
                 <div class="form-group">
              <label for="campo-senha">Senha</label>
                     <input form="campo-salario"class="form-control"nome="Restaurante.Senha"id="campo-senha"placeholder="Senha"required="requiret"onfocus="validarCampoSenha"value="@ViewBag.Restaurante.Senha" />
@@ -49,8 +40,24 @@
     </div>
   <div class="form-group">
       <label for="Campo-Estado">Estado</label>
-      <input form="Campo-Estado"class="form-control"nome="Restaurante.Estado"id="Campo.Estado"placeholder="Estado"required="required"onfocus="ValidarCampoEstado"value="@ViewBag.Restaurante."
+      <input form="Campo-Estado"class="form-control"nome="Restaurante.Estado"id="Campo.Estado"placeholder="Estado"required="required"onfocus="ValidarCampoEstado"value="@ViewBag.Restaurante.EStado" />
   </div>
+    <div class="form-group">
+        <label for="Campo-Cidade">Cidade</label>
+        <input form="Campo-Cidade" class="form-control" nome="Restaurante.Cidade" id="Campo.Cidade" placeholder="Cidade" required="required" onfocus="ValidarCampoCidade" value="@ViewBag.Restaurante.Cidade" />
+    </div>
+    <div class="form-group">
+        <label for="Campo-Bairro">Bairro</label>
+        <input form="Campo-Bairro" class="form-control" nome="Restaurante.Bairro" id="Campo.Bairro" placeholder="Bairro" required="required" onfocus="ValidarCampoBairro" value="@ViewBag.Restaurante.Bairro" />
+    </div>
+    <div class="form-group">
+        <label for="Campo-Logradouro">Logradouro</label>
+        <input form="Campo-Logradouro" class="form-control" nome="Restaurante.Logradouro" id="Campo.Logradouro" placeholder="Logradouro" required="required" onfocus="ValidarCampoLogradouro" value="@ViewBag.Restaurante.Logradouro" />
+    </div>
+    <div class="form-group">
+        <label for="Campo-Cep">Cep</label>
+        <input form="Campo-Cep" class="form-control" nome="Restaurante.Cep" id="Campo.Cep" placeholder="Cep" required="required" onfocus="ValidarCampoCep" value="@ViewBag.Restaurante.Cep" />
+    </div>
    </form>
 </body>
 </html>
