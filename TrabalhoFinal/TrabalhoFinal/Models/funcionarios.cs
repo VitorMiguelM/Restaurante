@@ -22,7 +22,7 @@ namespace TrabalhoFinal.Models
           [Required(ErrorMessage = "Celular não pode ser vazio")]
         public  double Celular { get; set; }
           [Required(ErrorMessage = "Data de nacimento não pode ser vazio")]
-        public double DataDeNacimento { get; set; }
+        public DateTime DataDeNacimento { get; set; }
           [Required(ErrorMessage = "CPF não pode ser vazio")]
         public double cpf { get; set; }
           [Required(ErrorMessage = "Sobrenome não pode ser vazio")]

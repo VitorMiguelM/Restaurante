@@ -27,7 +27,7 @@ namespace TrabalhoFinal.Repositorios
                     Login = linha[2].ToString(),
                     Senha = linha[3].ToString(),
                     Celular = Convert.ToInt32(linha[4].ToString()),
-                    DataNacimento = linha[5].ToString(),
+                    DataNacimento = Convert.ToDateTime(linha[5].ToString()),
                     CPF = Convert.ToDouble(linha[6].ToString()),
                     Estado = linha[7].ToString(),
                     Cidade = linha[8].ToString(),

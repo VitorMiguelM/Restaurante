@@ -9,23 +9,26 @@ namespace TrabalhoFinal.Models
     public class Clientes
     {
         public int Id { get; set; }
+
         [Required(ErrorMessage = "Nome não pode ser vazio")]
         [MinLength(3,ErrorMessage="Nome deve estar completo no minimo 3 carateres")]
         [MaxLength(100, ErrorMessage = "Nome deve conter no máximo 100 caracteres")]
         public string NomeCompleto { get; set; }
+
         [Required(ErrorMessage = "Login não pode ser vazio")]
-        [MinLength(3, ErrorMessage = "Login deve estar completo no minimo 3 carateres")]
-        [MaxLength(100, ErrorMessage = "Login deve conter no máximo 100 caracteres")]
+        [MinLength(4, ErrorMessage = "Login deve estar completo no mínimo 3 carateres")]
+        [MaxLength(25, ErrorMessage = "Login deve conter no máximo 25 caracteres")]
         public string  Login { get; set; }
+
         [Required(ErrorMessage = "Senha não pode ser vazio")]
-        [MinLength(3, ErrorMessage = "Senha deve estar completo no minimo 3 carateres")]
-        [MaxLength(100, ErrorMessage = "Senha deve conter no máximo 100 caracteres")]
+        [MinLength(4, ErrorMessage = "Senha deve ter no mínimo 4 carateres")]
+        [MaxLength(12, ErrorMessage = "Senha deve conter no máximo 12 caracteres")]
         public string Senha { get; set; }
+
         [Required(ErrorMessage = "Celular não pode ser vazio")]
-       
         public double Celular { get; set; }
  
-        public string DataNacimento{ get; set; }
+        public DateTime DataNacimento{ get; set; }
          [Required(ErrorMessage = "CPF não pode ser vazio")]
         public double CPF { get; set; }
          [Required(ErrorMessage = "Estado não pode ser vazio")]
