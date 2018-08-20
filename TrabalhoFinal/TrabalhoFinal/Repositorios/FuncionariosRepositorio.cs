@@ -59,6 +59,59 @@ namespace TrabalhoFinal.Repositorios
             return id;
         }
 
-        public bool Alterar
+        public bool Alterar(Funcionarios funcionarios)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "UPDATE funcionarios SET nome = @NOME, sobrenome = @SOBRENOME, senha = @SENHA, celular = @CELULAR, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, logradouro = @LOGRADOURO, cep = @CEP, cargo = @CARGO WHERE id = @ID";
+            command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @LOGRADOURO, @CEP, @CARGO)";
+            command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
+            command.Parameters.AddWithValue("@SOBRENOME", funcionarios.SobreNome);
+            command.Parameters.AddWithValue("@SENHA", funcionarios.Senha);
+            command.Parameters.AddWithValue("@CELULAR", funcionarios.Celular);
+            command.Parameters.AddWithValue("@DATA_NASCIMENTO", funcionarios.DataDeNacimento);
+            command.Parameters.AddWithValue("@CPF", funcionarios.CPF);
+            command.Parameters.AddWithValue("@ESTADO", funcionarios.Estado);
+            command.Parameters.AddWithValue("@CIDADE", funcionarios.Cidade);
+            command.Parameters.AddWithValue("@LOGRADOURO", funcionarios.Logradouro);
+            command.Parameters.AddWithValue("@CEP", funcionarios.CEP);
+            command.Parameters.AddWithValue("@CARGO", funcionarios.Cargo);
+            command.Parameters.AddWithValue("@ID", funcionarios.Id);
+            return command.ExecuteNonQuery() == 1;
+        }
+
+        public bool Excluir(int id)
+        {
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "DELETE FROM funcionarios WHERE id - @ID";
+            command.Parameters.AddWithValue("@ID", id);
+            return command.ExecuteNonQuery() == 1;
+        }
+
+        public Funcionarios ObterPeloId(int id)
+        {
+            Funcionarios funcionario = null;
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "SELECT nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo FROM funcionarios WHERE id = @ID";
+            command.Parameters.AddWithValue("@ID", id);
+            DataTable table = new DataTable();
+            table.Load(command.ExecuteReader());
+            if (table.Rows.Count == 1)
+            {
+                funcionario = new Funcionarios();
+                funcionario.Id = id;
+                funcionario.Nome = table.Rows[0][0].ToString();
+                funcionario.SobreNome = table.Rows[0][1].ToString();
+                funcionario.Senha = table.Rows[0][2].ToString();
+                funcionario.Celular = Convert.ToDouble(table.Rows[0][3].ToString());
+                funcionario.DataDeNacimento = Convert.ToDateTime(table.Rows[0][4].ToString());
+                funcionario.CPF = Convert.ToDouble(table.Rows[0][5].ToString());
+                funcionario.Estado = table.Rows[0][6].ToString();
+                funcionario.Cidade = table.Rows[0][7].ToString();
+                funcionario.Logradouro = table.Rows[0][7].ToString();
+                funcionario.CEP = Convert.ToDouble(table.Rows[0][8].ToString());
+                funcionario.Cargo = table.Rows[0][9].ToString();
+            }
+            return funcionario;
+        }
     }
 }
