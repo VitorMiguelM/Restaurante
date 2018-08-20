@@ -22,9 +22,9 @@ namespace TrabalhoFinal.Models
           [Required(ErrorMessage = "Celular não pode ser vazio")]
         public  double Celular { get; set; }
           [Required(ErrorMessage = "Data de nacimento não pode ser vazio")]
-        public double DataDeNacimento { get; set; }
+        public DateTime DataDeNacimento { get; set; }
           [Required(ErrorMessage = "CPF não pode ser vazio")]
-        public double cpf { get; set; }
+        public double CPF { get; set; }
           [Required(ErrorMessage = "Sobrenome não pode ser vazio")]
         public string Estado { get; set; }
           [Required(ErrorMessage = "Cidade não pode ser vazio")]
@@ -33,9 +33,9 @@ namespace TrabalhoFinal.Models
           [Required(ErrorMessage = "Bairro não pode ser vazio")]
         public string Bairro { get; set; }
           [Required(ErrorMessage = "Logadouro não pode ser vazio")]
-        public string Logadouro { get; set; }
+        public string Logradouro { get; set; }
           [Required(ErrorMessage = "CEP não pode ser vazio")]
-        public double cep { get; set; }
+        public double CEP { get; set; }
           [Required(ErrorMessage = "Cargo não pode ser vazio")]
         public string Cargo { get; set; }
 

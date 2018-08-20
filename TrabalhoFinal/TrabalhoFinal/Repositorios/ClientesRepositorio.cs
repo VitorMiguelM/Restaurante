@@ -27,12 +27,12 @@ namespace TrabalhoFinal.Repositorios
                     Login = linha[2].ToString(),
                     Senha = linha[3].ToString(),
                     Celular = Convert.ToInt32(linha[4].ToString()),
-                    DataNacimento = linha[5].ToString(),
+                    DataNacimento = Convert.ToDateTime(linha[5].ToString()),
                     CPF = Convert.ToDouble(linha[6].ToString()),
                     Estado = linha[7].ToString(),
                     Cidade = linha[8].ToString(),
-                    Logadouro = linha[9].ToString(),
-                    cep = linha[10].ToString()
+                    Logradouro = linha[9].ToString(),
+                    CEP = linha[10].ToString()
                 };
                 clientes.Add(cliente);
             }
@@ -51,8 +51,8 @@ namespace TrabalhoFinal.Repositorios
             command.Parameters.AddWithValue("@CPF", clientes.CPF);
             command.Parameters.AddWithValue("@ESTADO", clientes.Estado);
             command.Parameters.AddWithValue("@CIDADE", clientes.Cidade);
-            command.Parameters.AddWithValue("@LOGRADOURO", clientes.Logadouro);
-            command.Parameters.AddWithValue("@CEP", clientes.cep);
+            command.Parameters.AddWithValue("@LOGRADOURO", clientes.Logradouro);
+            command.Parameters.AddWithValue("@CEP", clientes.CEP);
             int id = Convert.ToInt32(command.ExecuteScalar().ToString());
             return id;
         }
@@ -69,8 +69,8 @@ namespace TrabalhoFinal.Repositorios
             command.Parameters.AddWithValue("@CPF", clientes.CPF);
             command.Parameters.AddWithValue("@ESTADO", clientes.Estado);
             command.Parameters.AddWithValue("@CIDADE", clientes.Cidade);
-            command.Parameters.AddWithValue("@LOGRADOURO", clientes.Logadouro);
-            command.Parameters.AddWithValue("@CEP", clientes.cep);
+            command.Parameters.AddWithValue("@LOGRADOURO", clientes.Logradouro);
+            command.Parameters.AddWithValue("@CEP", clientes.CEP);
             command.Parameters.AddWithValue("@ID", clientes.Id);
             return command.ExecuteNonQuery() == 1;
         }
@@ -102,8 +102,8 @@ namespace TrabalhoFinal.Repositorios
                 cliente.CPF = Convert.ToDouble(table.Rows[0][4].ToString());
                 cliente.Estado = table.Rows[0][5].ToString();
                 cliente.Cidade = table.Rows[0][6].ToString();
-                cliente.Logadouro = table.Rows[0][7].ToString();
-                cliente.cep = table.Rows[0][8].ToString();
+                cliente.Logradouro = table.Rows[0][7].ToString();
+                cliente.CEP = table.Rows[0][8].ToString();
             }
             return cliente;
         }
