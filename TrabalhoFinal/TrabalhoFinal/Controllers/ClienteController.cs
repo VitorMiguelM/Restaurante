@@ -13,7 +13,7 @@ namespace TrabalhoFinal.Controllers
         // GET: Cliente
         public ActionResult Index()
         {
-            ViewBag.TitluoPagina = "Restaurante ";
+            ViewBag.TitluoPagina = "Restaurante Luxo IV ";
             return View();
         }
         [HttpGet]
