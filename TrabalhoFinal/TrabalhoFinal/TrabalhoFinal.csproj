@@ -92,7 +92,9 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js" />
-<<<<<<< HEAD
+    <Content Include="App_Data\TrabalhoFinal_log.ldf">
+      <DependentUpon>TrabalhoFinal.mdf</DependentUpon>
+    </Content>
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -104,10 +106,8 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\CSS\pagina-inicial.css" />
-=======
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
->>>>>>> fa8189d4a1c5ce123187b3565edeb8c7fd7a33d9
     <Content Include="DataBase\Clientes.sql" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
@@ -149,7 +149,6 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.js.map" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Pratos\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Cliente\CadastroCliente.cshtml" />
     <Content Include="bootstrap\css\.DS_Store" />
     <Content Include="bootstrap\css\bootstrap-grid.css.map" />
@@ -162,9 +161,7 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
-=======
     <Content Include="Views\Funcionario\Index.cshtml" />
->>>>>>> fa8189d4a1c5ce123187b3565edeb8c7fd7a33d9
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
