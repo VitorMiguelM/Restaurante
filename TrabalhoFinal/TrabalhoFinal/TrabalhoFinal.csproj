@@ -133,6 +133,7 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.js.map" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Views\Pratos\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,9 +141,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Pratos\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
