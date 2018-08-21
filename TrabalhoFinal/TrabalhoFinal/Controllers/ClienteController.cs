@@ -19,7 +19,7 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult CadastroCliente()
         {
-            ViewBag.TituloPagina = "Restaurante-CadastroCliente";
+            ViewBag.TituloPagina = "Cadastro Cliente";
             ViewBag.Cliente = new Clientes();
             return View();
         }
