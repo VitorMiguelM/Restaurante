@@ -93,17 +93,19 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js" />
     <Content Include="Controllers\CSS\pagina-inicial.css" />
+    <Content Include="Controllers\CSS\pagina-funcionario.css" />
     <Content Include="DataBase\Clientes.sql" />
     <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
-    <Content Include="DataBase\TrabalhoFinal.mdf" />
+    <Content Include="App_Data\TrabalhoFinal.mdf" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\PratosController.cs" />
     <Compile Include="DataBase\BancoDados.cs" />
     <Compile Include="Global.asax.cs">
@@ -134,6 +136,7 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.js.map" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Pratos\Index.cshtml" />
+    <Content Include="Views\Funcionario\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
