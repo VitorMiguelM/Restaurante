@@ -15,7 +15,7 @@ namespace TrabalhoFinal.Repositorios
         {
             List<Funcionarios> funcionarios = new List<Funcionarios>();
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT id, nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo FROM clientes";
+            command.CommandText = "SELECT id, nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo FROM funcionarios";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
