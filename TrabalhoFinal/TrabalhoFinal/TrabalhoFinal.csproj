@@ -90,6 +90,12 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js" />
+<<<<<<< HEAD
+=======
+    <Content Include="App_Data\TrabalhoFinal_log.ldf">
+      <DependentUpon>TrabalhoFinal.mdf</DependentUpon>
+    </Content>
+>>>>>>> 2b1c15c37c35b21f74d5db2b4341c7980eaf1b59
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -103,7 +109,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
+<<<<<<< HEAD
     <Content Include="Content\Site.css" />
+=======
+>>>>>>> 2b1c15c37c35b21f74d5db2b4341c7980eaf1b59
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
     <Content Include="DataBase\Clientes.sql" />
@@ -172,6 +181,7 @@
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Funcionario\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -179,6 +189,8 @@
     <Content Include="Views\Reserva\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+=======
+>>>>>>> 2b1c15c37c35b21f74d5db2b4341c7980eaf1b59
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
