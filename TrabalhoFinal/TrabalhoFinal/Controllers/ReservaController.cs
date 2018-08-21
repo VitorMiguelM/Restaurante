@@ -14,8 +14,6 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<Clientes> clientes = new ClientesRepositorio().ObterTodos();
-            ViewBag.Clientes = clientes;
             ViewBag.TituloPagina = "Reservas";
             return View();
         }
