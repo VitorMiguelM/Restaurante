@@ -31,7 +31,7 @@ namespace TrabalhoFinal.Models
         public double Celular { get; set; }
  
         [Required(ErrorMessage = "Data de nascimento não pode estar vazio.")]
-        public DateTime DataNacimento{ get; set; }
+        public DateTime DataNascimento{ get; set; }
 
         [Required(ErrorMessage = "CPF deve ser preenchido!")]
         [MinLength(14, ErrorMessage = "Esse CPF é inválido!")]

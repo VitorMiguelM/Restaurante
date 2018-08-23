@@ -4,6 +4,7 @@
 
 <head>
     <title>Restaurante Luxo IV - Cadastro de cliente</title>
+    <link rel="stylesheet" href="~/Content/CSS/cadastro-cliente.css" />
 </head>
 <form action="/cliente/store" method="post">
     <div>
@@ -13,11 +14,25 @@
             </div>
         </div>
     </div>
-    <div class="rpw mt-3">
+    <div>
         <div class="col-md-12" id="div-campo-nome">
-            <label label for="campo-nome">Nome:<span class="text-danger font-weight-bold">*</span></label>
-            <input type="text" class="form-control" name="Cliente.Nome" id="campo-nome" placeholder="Digite seu nome aqui" required="required" value="@ViewBag.Cliente.Nome"/>
-            @Html.ValidationMessage("Cliente.Nome", new { @class = "text-danger"})
+            <label label for="campo-nome">Nome<span class="text-danger font-weight-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" required="required" value="@ViewBag.Cliente.NomeCompleto" />
+            @Html.ValidationMessage("Cliente.NomeCompleto", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div>
+        <div class="col-md-12" id="div-campo-telefone">
+            <label label for="campo-telefone">Telefone(Celular)<span class="text-danger font-weigth-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" value="@ViewBag.Cliente.Celular" />
+            @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div>
+        <div class="col-md-12" id="div-campo-data-nascimento">
+            <label label for="campo-data-nascimento">Data de Nascimento<span class="text-danger font-weight-bold">*</span></label>
+            <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" value="@ViewBag.Cliente.DataNascimento" />
+            @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
         </div>
     </div>
 </form>
