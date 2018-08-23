@@ -14,7 +14,6 @@
     <RootNamespace>TrabalhoFinal</RootNamespace>
     <AssemblyName>TrabalhoFinal</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-<<<<<<< HEAD
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -22,8 +21,6 @@
     <IISExpressUseClassicPipelineMode />
     <Use64BitIISExpress />
     <UseGlobalApplicationHostFile />
-=======
->>>>>>> ed41c16a903f53dcb61a18a11fd75916609c0625
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -98,8 +96,6 @@
     <Content Include="App_Data\TrabalhoFinal_log.ldf">
       <DependentUpon>TrabalhoFinal.mdf</DependentUpon>
     </Content>
-<<<<<<< HEAD
-=======
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -114,7 +110,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
     <Content Include="Content\Site.css" />
->>>>>>> ed41c16a903f53dcb61a18a11fd75916609c0625
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
     <Content Include="DataBase\Clientes.sql" />
@@ -160,9 +155,9 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Pratos\Index.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
-<<<<<<< HEAD
+
     <Content Include="Views\Pratos\Prato.cshtml" />
-=======
+
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -170,7 +165,6 @@
     <Content Include="Views\Reserva\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
->>>>>>> ed41c16a903f53dcb61a18a11fd75916609c0625
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

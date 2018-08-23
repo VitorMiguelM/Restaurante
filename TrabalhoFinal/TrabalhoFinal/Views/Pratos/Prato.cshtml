@@ -2,7 +2,8 @@
 @{
     Layout = "~/Views/Shared/Master.cshtml";
 }
-@Html.ActionLink
+@Html.ActionLink("Novo restaurante" , "CadastroPrato" , "Restaurante",
+    new { @class="btn btn-primary float-right mr-3 mb-2 mt-2"})
 
 <!DOCTYPE html>
 
@@ -12,7 +13,23 @@
     <title>Prato</title>
 </head>
 <body>
-    <div> 
+    <div class="mr-3 ml-3">
+       
+        @foreach (TrabalhoFinal.Models.Pratos prato in @ViewBag.Restaurante)
+        {
+            <tr>
+                <td>@prato.Id</td>
+                <td>@prato.Nome</td>
+                <td>@prato.ModoDePreparo</td>
+                <td>@prato.PropiedadesNaturais</td>
+                <td>@prato.Email</td>
+                <td>@prato.TelefoneCelular</td>
+                <td>@prato.descricao</td>
+                <td>
+                    
+                </td>
+            </tr>
+        }
     </div>
 </body>
 </html>
