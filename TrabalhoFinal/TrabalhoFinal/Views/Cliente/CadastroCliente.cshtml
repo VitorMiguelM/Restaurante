@@ -1,9 +1,23 @@
-﻿
-@{
+﻿@{
     Layout = "~/Views/Master.cshtml";
 }
+
+<head>
+    <title>Restaurante Luxo IV - Cadastro de cliente</title>
+</head>
 <form action="/cliente/store" method="post">
-    <div> 
-        <label></label>
+    <div>
+        <div class="row-mt-3">
+            <div class="col-md-12">
+                <h1 class="text-dark text-center">Cadastro de Cliente</h1>
+            </div>
+        </div>
+    </div>
+    <div class="rpw mt-3">
+        <div class="col-md-12" id="div-campo-nome">
+            <label label for="campo-nome">Nome:<span class="text-danger font-weight-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.Nome" id="campo-nome" placeholder="Digite seu nome aqui" required="required" value="@ViewBag.Cliente.Nome"/>
+            @Html.ValidationMessage("Cliente.Nome", new { @class = "text-danger"})
+        </div>
     </div>
 </form>
