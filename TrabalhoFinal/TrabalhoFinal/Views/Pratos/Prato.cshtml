@@ -14,7 +14,8 @@
 </head>
 <body>
     <div class="mr-3 ml-3">
-       
+        
+       <tbody>
         @foreach (TrabalhoFinal.Models.Pratos prato in @ViewBag.Restaurante)
         {
             <tr>
@@ -26,10 +27,15 @@
                 <td>@prato.TelefoneCelular</td>
                 <td>@prato.descricao</td>
                 <td>
-                    
+                    <a href="/Restaurante/Excluir?id=@prato.Id" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Excluir</a>
+                    <a href="/Recrutadora/CadastroPrato?id=@prato.Id" class="btn btn-outline-dark"><i class="fa fa-trash"></i>Cadastrar</a>
                 </td>
+
             </tr>
+            
         }
+        </tbody>
+        
     </div>
 </body>
 </html>
