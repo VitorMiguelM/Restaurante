@@ -14,15 +14,6 @@
     <RootNamespace>TrabalhoFinal</RootNamespace>
     <AssemblyName>TrabalhoFinal</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-<<<<<<< HEAD
-    <UseIISExpress>false</UseIISExpress>
-=======
-    <UseIISExpress>true</UseIISExpress>
->>>>>>> 7401c80a691f3acbeee8105bdc9dc21e22d12bf4
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
