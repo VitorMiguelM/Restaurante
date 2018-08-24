@@ -155,9 +155,7 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Views\Pratos\Index.cshtml" />
     <Content Include="Views\Funcionario\Index.cshtml" />
-
     <Content Include="Views\Pratos\Prato.cshtml" />
-
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
