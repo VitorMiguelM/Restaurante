@@ -14,6 +14,11 @@
     <RootNamespace>TrabalhoFinal</RootNamespace>
     <AssemblyName>TrabalhoFinal</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,20 +94,6 @@
     <Content Include="App_Data\TrabalhoFinal_log.ldf">
       <DependentUpon>TrabalhoFinal.mdf</DependentUpon>
     </Content>
-    <Content Include="bin\System.Web.Helpers.dll" />
-    <Content Include="bin\System.Web.Helpers.xml" />
-    <Content Include="bin\System.Web.Mvc.dll" />
-    <Content Include="bin\System.Web.Mvc.xml" />
-    <Content Include="bin\System.Web.Razor.dll" />
-    <Content Include="bin\System.Web.Razor.xml" />
-    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
-    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
-    <Content Include="bin\System.Web.Webpages.dll" />
-    <Content Include="bin\System.Web.Webpages.Razor.dll" />
-    <Content Include="bin\System.Web.Webpages.Razor.xml" />
-    <Content Include="bin\System.Web.Webpages.xml" />
-    <Content Include="bin\TrabalhoFinal.dll" />
-    <Content Include="bin\TrabalhoFinal.pdb" />
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -115,11 +106,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CSS\cadastro-cliente.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\CSS\pagina-funcionario.css" />
-    <Content Include="Content\CSS\pagina-reserva.css" />
+    <Content Include="Controllers\CSS\pagina-inicial.css" />
+    <Content Include="Controllers\CSS\pagina-funcionario.css" />
     <Content Include="DataBase\Clientes.sql" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
@@ -145,7 +135,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\clientes.cs" />
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
