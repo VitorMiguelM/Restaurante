@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <div>
         <div class="col-md-12" id="div-campo-nome">
             <label label for="campo-nome">Nome<span class="text-danger font-weight-bold">*</span></label>
@@ -33,6 +34,67 @@
             <label label for="campo-data-nascimento">Data de Nascimento<span class="text-danger font-weight-bold">*</span></label>
             <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" value="@ViewBag.Cliente.DataNascimento" />
             @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
+=======
+    <div class="div-campos-cadastro">
+        <div>
+            <div class="col-md-5" id="div-campo-nome">
+                <label label for="campo-nome">Nome<span class="text-danger font-weight-bold">*</span></label>
+                <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" required="required" value="@ViewBag.Cliente.NomeCompleto" />
+                @Html.ValidationMessage("Cliente.NomeCompleto", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            <div class="col-md-5" id="div-campo-telefone">
+                <label label for="campo-telefone">Telefone(Celular)<span class="text-danger font-weigth-bold">*</span></label>
+                <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" value="@ViewBag.Cliente.Celular" />
+                @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            <div class="col-md-5" id="div-campo-data-nascimento">
+                <label label for="campo-data-nascimento">Data de Nascimento<span class="text-danger font-weight-bold">*</span></label>
+                <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" value="@ViewBag.Cliente.DataNascimento" />
+                @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            <div class="col-md-5" id="div-campo-cpf">
+                <label label for="campo-cpf">CPF<span class="text-danger font-weight-bold">*</span></label>
+                <input type="text" class="form-control" name="Cliente.CPF" id="campo-cpf" required="required" value="@ViewBag.Cliente.CPF" />
+                @Html.ValidationMessage("Cliente.CPF", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            <div class="col-md-5" id="div-campo-cep">
+                <label label for="campo-cep">CEP</label>
+                <input type="text" class="form-control" name="Cliente.CEP" id="campo-cep" value="@ViewBag.Cliente.CPF" />
+            </div>
+        </div>
+        <div>
+            <div class="col-md-5" id="div-campo-estado">
+                <label label for="campo-estado">Estado</label>
+                <input type="text" class="form-control" name="Cliente.Estado" id="campo-estado" value="@ViewBag.Cliente.CPF" />
+            </div>
+        </div>
+        <div>
+            <div class="col-md-5" id="div-campo-cidade">
+                <label label for="campo-cidade">Cidade</label>
+                <input type="text" class="form-control" name="Cliente.Cidade" id="campo-cidade" value="@ViewBag.Cliente.Cidade" />
+            </div>
+        </div>
+        <div class="col-md-5" id="div-campo-bairro">
+            <label label for="campo-bairro">Bairro</label>
+            <input type="text" class="form-contrl" name="Cliente.Bairro" id="campo-bairro" value="@ViewBag.Cliente.Bairro" />
+        </div>
+        <div class="col-md-5" id="div-campo-logradouro">
+            <label label for="campo-logradouro">Logradouro</label>
+            <input type="text" class="form-control" name="Cliente.Logradouro" id="campo-logradouro" value="@ViewBag.Cliente.Logradouro" />
+        </div>
+        <div class="col-md-5" id="div-campo-email">
+            <label label for="campo-email">E-mail<span class="text-danger font-weight-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.Email" id="campo-emai" placeholder="Exemplo@Exemplo.com" value=@ViewBag.Cliente.Email />
+
+>>>>>>> 91c2eb477239037124bb1e61b9005770253f3e49
         </div>
     </div>
 </form>
