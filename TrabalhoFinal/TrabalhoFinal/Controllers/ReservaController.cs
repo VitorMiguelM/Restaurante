@@ -17,5 +17,12 @@ namespace TrabalhoFinal.Controllers
             ViewBag.TituloPagina = "Reservas";
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Pedido()
+        {
+            ViewBag.TituloPagina = "Reserva";
+            return View();
+        }
     }
 }

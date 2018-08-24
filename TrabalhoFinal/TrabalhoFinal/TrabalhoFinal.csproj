@@ -93,6 +93,7 @@
     <Content Include="App_Data\Bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.js" />
     <Content Include="App_Data\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="App_Data\TrabalhoFinal.mdf" />
     <Content Include="App_Data\TrabalhoFinal_log.ldf">
       <DependentUpon>TrabalhoFinal.mdf</DependentUpon>
     </Content>
@@ -116,9 +117,10 @@
     <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
-    <Content Include="App_Data\TrabalhoFinal.mdf" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
