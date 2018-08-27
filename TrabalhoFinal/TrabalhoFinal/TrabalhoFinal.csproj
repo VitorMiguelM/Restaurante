@@ -106,7 +106,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS\cadastro-cliente.css" />
+    <Content Include="Content\CSS\pagina-funcionario.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
+    <Content Include="Content\CSS\pagina-reserva.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
