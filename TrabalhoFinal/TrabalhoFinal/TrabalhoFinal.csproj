@@ -94,6 +94,20 @@
     <Content Include="App_Data\TrabalhoFinal_log.ldf">
       <DependentUpon>TrabalhoFinal.mdf</DependentUpon>
     </Content>
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.xml" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.xml" />
+    <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="bin\TrabalhoFinal.dll" />
+    <Content Include="bin\TrabalhoFinal.pdb" />
     <Content Include="bootstrap\css\bootstrap-grid.css" />
     <Content Include="bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap\css\bootstrap-reboot.css" />
@@ -106,7 +120,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS\cadastro-cliente.css" />
+    <Content Include="Content\CSS\pagina-funcionario.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
+    <Content Include="Content\CSS\pagina-reserva.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
@@ -119,6 +136,7 @@
     <Content Include="imagens e icones\prato01.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\CSS\pagina-reserva.css~HEAD" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -183,6 +201,8 @@
     <Content Include="Views\Reserva\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Index.cshtml" />
+    <Content Include="Views\Reserva\Pedido.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
