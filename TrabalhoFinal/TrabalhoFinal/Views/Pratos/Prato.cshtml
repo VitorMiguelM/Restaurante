@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+@Html.ActionLink("Novo restaurante" , "CadastroPrato" , "Restaurante",
+    new { @class="btn btn-primary float-right mr-3 mb-2 mt-2"})
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Prato</title>
+</head>
+<body>
+    <div class="mr-3 ml-3">
+        
+       <tbody>
+        @foreach (TrabalhoFinal.Models.Pratos prato in @ViewBag.Restaurante)
+        {
+            <tr>
+                <td>@prato.Id</td>
+                <td>@prato.Nome</td>
+                <td>@prato.ModoDePreparo</td>
+                <td>@prato.PropiedadesNaturais</td>
+                <td>@prato.Email</td>
+                <td>@prato.TelefoneCelular</td>
+                <td>@prato.descricao</td>
+                <td>
+                    <a href="/Restaurante/Excluir?id=@prato.Id" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Excluir</a>
+                    <a href="/Recrutadora/CadastroPrato?id=@prato.Id" class="btn btn-outline-dark"><i class="fa fa-trash"></i>Cadastrar</a>
+                </td>
+
+            </tr>
+            
+        }
+        </tbody>
+        
+    </div>
+</body>
+</html>

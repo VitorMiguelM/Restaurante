@@ -6,9 +6,9 @@ CREATE TABLE pratos(
 	id							INT IDENTITY(1,1) PRIMARY KEY,
 	nome						VARCHAR(200) NOT NULL,
 	modo_preparo				VARCHAR(2000) NOT NULL,
-	propriedades_nutricionais	VARCHAR(500),
+	propriedades_nutricionais	VARCHAR(500)NOT NULL,
 	preco						REAL NOT NULL,
-	descricao					TEXT,
+	descricao					TEXT ,
 );
 
 CREATE TABLE ingredientes(
