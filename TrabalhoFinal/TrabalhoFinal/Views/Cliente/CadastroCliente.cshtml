@@ -1,11 +1,10 @@
 ﻿@{
     Layout = "~/Views/Master.cshtml";
+
 }
 
-<head>
-    <title>Restaurante Luxo IV - Cadastro de cliente</title>
-    <link rel="stylesheet" href="~/Content/CSS/cadastro-cliente.css" />
-</head>
+
+
 <form   action="/cliente/store" method="post">
     <div>
         <div class="row-mt-3">
@@ -84,10 +83,10 @@
                 <input class="btn btn-dark" type="submit" value="Cadastrar" />
             </div>
         </div>
-        <style>
-            .div-campos-cadastro{
-                border-style:groove;
-            }
-        </style>
     </div>
 </form>
+
+
+@section css {
+    <link rel="stylesheet" href="~/Content/CSS/cadastro-cliente.css" />
+}
