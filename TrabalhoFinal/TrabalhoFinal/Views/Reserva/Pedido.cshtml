@@ -1,41 +1,44 @@
 ﻿@{
-    layout = "~/Views/Master.cshtml";
+    Layout = "~/Views/Master.cshtml";
 }
 
 
 <div class="div-pedido">
     <div class="center-form">
-        <form>
-            <label for="pedido">Pedido</label>
-            <input type="text" name="pedido" id="pedido" placeholder="O que você deseja?" />
-        </form>
-    </div>
-    <div class="center-form">
-        <form>
-            <label for="mesa">Selecione sua mesa</label>
-            <input type="" name="mesa" id="mesa" />
-        </form>
-    </div>
-    <div class="center-form">
-        <form>
-            <label for="horario">Horário da reserva</label>
-            <input type="time" name="horario" id="horario" />
-        </form>
-    </div>
-    <div class="center-form">
-        <form>
-            <label for="pagamento">Foma de pagamento</label>
-            <select class="dropdown">
-                <option value="dinheiro">Dineiro</option>
-                <option value="cartao_debito">Cartão de Débito</option>
-                <option value="cartao_credito">Cartão de Crédito</option>
-            </select>
-        </form>
-    </div>
-    <div class="center-form">
-        <form>
-            <a href="" class="btn btn-primary">Entrar</a>
-        </form>
+        <div class="row mt-5">
+
+            <form>
+                <label for="pedido">Pedido</label>
+                <input type="text" name="pedido" id="pedido" placeholder="O que você deseja?" />
+            </form>
+        </div>
+        <div class="center-form">
+            <form>
+                <label for="mesa">Selecione sua mesa</label>
+                <input type="" name="mesa" id="mesa" />
+            </form>
+        </div>
+        <div class="center-form">
+            <form>
+                <label for="horario">Horário da reserva</label>
+                <input type="time" name="horario" id="horario" />
+            </form>
+        </div>
+        <div class="center-form">
+            <form>
+                <label for="pagamento">Foma de pagamento</label>
+                <select class="dropdown">
+                    <option value="dinheiro">Dineiro</option>
+                    <option value="cartao_debito">Cartão de Débito</option>
+                    <option value="cartao_credito">Cartão de Crédito</option>
+                </select>
+            </form>
+        </div>
+        <div class="center-form">
+            <form>
+                <a href="" class="btn btn-primary">Entrar</a>
+            </form>
+        </div>
     </div>
 </div>
 
