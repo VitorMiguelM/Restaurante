@@ -25,52 +25,61 @@
     <body>
         <h1>Seu Prato!</h1>
 
+ <div class="form-control"id="div-campo-imagem">
+     <img src="" class="rounded float-right" alt="">
+     <input type="file" class="form-control-file" name="Restaurante.Foto" required="required" onfocus="validarCampoNome()"/>
+ </div>
+
+
         <div class="form-group" id="div-campo-nome">
             <label for="campo-nome">
                 Nome
 
             </label>
-            <input type="text" class="form-control" name="Restaurante.Nome" id="campo-nome" placeholder="Digite o seu nome" required="required" onfocus="validarCampoNome()"
+            <input type="text" class="form-control" name="Restaurante.Nome" id="campo-nome" aria-describedby="Nome" placeholder="Digite o seu nome" required="required" onfocus="validarCampoNome()"
                    value="@ViewBag.Restaurante.Nome" />
             @Html.ValidationMessage("Restaurante.Nome", new { @class = "text-danger" })
         </div>
         <div class="form-group" id="div-campo-preparo">
             <label for="campo-preparo">Modo De Preparo</label>
-            <input type="text " class="form-control" name="Restaurante.preparo" id="campo-preparo" 
-                    placeholder="escreva o preparo completo de seu prato"
-                   riquered="riquered" onfocus="ValuidaCampoPreparo()"
-                   value="@ViewBag.Restaurante.Preparo" />
+            <input type="text" class="from-control" name="RestaurantePreparo" id="Campo-Preparo" aria-describedby="Campo-Preparo" placeholder="Dijite o modo de prepare" required="required" onfocus="ValidarMensagem()"
+                   value="@ViewBag.Restaurante.Preparo" /><textarea class="form-control" aria-label="Preparo"></textarea>
+            
             @Html.ValidationMessage("Restaurante.preparo", new { @class = "text-danger" })
         </div>
         <div class="form-group" id="div-campo-prato">
             <label form="campo-Propriedades-Nutricionais">Propriedades Nutricionais</label>
-            <input type="text" class="form-control" name="Restaurante.Propietades.Nutrisionais" id="campo-PropiedadesNaturais"
+            <input type="text" class="form-control" name="Restaurante.Propietades.Nutrisionais" id="campo-PropiedadesNaturais" aria-describedby="Propiedades-Naturais"
                    placeholder="Digite  dijite as propiedades Nutricionais" required="required" onfocus="ValidarCampoPropiedadesNutricionais()"
                    value="@ViewBag.Restaurante.PropiedadesNutricionais" />
             @Html.ValidationMessage("Restaurante.PropiedadesNutricionais", new { @class = "text-danger" })
         </div>
         <div class="form-group" id="div-campo-preco">
-            <label for="Campo-Preco">
-                Preço
-            </label>
-            <input type="text" class="form-control" name="RestaorantePreco" id="Campo-Preco" placeholder="Dijite o Preço" required="required" onfocus="ValidarCampoPreco()"
-                   value="@ViewBag.Restaurante.Preco" />
-            @Html.ValidationMessage("Restaurante.Preco", new { @class = "text-danger" })
-        </div>
+            <div class="form-group col-md-6">
+                <label for="Campo-Preco">
+                    Preço
+                </label>
+                <input type="text" class="form-control" name="RestaorantePreco" id="Campo-Preco" placeholder="Dijite o Preço" required="required" onfocus="ValidarCampoPreco()"
+                       value="@ViewBag.Restaurante.Preco" />
+                @Html.ValidationMessage("Restaurante.Preco", new { @class = "text-danger" })
+            </div>
+            </div>
+        <div class="form-group" id="div-campo-Celular">
+            <div class="form-group col-md-6">
+                <label for="CampoCelular">
+                    Telefone Celular
+                </label>
+                <input type="text" class="from-control" name="RestauranteCelular" id="Campo-Celular" placeholder="Digite seu Telefone Celular" required="required" onfocus="ValidarCampoCelular()"
+                       value="@ViewBag.Restaurante.Celular" />
+                @Html.ValidationMessage("Restaurante.Celular", new { @class = "text-danger" })
+            </div>
+           </div>
         <div class="form-group" id="div-campo-Email">
             <label form="Campo-Email">E-mail</label>
-            <input type="text" class="form-control" name="ResteoranteEmail" id="Campo-Email" placeholder="Digite seu E-mail" required="required" onfocus="ValidarCampoEmail()"
+            <input type="text" class="form-control" name="ResteoranteEmail" id="Campo-Email" aria-describedby="Campo-Email" placeholder="Digite seu E-mail" required="required" onfocus="ValidarCampoEmail()"
                    value="@ViewBag.Restaurante.Email" />
             @Html.ValidationMessage("Restaurante.Email", new { @class = "text-danger" })
 
-        </div>
-        <div class="form-group" id="div-campo-Celular">
-            <label for="CampoCelular">
-                Telefone Celular
-            </label>
-            <input type="text" class="from-control" name="RestauranteCelular" id="Campo-Celular" placeholder="Digite seu Telefone Celular" required="required" onfocus="ValidarCampoCelular()"
-                   value="@ViewBag.Restaurante.Celular" />
-            @Html.ValidationMessage("Restaurante.Celular", new { @class = "text-danger" })
         </div>
         <div class="form-group" id="div-campo-Mensagem">
             <label for="CampoMansagem">
@@ -78,8 +87,12 @@
             </label>
             <input type="text" class="from-control" name="RestauranteMensagem" id="Campo-Mengem" placeholder="Dijite sua Mensagem" required="required" onfocus="ValidarMensagem()"
                    value="@ViewBag.Restaurante.Mensagem" />
+
             @Html.ValidationMessage("Restaurante.Mensagem", new { @class = "text-danger" })
         </div>
+      
 
 
 </html>
+
+    
