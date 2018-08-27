@@ -13,6 +13,26 @@
             </div>
         </div>
     </div>
+    <div>
+        <div class="col-md-12" id="div-campo-nome">
+            <label label for="campo-nome">Nome<span class="text-danger font-weight-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" required="required" value="@ViewBag.Cliente.NomeCompleto" />
+            @Html.ValidationMessage("Cliente.NomeCompleto", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div>
+        <div class="col-md-12" id="div-campo-telefone">
+            <label label for="campo-telefone">Telefone(Celular)<span class="text-danger font-weigth-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" value="@ViewBag.Cliente.Celular" />
+            @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div>
+        <div class="col-md-12" id="div-campo-data-nascimento">
+            <label label for="campo-data-nascimento">Data de Nascimento<span class="text-danger font-weight-bold">*</span></label>
+            <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" value="@ViewBag.Cliente.DataNascimento" />
+            @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
+
     <div class="div-campos-cadastro">
         <div>
             <div class="col-md-5 form-group" id="div-campo-nome">
@@ -72,6 +92,7 @@
                 <input type="text" class="form-control" name="Cliente.Logradouro" id="campo-logradouro" tabindex="9" value="@ViewBag.Cliente.Logradouro" />
             </div>
         </div>
+<<<<<<< HEAD
         <div>
             <div class="col-md-5 " id="div-campo-email">
                 <label label for="campo-email">E-mail<span class="text-danger font-weight-bold">*</span></label>
@@ -82,6 +103,13 @@
             <div class="col-md-5 ">
                 <input class="btn btn-dark" type="submit" value="Cadastrar" />
             </div>
+=======
+        <div class="col-md-5" id="div-campo-email">
+            <label label for="campo-email">E-mail<span class="text-danger font-weight-bold">*</span></label>
+            <input type="text" class="form-control" name="Cliente.Email" id="campo-emai" placeholder="Exemplo@Exemplo.com" value=@ViewBag.Cliente.Email />
+
+
+>>>>>>> a2637b9d9f2ad9382a6a4ae2bc9152926182617b
         </div>
     </div>
 </form>
