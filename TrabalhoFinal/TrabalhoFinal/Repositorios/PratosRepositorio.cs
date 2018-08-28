@@ -15,7 +15,7 @@ namespace TrabalhoFinal.Repositorio
         {
             List<Pratos> pratos = new List<Pratos>();
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT id, nome, modo_preparo, propriedade_nutricional, preco, descricao FROM pratos";
+            command.CommandText = "SELECT id, nome, modo_preparo, propriedades_nutricionais, preco, descricao FROM pratos";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
