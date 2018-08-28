@@ -1,8 +1,6 @@
 ﻿.div-pedido {
-    background-color: lightblue ;
-
-}
-body{
-    width: 100%;
-    text
+    border-right: 10px groove #cfcfcfcf;
+    border-left: 10px groove #cfcfcfcf;
+    border-top: 10px groove #cfcfcfcf;
+    border-bottom: 10px groove #cfcfcfcf;
 }
