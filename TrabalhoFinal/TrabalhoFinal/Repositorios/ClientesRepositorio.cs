@@ -95,15 +95,15 @@ namespace TrabalhoFinal.Repositorios
             {
                 cliente = new Clientes();
                 cliente.Id = id;
-                cliente.NomeCompleto = table.Rows[0][0].ToString();
-                cliente.Login = table.Rows[0][1].ToString();
-                cliente.Senha = table.Rows[0][2].ToString();
-                cliente.Celular = Convert.ToDouble(table.Rows[0][3].ToString());
-                cliente.CPF = Convert.ToDouble(table.Rows[0][4].ToString());
-                cliente.Estado = table.Rows[0][5].ToString();
-                cliente.Cidade = table.Rows[0][6].ToString();
-                cliente.Logradouro = table.Rows[0][7].ToString();
-                cliente.CEP = table.Rows[0][8].ToString();
+                cliente.NomeCompleto = table.Rows[0]["nome_completo"].ToString();
+                cliente.Login = table.Rows[0]["login"].ToString();
+                cliente.Senha = table.Rows[0]["senha"].ToString();
+                cliente.Celular = Convert.ToDouble(table.Rows[0]["celular"].ToString());
+                cliente.CPF = Convert.ToDouble(table.Rows[0]["cpf"].ToString());
+                cliente.Estado = table.Rows[0]["estado"].ToString();
+                cliente.Cidade = table.Rows[0]["cidade"].ToString();
+                cliente.Logradouro = table.Rows[0]["logradouro"].ToString();
+                cliente.CEP = table.Rows[0]["cep"].ToString();
             }
             return cliente;
         }
