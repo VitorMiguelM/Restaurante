@@ -24,15 +24,15 @@ namespace TrabalhoFinal.Repositorios
                 {
                     Id = Convert.ToInt32(linha[0].ToString()),
                     Nome = linha[1].ToString(),
-                    SobreNome = linha[2].ToString(),
+                    Sobrenome = linha[2].ToString(),
                     Senha = linha[3].ToString(),
                     Celular = Convert.ToInt32(linha[4].ToString()),
-                    DataDeNacimento = Convert.ToDateTime(linha[5].ToString()),
-                    CPF = Convert.ToDouble(linha[6].ToString()),
+                    DataDeNascimento = Convert.ToDateTime(linha[5].ToString()),
+                    CPF = linha[6].ToString(),
                     Estado = linha[7].ToString(),
                     Cidade = linha[8].ToString(),
                     Logradouro = linha[9].ToString(),
-                    CEP = Convert.ToDouble(linha[10].ToString()),
+                    CEP = linha[10].ToString(),
                     Cargo = linha[11].ToString()
                 };
                 funcionarios.Add(funcionario);
@@ -45,10 +45,10 @@ namespace TrabalhoFinal.Repositorios
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @LOGRADOURO, @CEP, @CARGO)";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
-            command.Parameters.AddWithValue("@SOBRENOME", funcionarios.SobreNome);
+            command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
             command.Parameters.AddWithValue("@SENHA", funcionarios.Senha);
             command.Parameters.AddWithValue("@CELULAR", funcionarios.Celular);
-            command.Parameters.AddWithValue("@DATA_NASCIMENTO", funcionarios.DataDeNacimento);
+            command.Parameters.AddWithValue("@DATA_NASCIMENTO", funcionarios.DataDeNascimento);
             command.Parameters.AddWithValue("@CPF", funcionarios.CPF);
             command.Parameters.AddWithValue("@ESTADO", funcionarios.Estado);
             command.Parameters.AddWithValue("@CIDADE", funcionarios.Cidade);
@@ -65,10 +65,10 @@ namespace TrabalhoFinal.Repositorios
             command.CommandText = "UPDATE funcionarios SET nome = @NOME, sobrenome = @SOBRENOME, senha = @SENHA, celular = @CELULAR, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, logradouro = @LOGRADOURO, cep = @CEP, cargo = @CARGO WHERE id = @ID";
             command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @LOGRADOURO, @CEP, @CARGO)";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
-            command.Parameters.AddWithValue("@SOBRENOME", funcionarios.SobreNome);
+            command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
             command.Parameters.AddWithValue("@SENHA", funcionarios.Senha);
             command.Parameters.AddWithValue("@CELULAR", funcionarios.Celular);
-            command.Parameters.AddWithValue("@DATA_NASCIMENTO", funcionarios.DataDeNacimento);
+            command.Parameters.AddWithValue("@DATA_NASCIMENTO", funcionarios.DataDeNascimento);
             command.Parameters.AddWithValue("@CPF", funcionarios.CPF);
             command.Parameters.AddWithValue("@ESTADO", funcionarios.Estado);
             command.Parameters.AddWithValue("@CIDADE", funcionarios.Cidade);
@@ -100,15 +100,15 @@ namespace TrabalhoFinal.Repositorios
                 funcionario = new Funcionarios();
                 funcionario.Id = id;
                 funcionario.Nome = table.Rows[0][0].ToString();
-                funcionario.SobreNome = table.Rows[0][1].ToString();
+                funcionario.Sobrenome = table.Rows[0][1].ToString();
                 funcionario.Senha = table.Rows[0][2].ToString();
                 funcionario.Celular = Convert.ToDouble(table.Rows[0][3].ToString());
-                funcionario.DataDeNacimento = Convert.ToDateTime(table.Rows[0][4].ToString());
-                funcionario.CPF = Convert.ToDouble(table.Rows[0][5].ToString());
+                funcionario.DataDeNascimento = Convert.ToDateTime(table.Rows[0][4].ToString());
+                funcionario.CPF = table.Rows[0][5].ToString();
                 funcionario.Estado = table.Rows[0][6].ToString();
                 funcionario.Cidade = table.Rows[0][7].ToString();
                 funcionario.Logradouro = table.Rows[0][7].ToString();
-                funcionario.CEP = Convert.ToDouble(table.Rows[0][8].ToString());
+                funcionario.CEP = table.Rows[0][8].ToString();
                 funcionario.Cargo = table.Rows[0][9].ToString();
             }
             return funcionario;
