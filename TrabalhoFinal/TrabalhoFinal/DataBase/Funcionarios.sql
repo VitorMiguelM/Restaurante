@@ -13,3 +13,5 @@
 	cep					VARCHAR(9) NOT NULL,
 	cargo				VARCHAR(20) NOT NULL
 );
+
+INSERT INTO funcionarios (nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) VALUES('Jefersson','da Silva', 123456789, '(47) 9136-4852', '2000-05-05', '515.854.546-99','Santa catarina', 'Blumenau', 'Tribess','Rua Hermann Tribess', '85468-999','Faxineiro');
