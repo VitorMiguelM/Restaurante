@@ -133,6 +133,8 @@
     <Content Include="App_Data\TrabalhoFinal.mdf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="imagens e icones\imagem-atendimento.png" />
+    <Content Include="imagens e icones\imagem-cliente.png" />
     <Content Include="imagens e icones\prato01.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -200,7 +202,6 @@
     <Content Include="Views\Reserva\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Index.cshtml" />
     <Content Include="Views\Reserva\Pedido.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

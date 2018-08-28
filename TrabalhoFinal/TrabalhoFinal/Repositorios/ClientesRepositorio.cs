@@ -98,8 +98,8 @@ namespace TrabalhoFinal.Repositorios
                 cliente.NomeCompleto = table.Rows[0]["nome_completo"].ToString();
                 cliente.Login = table.Rows[0]["login"].ToString();
                 cliente.Senha = table.Rows[0]["senha"].ToString();
-                cliente.Celular = Convert.ToDouble(table.Rows[0]["celular"].ToString());
-                cliente.CPF = Convert.ToDouble(table.Rows[0]["cpf"].ToString());
+                cliente.Celular = table.Rows[0]["celular"].ToString();
+                cliente.CPF = table.Rows[0]["cpf"].ToString();
                 cliente.Estado = table.Rows[0]["estado"].ToString();
                 cliente.Cidade = table.Rows[0]["cidade"].ToString();
                 cliente.Logradouro = table.Rows[0]["logradouro"].ToString();
