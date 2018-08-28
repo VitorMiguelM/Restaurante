@@ -19,8 +19,11 @@ namespace TrabalhoFinal.Models
         public string PropiedadesNaturais { get; set; }
          [Required(ErrorMessage = "Preso não pode ser vazio")]
          public double preco { get; set; }
+
          public string Email { get; set; }
+
          public string TelefoneCelular { get; set; }
+
         public string descricao { get; set; }
 
     }
