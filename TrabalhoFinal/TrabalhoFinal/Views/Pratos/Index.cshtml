@@ -14,7 +14,18 @@
 <body>
     <div class="mr-3 ml-3">
 
-        <table>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="bg-secondary table-hover">
+                    <th>Nome</th>
+                    <th>ModoDePreparo</th>
+                    <th>PropiedadesNaturais</th>
+                    <th>Email</th>
+                    <th>TelefoneCelular</th>
+                    <th>deszcricao</th>
+                </tr>
+            </thead>
+            <tbody>
             @foreach (TrabalhoFinal.Models.Pratos Prato in @ViewBag.Pratos)
             {
                 <tr>
@@ -28,12 +39,23 @@
                     <td>
                         <a href="/Pratos/Excluir?id=@Prato.Id" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Excluir</a>
                         <a href="/Pratos/CadastroPrato?id=@Prato.Id" class="btn btn-outline-dark"><i class="fa fa-trash"></i>Cadastrar</a>
-
-                    </td>
+                        <a href="/Pratos/Editar?id=@Prato.Id" class="btn btn-outline-success">  <i class="fa fa-adjust"></i> Editar</a>
+</td>
 
                 </tr>
 
             }
+          </tbody>
+        <tfoot>
+                <tr class="bg-secondary text-white">
+                    <th>Nome</th>
+                    <th>ModoDePreparo</th>
+                    <th>PropiedadesNaturais</th>
+                    <th>Email</th>
+                    <th>TelefoneCelular</th>
+                    <th>deszcricao</th>
+                </tr>
+            </tfoot>
         </table>
 
     </div>
