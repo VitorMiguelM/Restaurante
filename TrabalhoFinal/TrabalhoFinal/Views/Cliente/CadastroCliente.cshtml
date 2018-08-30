@@ -5,7 +5,7 @@
 
 
 
-<form   action="/cliente/store" method="post">
+<form   action="/Cliente/Store" method="post">
     <div>
         <div class="row-mt-3">
             <div class="col-md-12">
@@ -13,48 +13,28 @@
             </div>
         </div>
     </div>
-    <div>
-        <div class="col-md-5" id="div-campo-nome">
-            <label label for="campo-nome">Nome<span class="text-danger font-weight-bold">*</span></label>
-            <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" required="required" value="@ViewBag.Cliente.NomeCompleto" />
-            @Html.ValidationMessage("Cliente.NomeCompleto", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div>
-        <div class="col-md-5" id="div-campo-telefone">
-            <label label for="campo-telefone">Telefone(Celular)<span class="text-danger font-weigth-bold">*</span></label>
-            <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" value="@ViewBag.Cliente.Celular" />
-            @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div>
-        <div class="col-md-5" id="div-campo-data-nascimento">
-            <label label for="campo-data-nascimento">Data de Nascimento<span class="text-danger font-weight-bold">*</span></label>
-            <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" value="@ViewBag.Cliente.DataNascimento" />
-            @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div>
-            <div class="col-md-5 form-group" id="div-campo-nome">
+    <div class="col-md-offset-1">
+        <div>
+            <div class="col-md-5" id="div-campo-nome">
                 <label label for="campo-nome">Nome<span class="text-danger font-weight-bold">*</span></label>
-                <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" required="required" tabindex="1" value="@ViewBag.Cliente.NomeCompleto" />
+                <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" tabindex="1" required="required" value="@ViewBag.Cliente.NomeCompleto" />
                 @Html.ValidationMessage("Cliente.NomeCompleto", new { @class = "text-danger" })
             </div>
-    </div>
+        </div>
         <div>
-            <div class="col-md-5 form-group" id="div-campo-telefone">
+            <div class="col-md-5" id="div-campo-telefone">
                 <label label for="campo-telefone">Telefone(Celular)<span class="text-danger font-weigth-bold">*</span></label>
                 <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" tabindex="2" value="@ViewBag.Cliente.Celular" />
                 @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
             </div>
         </div>
         <div>
-            <div class="col-md-5 form-group" id="div-campo-data-nascimento">
+            <div class="col-md-5" id="div-campo-data-nascimento">
                 <label label for="campo-data-nascimento">Data de Nascimento<span class="text-danger font-weight-bold">*</span></label>
                 <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" tabindex="3" value="@ViewBag.Cliente.DataNascimento" />
                 @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
             </div>
-        </div>
+        </div>       
         <div>
             <div class="col-md-5 form-group" id="div-campo-cpf">
                 <label label for="campo-cpf">CPF<span class="text-danger font-weight-bold">*</span></label>
@@ -98,15 +78,11 @@
                 <input type="text" class="form-control" name="Cliente.Email" id="campo-emai" placeholder="Exemplo@Exemplo.com" tabindex="10" value=@ViewBag.Cliente.Email />
             </div>
         </div>
-        <div>           
-            <div class="col-md-5" id="div-campo-email">
-                <label label for="campo-email">E-mail<span class="text-danger font-weight-bold">*</span></label>
-                <input type="text" class="form-control" name="Cliente.Email" id="campo-emai" placeholder="Exemplo@Exemplo.com" value=@ViewBag.Cliente.Email />
-            </div>
+        
+        <div class="botao-submit ">
+            <button type="submit" class="btn btn-success" tabindex="11"><i class="fa fa-save">Cadastrar</i></button>
         </div>
-        <div class="col-md-5 ">
-            <input class="btn btn-dark" type="submit" value="Cadastrar" />
-        </div>
+    </div>
 </form>
 
 
