@@ -28,7 +28,7 @@ namespace TrabalhoFinal.Models
         [Required(ErrorMessage = "Telefone Celular não pode estar vazio.")]
         [MinLength(8, ErrorMessage = "Esse número é inválido.")]
         [MaxLength(8, ErrorMessage = "Esse número é invalido.")]
-        public double Celular { get; set; }
+        public string Celular { get; set; }
  
         [Required(ErrorMessage = "Data de nascimento não pode estar vazio.")]
         public DateTime DataNascimento{ get; set; }
@@ -36,7 +36,7 @@ namespace TrabalhoFinal.Models
         [Required(ErrorMessage = "CPF deve ser preenchido!")]
         [MinLength(14, ErrorMessage = "Esse CPF é inválido!")]
         [MaxLength(14, ErrorMessage = "Esse CPF é inválido!")]
-        public double CPF { get; set; }
+        public string CPF { get; set; }
 
         [Required(ErrorMessage = "Estado não pode estar vazio")]
         public string Estado { get; set; }

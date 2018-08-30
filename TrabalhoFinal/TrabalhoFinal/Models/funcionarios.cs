@@ -14,17 +14,16 @@ namespace TrabalhoFinal.Models
         [MaxLength(100, ErrorMessage = "Nome deve conter no máximo 100 caracteres")]
         public string Nome { get; set; }
         [Required(ErrorMessage = "Sobrenome não pode ser vazio")]
-
         [MaxLength(100, ErrorMessage = "Sobrenome deve conter no máximo 100 caracteres")]
-        public string SobreNome { get; set; }
+        public string Sobrenome { get; set; }
           [Required(ErrorMessage = "Senha não pode ser vazio")]
         public string Senha { get; set; }
           [Required(ErrorMessage = "Celular não pode ser vazio")]
         public  double Celular { get; set; }
           [Required(ErrorMessage = "Data de nacimento não pode ser vazio")]
-        public DateTime DataDeNacimento { get; set; }
+        public DateTime DataDeNascimento { get; set; }
           [Required(ErrorMessage = "CPF não pode ser vazio")]
-        public double CPF { get; set; }
+        public string CPF { get; set; }
           [Required(ErrorMessage = "Sobrenome não pode ser vazio")]
         public string Estado { get; set; }
           [Required(ErrorMessage = "Cidade não pode ser vazio")]
@@ -35,7 +34,7 @@ namespace TrabalhoFinal.Models
           [Required(ErrorMessage = "Logadouro não pode ser vazio")]
         public string Logradouro { get; set; }
           [Required(ErrorMessage = "CEP não pode ser vazio")]
-        public double CEP { get; set; }
+        public string CEP { get; set; }
           [Required(ErrorMessage = "Cargo não pode ser vazio")]
         public string Cargo { get; set; }
 
