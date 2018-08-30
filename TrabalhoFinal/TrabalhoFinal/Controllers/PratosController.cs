@@ -22,7 +22,7 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult CadastroPrato()
         {
-            ViewBag.TituloPagina = "Restaurante-CadastroPrato";
+            ViewBag.TituloPagina = "Pratos-CadastroPrato";
             ViewBag.Prato = new Pratos();
             return View();
         }

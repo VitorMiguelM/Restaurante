@@ -16,15 +16,15 @@ namespace TrabalhoFinal.Models
          [Required(ErrorMessage = "modo de peparo não pode ser vazio")]
         public string ModoDePreparo { get; set; }
          [Required(ErrorMessage = "propiedades não pode ser vazio")]
-        public string PropiedadesNaturais { get; set; }
+         public string Propriedades_Nutricionais { get; set; }
          [Required(ErrorMessage = "Preso não pode ser vazio")]
          public double preco { get; set; }
 
          public string Email { get; set; }
 
-         public string TelefoneCelular { get; set; }
+         public string Celular { get; set; }
 
-        public string descricao { get; set; }
-
+         public string Mensagem { get; set; }
+        
     }
 }
