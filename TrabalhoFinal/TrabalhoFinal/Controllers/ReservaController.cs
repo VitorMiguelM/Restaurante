@@ -12,17 +12,35 @@ namespace TrabalhoFinal.Controllers
     {
         // GET: Reserva
         [HttpGet]
+
         public ActionResult Index()
         {
+
             ViewBag.TituloPagina = "Reservas";
+
             return View();
+
         }
 
         [HttpGet]
+
         public ActionResult Pedido()
         {
+
             ViewBag.TituloPagina = "Reserva";
+
             return View();
+
+        }
+
+        [HttpGet]
+
+        public ActionResult Nao_Cadastrado()
+        {
+            ViewBag.TitutloPagina = "Reserva";
+
+            return View();
+
         }
     }
 }
