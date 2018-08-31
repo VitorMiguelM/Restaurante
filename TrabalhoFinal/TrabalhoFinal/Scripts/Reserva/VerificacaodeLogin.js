@@ -6,6 +6,21 @@
     }
 }
 
+function validarFormulario()
+{
+    var textoCampoCPF = document.getElementById("cpf").value;
+    var textoCampoMesa = document.getElementById("mesa");
+    var textoCampoHorario = document.getElementById("horario");
+    var textoCampoPagamento = document.getElementById("pagamento")
+    if (validarLogin() == false) {
+        event.preventDefault();
+    }
+
+    validarLogin();
+    
+}
+
+
 function validarLogin()
 {
     var textoCampoLogin = document.getElementById("nome").value;
@@ -54,7 +69,9 @@ function validarLogin()
         document.getElementById()
     }
 
-    if (textoCampoLogin.length >= 3 &&) {
+    if (textoCampoLogin.length >= 3 && textoCampoLogin.length <= 100) {
+        document.getElementById("nome").classList.remove("border-danger");
 
+        document.getElementById("nome").classList.add("border-sucess");
     }
 }
