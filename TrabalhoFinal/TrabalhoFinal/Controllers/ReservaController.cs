@@ -15,8 +15,11 @@ namespace TrabalhoFinal.Controllers
 
         public ActionResult Index()
         {
+            List<Reserva> reserva = new ReservaRepositorio().ObterTodos();
 
             ViewBag.TituloPagina = "Reservas";
+
+            ViewBag.Reserva = reserva;
 
             return View();
 
@@ -26,8 +29,11 @@ namespace TrabalhoFinal.Controllers
 
         public ActionResult Pedido()
         {
+            List<Reserva> reserva = new ReservaRepositorio().ObterTodos();
 
             ViewBag.TituloPagina = "Reserva";
+
+            ViewBag.Reserva = reserva;
 
             return View();
 

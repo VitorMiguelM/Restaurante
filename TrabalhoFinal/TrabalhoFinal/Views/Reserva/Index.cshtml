@@ -48,6 +48,8 @@
 
                 <input type="text" name="login" id="login" placeholder="Email" tabindex="1" />
 
+                @Html.ValidationMessage("Reserva.Login", new { @class = "text-danger" })
+
             </div>
 
             <div class="col-md-12">
@@ -55,6 +57,8 @@
                 <label for="senha">Senha</label>
 
                 <input type="password" name="senha" id="senha" placeholder="Senha" tabindex="2" />
+
+                @Html.ValidationMessage("Reserva.Senha", new { @class = "text-danger" })
 
             </div>
 
