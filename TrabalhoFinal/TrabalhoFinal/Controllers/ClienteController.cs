@@ -11,6 +11,7 @@ namespace TrabalhoFinal.Controllers
     public class ClienteController : Controller
     {
         // GET: Cliente
+        
         public ActionResult Lista()
         {
             List<Clientes> clientes = new ClientesRepositorio().ObterTodos();
