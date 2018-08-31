@@ -205,7 +205,7 @@
     <Content Include="Views\Reserva\Pedido.cshtml" />
     <Content Include="Views\Pratos\CadastroPrato.cshtml" />
     <Content Include="Views\Funcionario\CadastroFuncionario.cshtml" />
-    <Content Include="Views\Pratos\EditarPratos.cshtml" />
+    <Content Include="Views\Pratos\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
