@@ -24,7 +24,7 @@
         <div>
             <div class="col-md-5" id="div-campo-telefone">
                 <label label for="campo-telefone">Telefone(Celular)<span class="text-danger font-weigth-bold">*</span></label>
-                <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: (DDD) 0000-0000" required="required" tabindex="2" value="@ViewBag.Cliente.Celular" />
+                <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" tabindex="2" value="@ViewBag.Cliente.Celular" />
                 @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
             </div>
         </div>
@@ -38,38 +38,38 @@
         <div>
             <div class="col-md-5 form-group" id="div-campo-cpf">
                 <label label for="campo-cpf">CPF<span class="text-danger font-weight-bold">*</span></label>
-                <input type="text" class="form-control" name="Cliente.CPF" id="campo-cpf" required="required" placeholder="Digite seu CPF" tabindex="4" value="@ViewBag.Cliente.CPF" />
+                <input type="text" class="form-control" name="Cliente.CPF" id="campo-cpf" required="required" tabindex="4" value="@ViewBag.Cliente.CPF" />
                 @Html.ValidationMessage("Cliente.CPF", new { @class = "text-danger" })
             </div>
         </div>
         <div>
             <div class="col-md-5 form-group" id="div-campo-cep">
                 <label label for="campo-cep">CEP</label>
-                <input type="text" class="form-control" name="Cliente.CEP" id="campo-cep" placeholder="Digite seu CEP" tabindex="5" value="@ViewBag.Cliente.CPF" />
+                <input type="text" class="form-control" name="Cliente.CEP" id="campo-cep" tabindex="5" value="@ViewBag.Cliente.CPF" />
             </div>
         </div>
         <div>
             <div class="col-md-5 form-group" id="div-campo-estado">
                 <label label for="campo-estado">Estado</label>
-                <input type="text" class="form-control" name="Cliente.Estado" id="campo-estado" placeholder="Digite seu Estado" tabindex="6" value="@ViewBag.Cliente.CPF" />
+                <input type="text" class="form-control" name="Cliente.Estado" id="campo-estado" tabindex="6" value="@ViewBag.Cliente.CPF" />
             </div>
         </div>
         <div>
             <div class="col-md-5 form-group" id="div-campo-cidade">
                 <label label for="campo-cidade">Cidade</label>
-                <input type="text" class="form-control" name="Cliente.Cidade" id="campo-cidade" placeholder="Digite sua Cidade" tabindex="7" value="@ViewBag.Cliente.Cidade" />
+                <input type="text" class="form-control" name="Cliente.Cidade" id="campo-cidade" tabindex="7" value="@ViewBag.Cliente.Cidade" />
             </div>
         </div>
         <div>
             <div class="col-md-5 form-group" id="div-campo-bairro">
                 <label label for="campo-bairro">Bairro</label>
-                <input type="text" class="form-contrl" name="Cliente.Bairro" id="campo-bairro" placeholder="Digite seu bairro" tabindex="8" value="@ViewBag.Cliente.Bairro" />
+                <input type="text" class="form-contrl" name="Cliente.Bairro" id="campo-bairro" tabindex="8" value="@ViewBag.Cliente.Bairro" />
             </div>
         </div>
         <div>
             <div class="col-md-5 form-group" id="div-campo-logradouro">
                 <label label for="campo-logradouro">Logradouro</label>
-                <input type="text" class="form-control" name="Cliente.Logradouro" id="campo-logradouro" placeholder="Digite seu logradouro" tabindex="9" value="@ViewBag.Cliente.Logradouro" />
+                <input type="text" class="form-control" name="Cliente.Logradouro" id="campo-logradouro" tabindex="9" value="@ViewBag.Cliente.Logradouro" />
             </div>
         </div>
         <div>
