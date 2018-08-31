@@ -203,11 +203,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Reserva\Pedido.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Pratos\CadastroPrato.cshtml" />
-=======
     <Content Include="Views\Funcionario\CadastroFuncionario.cshtml" />
->>>>>>> 57599bd1695298248d59e3c753e826614d7798b0
+    <Content Include="Views\Pratos\EditarPratos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
