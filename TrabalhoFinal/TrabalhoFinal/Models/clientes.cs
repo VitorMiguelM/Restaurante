@@ -26,8 +26,8 @@ namespace TrabalhoFinal.Models
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Telefone Celular não pode estar vazio.")]
-        [MinLength(8, ErrorMessage = "Esse número é inválido.")]
-        [MaxLength(8, ErrorMessage = "Esse número é invalido.")]
+        [MinLength(12, ErrorMessage = "Esse número é inválido.")]
+        [MaxLength(14, ErrorMessage = "Esse número é invalido.")]
         public string Celular { get; set; }
  
         [Required(ErrorMessage = "Data de nascimento não pode estar vazio.")]
