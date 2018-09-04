@@ -203,8 +203,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Reserva\Pedido.cshtml" />
+    <Content Include="Views\Pratos\CadastroPrato.cshtml" />
     <Content Include="Views\Funcionario\CadastroFuncionario.cshtml" />
+
+    <Content Include="Views\Pratos\Editar.cshtml" />
+
     <Content Include="Views\Cliente\Editar.cshtml" />
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

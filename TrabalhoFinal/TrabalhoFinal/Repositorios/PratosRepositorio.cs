@@ -25,9 +25,9 @@ namespace TrabalhoFinal.Repositorio
                     Id = Convert.ToInt32(linha[0].ToString()),
                     Nome = linha[1].ToString(),
                     ModoDePreparo = linha[2].ToString(),
-                    PropiedadesNaturais = linha[3].ToString(),
+                    Propriedades_Nutricionais = linha[3].ToString(),
                     preco = Convert.ToDouble(linha[4].ToString()),
-                    descricao = linha[5].ToString()
+                    Mensagem = linha[5].ToString()
                 };
                 pratos.Add(prato);
             }
@@ -40,9 +40,9 @@ namespace TrabalhoFinal.Repositorio
             command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES_NUTRICIONAIS, @PRECO, @DESCRICAO)";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
-            command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.PropiedadesNaturais);
+            command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
             command.Parameters.AddWithValue("@PRECO", pratos.preco);
-            command.Parameters.AddWithValue("@DESCRICAO", pratos.descricao);
+            command.Parameters.AddWithValue("@DESCRICAO", pratos.Mensagem);
             int id = Convert.ToInt32(command.ExecuteScalar().ToString());
             return id;
         }
@@ -53,9 +53,9 @@ namespace TrabalhoFinal.Repositorio
             command.CommandText = "UPDATE pratos SET nome = @NOME, modo_preparo = @MODO_PREPARO, propriedades_nutricionais = @PROPRIEDADES_NUTRICIONAIS, preco = @PRECO, descricao = @DESCRICAO WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
-            command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.PropiedadesNaturais);
+            command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
             command.Parameters.AddWithValue("@PRECO", pratos.preco);
-            command.Parameters.AddWithValue("@DESCRICAO", pratos.descricao);
+            command.Parameters.AddWithValue("@DESCRICAO", pratos.Mensagem);
             command.Parameters.AddWithValue("@ID", pratos.Id);
             return command.ExecuteNonQuery() == 1;
         }
@@ -82,9 +82,9 @@ namespace TrabalhoFinal.Repositorio
                 prato.Id = id;
                 prato.Nome = table.Rows[0][0].ToString();
                 prato.ModoDePreparo = table.Rows[0][1].ToString();
-                prato.PropiedadesNaturais = table.Rows[0][2].ToString();
+                prato.Propriedades_Nutricionais = table.Rows[0][2].ToString();
                 prato.preco = Convert.ToDouble(table.Rows[0][3].ToString());
-                prato.descricao = table.Rows[0][4].ToString();
+                prato.Mensagem = table.Rows[0][4].ToString();
             }
             return prato;
         }

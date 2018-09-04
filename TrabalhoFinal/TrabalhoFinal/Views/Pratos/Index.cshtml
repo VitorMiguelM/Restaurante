@@ -32,15 +32,16 @@
                     <td>@Prato.Id</td>
                     <td>@Prato.Nome</td>
                     <td>@Prato.ModoDePreparo</td>
-                    <td>@Prato.PropiedadesNaturais</td>
+                    <td>@Prato.Propriedades_Nutricionais</td>
                     <td>@Prato.Email</td>
-                    <td>@Prato.TelefoneCelular</td>
-                    <td>@Prato.descricao</td>
+                    <td>@Prato.Celular</td>
+                    <td>@Prato.Mensagem</td>
                     <td>
                         <a href="/Pratos/Excluir?id=@Prato.Id" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Excluir</a>
-                        <a href="/Pratos/CadastroPrato?id=@Prato.Id" class="btn btn-outline-dark"><i class="fa fa-trash"></i>Cadastrar</a>
-                        <a href="/Pratos/Editar?id=@Prato.Id" class="btn btn-outline-success">  <i class="fa fa-adjust"></i> Editar</a>
-</td>
+                      
+                       <a href="/Pratos/Editar?id=@Prato.Id" class="btn btn-outline-success"><i class="fa fa-adjust"></i> Editar</a>
+                       
+                  </td>
 
                 </tr>
 
@@ -59,6 +60,9 @@
         </table>
 
     </div>
+    <button class="btn btn-outline-dark " type="submit">
+        <i class="fa fa-save"></i> Cadastrar
+    </button>
 </body>
 
 

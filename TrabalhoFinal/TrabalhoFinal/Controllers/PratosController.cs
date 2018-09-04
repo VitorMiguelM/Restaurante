@@ -22,8 +22,8 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult CadastroPrato()
         {
-            ViewBag.TituloPagina = "Restaurante-CadastroPrato";
-            ViewBag.Prato = new Pratos();
+            ViewBag.TituloPagina = "Pratos - CadastroPrato";
+           ViewBag.Prato = new Pratos();
             return View();
         }
         [HttpGet]
