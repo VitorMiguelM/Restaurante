@@ -157,6 +157,7 @@
     <Compile Include="Models\clientes.cs" />
     <Compile Include="Models\funcionarios.cs" />
     <Compile Include="Models\pratos.cs" />
+    <Compile Include="Models\Reserva.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="Repositorios\ClientesRepositorio.cs" />
     <Compile Include="Repositorios\FuncionariosRepositorio.cs" />
     <Compile Include="Repositorios\PratosRepositorio.cs" />
+    <Compile Include="Repositorios\ReservaRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -205,11 +207,8 @@
     <Content Include="Views\Reserva\Pedido.cshtml" />
     <Content Include="Views\Pratos\CadastroPrato.cshtml" />
     <Content Include="Views\Funcionario\CadastroFuncionario.cshtml" />
-
     <Content Include="Views\Pratos\Editar.cshtml" />
-
     <Content Include="Views\Cliente\Editar.cshtml" />
-
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

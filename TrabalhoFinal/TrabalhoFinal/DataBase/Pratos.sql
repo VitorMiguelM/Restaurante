@@ -29,5 +29,6 @@ INSERT INTO pratos VALUES ('Bolo Simples', 'Bata as claras em neve e reserve. Mi
 INSERT INTO ingredientes VALUES ('2 xícaras (chá) de açúcar, 3 xícaras (chá) de farinha de trigo, 4 colheres (sopa) de margarina, 3 ovos, 1 e 1/2 xícara (chá) de leite, 1 colher (sopa) bem cheia de fermento em pó');
 
 
+
 SELECT * FROM pratos;
 SELECT * FROM ingredientes;

@@ -48,8 +48,8 @@ namespace TrabalhoFinal.Controllers
                 return RedirectToAction("Editar", new { id = identificador });
             }
 
-            ViewBag.prato = prato;
-            return View("Cadastro");
+            ViewBag.Prato = prato;
+            return View("CadastroPrato");
         }
         [HttpPost]
         public ActionResult Update(Pratos prato)
