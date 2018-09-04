@@ -17,6 +17,7 @@ namespace TrabalhoFinal.Repositorios
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "SELECT id, nome, celular, cpf, horario, pagamento FROM reservas";
             DataTable table = new DataTable();
+            
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
             {
