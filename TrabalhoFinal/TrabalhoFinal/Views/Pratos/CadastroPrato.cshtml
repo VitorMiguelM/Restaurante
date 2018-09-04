@@ -67,11 +67,16 @@
                   value="@ViewBag.Prato.Mensagem"></textarea>
         @Html.ValidationMessage("Pratos.Mensagem", new { @class = "text-danger" })
     </div>
-   
-    <ul class="nav justify-content-end">
-        <button class="btn btn-dark" type="submit">
-            <i class="fa fa-save"></i> Cadastrar
-        </button>
-    </ul>
+    
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+
+                <input type="submit" value="Create" class="btn btn-default"  />
+
+            </div>
+        </div>
+        
+
+
 </body>
 </html>

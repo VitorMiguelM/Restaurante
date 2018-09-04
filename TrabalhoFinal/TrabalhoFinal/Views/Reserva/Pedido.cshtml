@@ -24,19 +24,13 @@
 
     </div>
 
-    <div class="text-center col-md-12">
-
-        <label for="pedido">Pedido</label>
-
-        <input type="text" name="pedido" id="pedido" placeholder="O que você deseja?" />
-
-    </div>
-
     <div>
 
         <label for="mesa">Selecione sua mesa</label>
 
         <input type="week" name="mesa" id="mesa" />
+
+        @Html.ValidationMessage("Reserva.Mesa", new { @class = "text-danger" })
 
     </div>
 
@@ -44,6 +38,8 @@
         <label for="horario">Horário da reserva</label>
 
         <input type="time" name="horario" id="horario" />
+
+        @Html.ValidationMessage("Reserva.Horario", new { @class = "text-danger" })
 
     </div>
 
@@ -60,6 +56,8 @@
             <option value="cartao_credito">Cartão de Crédito</option>
 
         </select>
+
+        @Html.ValidationMessage("Reserva.Pagamento", new { @class = "text-danger" })
 
     </div>
 
