@@ -63,7 +63,6 @@ namespace TrabalhoFinal.Repositorios
         {
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "UPDATE funcionarios SET nome = @NOME, sobrenome = @SOBRENOME, senha = @SENHA, celular = @CELULAR, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, logradouro = @LOGRADOURO, cep = @CEP, cargo = @CARGO WHERE id = @ID";
-            command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @LOGRADOURO, @CEP, @CARGO)";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
             command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
             command.Parameters.AddWithValue("@SENHA", funcionarios.Senha);

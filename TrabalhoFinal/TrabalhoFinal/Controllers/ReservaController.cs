@@ -48,5 +48,21 @@ namespace TrabalhoFinal.Controllers
             return View();
 
         }
+
+        [HttpGet]
+
+        public ActionResult Store(Reserva reserva)
+        {
+
+            if (ModelState.IsValid)
+            {
+                int identificador = new ReservaRepositorio().Cadastro(reserva);
+                return RedirectToAction("Editar", new { id = identificador });
+            }
+            ViewBag.reserva = reserva;
+
+            return View();
+
+        }
     }
 }
