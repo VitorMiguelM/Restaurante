@@ -66,4 +66,59 @@
         <input type="date" name="Funcionario.DataDeNascimento" id="campo-datadenascimento" class="form-control" placeholder="Informe sua data de nascimento" required="required" value="@ViewBag.Funcionario.DataDeNascimento"/>
         @Html.ValidationMessage("Funcionario.DataDeNascimento", new { @class = "text-danger" })
     </div>
+    <div class="form-group">
+    <label for="campo-bairro">Bairro<span class="text-danger">*</span></label>
+    <input type="text" name="Funcionario.Bairro" id="campo-bairro" class="form-control" placeholder="informe seu bairrro" required="required" value="@ViewBag.Funcionario.Bairro"/>
+    @Html.ValidationMessage("Funcionario.Bairro", new { @class = "Text-danger"})
+    </div>
+    <div class="form-group">
+        <label for="campo-logradouro">Logradouro<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Logradouro" id="campo-bairro" class="form-control" placeholder="Informe seu logradouro" required="required" value="@ViewBag.Funcionario.Logradouro"/>
+        @Html.ValidationMessage("Funcionario.Logradouro")
+    </div>
+    <div class="form-group">
+        <label for="campo-cep">CEP<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.CEP" id="campo-cep" class="form-control" placeholder="Informe seu CEP" required="required" value="@ViewBag.Funcionario.CEP"/>
+        @Html.ValidationMessage("Funcionario.CEP")
+    </div>
+    <div class="form-group">
+        <label for="campo-cargo">Cargo<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Cargo" id="campo-cargo" class="form-control" placeholder="Informe o cargo pretendido"/>
+
+    </div>
+    <button class="btn btn-success" type="submit">
+        <i class="fa fa-save"></i> Cadastrar
+    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </form>
