@@ -12,57 +12,62 @@ namespace TrabalhoFinal.Controllers
     {
         // GET: Reserva
         [HttpGet]
-
         public ActionResult Index()
         {
             List<Reserva> reserva = new ReservaRepositorio().ObterTodos();
-
             ViewBag.TituloPagina = "Reservas";
-
             ViewBag.Reserva = reserva;
-
             return View();
-
         }
 
         [HttpGet]
-
         public ActionResult Pedido()
         {
             List<Reserva> reserva = new ReservaRepositorio().ObterTodos();
-
             ViewBag.TituloPagina = "Reserva";
-
             ViewBag.Reserva = reserva;
-
             return View();
-
         }
 
         [HttpGet]
-
         public ActionResult Nao_Cadastrado()
         {
             ViewBag.TitutloPagina = "Reserva";
-
             return View();
-
         }
 
         [HttpGet]
-
-        public ActionResult Store(Reserva reserva)
+        public ActionResult Editar(int id)
         {
+            Reserva reservas = new ReservaRepositorio().ObterPeloId(id);
+            ViewBag.Reserva = reservas;
+            return View();
+        }
 
+        [HttpGet]
+        public ActionResult Excluir(int id)
+        {
+            bool apagado = new ReservaRepositorio().Excluir(id);
+            return null;
+        }
+
+        [HttpPost]
+        public ActionResult Store(Reserva reservas)
+        {
             if (ModelState.IsValid)
             {
-                int identificador = new ReservaRepositorio().Cadastro(reserva);
+                int identificador = new ReservaRepositorio().Cadastrar(reservas);
                 return RedirectToAction("Editar", new { id = identificador });
             }
-            ViewBag.reserva = reserva;
+            ViewBag.Reserva = reservas;
+            return View("Pedido");
+        }
 
-            return View();
-
+        [HttpPost]
+        public ActionResult Update(Reserva reservas)
+        {
+            bool alterado = new ReservaRepositorio().Alterar(reservas);
+            return null;
         }
     }
 }

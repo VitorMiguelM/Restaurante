@@ -35,7 +35,7 @@ namespace TrabalhoFinal.Repositorios
             return reservas;
         }
         
-        public int Cadastro(Reserva reserva)
+        public int Cadastrar(Reserva reserva)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = @"INSERT INTO reservas (nome, celular, cpf, horario, pagamento) OUTPUT INSERTED.ID VALUES (@NOME, @CELULAR, @CPF, @HORARIO, @PAGAMENTO)";
