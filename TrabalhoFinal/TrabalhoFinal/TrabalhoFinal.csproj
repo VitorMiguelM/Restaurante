@@ -122,6 +122,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS\cadastro-cliente.css" />
+    <Content Include="Content\CSS\login-cliente.css" />
     <Content Include="Content\CSS\pagina-funcionario.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
     <Content Include="Content\CSS\pagina-reserva.css" />
