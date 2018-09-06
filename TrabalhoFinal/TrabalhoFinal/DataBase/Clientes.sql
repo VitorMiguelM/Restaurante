@@ -14,4 +14,4 @@ CREATE TABLE clientes(
 	cep					VARCHAR(9) NOT NULL
 );
 
-INSERT INTO clientes (nome_completo, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) VALUES ('Austin Gillispie', 'austin12@gmail.com', 'austin12', '47 9563-5412', '1951-06-21', '505.310.755-67', 'Rio de Janeiro', 'Rio de Janeiro', 'Botafogo', 'Rua São Clemente', '22260-006');
+INSERT INTO clientes (nome_completo, email, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) VALUES ('Austin Gillispie', 'austin12@gmail.com', 'austin12', '47 9563-5412', '1951-06-21', '505.310.755-67', 'Rio de Janeiro', 'Rio de Janeiro', 'Botafogo', 'Rua São Clemente', '22260-006');
