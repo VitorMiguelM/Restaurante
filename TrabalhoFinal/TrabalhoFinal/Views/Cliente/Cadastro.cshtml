@@ -75,9 +75,15 @@
         <div>
             <div class="col-md-5 " id="div-campo-email">
                 <label label for="campo-email">E-mail<span class="text-danger font-weight-bold">*</span></label>
-                <input type="text" class="form-control" name="Cliente.Email" id="campo-emai" placeholder="Exemplo@Exemplo.com" tabindex="10" value=@ViewBag.Cliente.Email />
+                <input type="text" class="form-control" name="Cliente.Email" id="campo-email" placeholder="Exemplo@Exemplo.com" tabindex="10" value=@ViewBag.Cliente.Email />
             </div>
-        </div>       
+        </div>    
+        <div>
+            <div class="col-md-5" id="div-campo-senha">
+                <label label for="campo-senha">Senha<span class="text-danger font-weight-bold">*</span></label>                
+                <input type="text" class="form-control" name="Cliente.Senha" id="campo-senha" placeholder="Digite sua senha" tabindex="11" value="@ViewBag.Cliente.Senha" />
+            </div>
+        </div>   
         <div class="botao-submit ">
             <button type="submit" class="btn btn-success" tabindex="11"><i class="fa fa-save">Cadastrar</i></button>
         </div>
