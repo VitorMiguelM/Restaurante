@@ -2,7 +2,7 @@
 CREATE TABLE clientes(
 	id					INT IDENTITY(1,1),
 	nome_completo		VARCHAR(100) NOT NULL,
-	email				VARCHAR(50) NOT NULL,
+	[email]				VARCHAR(50) NOT NULL,
 	senha				VARCHAR(12) NOT NULL,
 	celular				VARCHAR(14) NOT NULL,
 	data_nascimento		DATE NOT NULL,
@@ -14,4 +14,8 @@ CREATE TABLE clientes(
 	cep					VARCHAR(9) NOT NULL
 );
 
-INSERT INTO clientes (nome_completo, email, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) VALUES ('Austin Gillispie', 'austin12@gmail.com', 'austin12', '47 9563-5412', '1951-06-21', '505.310.755-67', 'Rio de Janeiro', 'Rio de Janeiro', 'Botafogo', 'Rua São Clemente', '22260-006');
+INSERT INTO clientes (nome_completo, email, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) VALUES 
+('Austin Gillispie', 'austin12@gmail.com', 'austin12', '47 9563-5412', '1951-06-21', '505.310.755-67', 'Rio de Janeiro', 'Rio de Janeiro', 
+'Botafogo', 'Rua São Clemente', '22260-006');
+
+SELECT * FROM clientes;
