@@ -8,10 +8,10 @@
 
 function validarFormulario()
 {
-    var textoCampoCPF = document.getElementById("cpf").value;
-    var textoCampoMesa = document.getElementById("mesa");
-    var textoCampoHorario = document.getElementById("horario");
-    var textoCampoPagamento = document.getElementById("pagamento")
+    var textoCampoCPF
+    var textoCampoMesa
+    var textoCampoHorario
+    var textoCampoPagamento
     if (validarLogin() == false) {
         event.preventDefault();
     }
@@ -23,13 +23,13 @@ function validarFormulario()
 
 function validarLogin()
 {
-    var textoCampoLogin = document.getElementById("nome").value;
+    var textoCampoLogin = document.getElementById("campo-nome").value;
 
-    document.getElementById("nome").classList.remove("border-sucess");
+    document.getElementById("campo-nome").classList.remove("border-sucess");
 
-    apagarElemento("span-nome-menor-3");
+    apagarElemento("span-campo-nome-menor-3");
 
-    apagarElemento("span-nome-maior-100");
+    apagarElemento("span-campo-nome-maior-100");
 
     if (textoCampoLogin.length < 3)
     {
@@ -37,15 +37,15 @@ function validarLogin()
 
         var texto = document.createTextNode("Campo login deve ter no mínimo 3 caracteres");
 
-        elementoSpanLogin.id = "span-nome-menor-3";
+        elementoSpanLogin.id = "span-campo-nome-menor-3";
 
         elementoSpanLogin.appendChild(texto);
 
         elementoSpanLogin.classList.add("text-danger");
 
-        document.getElementById("div-nome").appendChild(elementoSpanLogin);
+        document.getElementById("div-campo-nome").appendChild(elementoSpanLogin);
 
-        document.getElementById("nome").classList.add("border-danger");
+        document.getElementById("campo-nome").classList.add("border-danger");
 
         return false;
     }
@@ -56,22 +56,22 @@ function validarLogin()
 
         var texto = document.createTextNode("Campo login deve ter no máximo 100 caracteres");
 
-        elementoSpanLogin.id = "span-nome-maior-100";
+        elementoSpanLogin.id = "span-campo-nome-maior-100";
 
         elementoSpanLogin.appendChild(texto);
 
         elementoSpanLogin.classList.add("text-denger");
 
-        document.getElementById("div-nome").appendChild(elementoSpanLogin);
+        document.getElementById("div-campo-nome").appendChild(elementoSpanLogin);
 
-        document.getElementById("nome").classList.add("border-danger");
+        document.getElementById("campo-nome").classList.add("border-danger");
 
         document.getElementById()
     }
 
     if (textoCampoLogin.length >= 3 && textoCampoLogin.length <= 100) {
-        document.getElementById("nome").classList.remove("border-danger");
+        document.getElementById("campo-nome").classList.remove("border-danger");
 
-        document.getElementById("nome").classList.add("border-sucess");
+        document.getElementById("campo-nome").classList.add("border-sucess");
     }
 }
