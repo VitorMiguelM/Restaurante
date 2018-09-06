@@ -36,7 +36,7 @@ namespace TrabalhoFinal.Controllers
         public ActionResult Editar(int id)
         {
             Clientes clientes = new ClientesRepositorio().ObterPeloId(id);
-            ViewBag.Clientes = clientes;
+            ViewBag.Cliente = clientes;
             return View();
         }
         [HttpGet]
