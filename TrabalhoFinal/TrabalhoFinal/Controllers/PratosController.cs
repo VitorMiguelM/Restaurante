@@ -30,7 +30,7 @@ namespace TrabalhoFinal.Controllers
         public ActionResult Editar(int id)
         {
             Pratos pratos = new RestauranteRepositorio().ObterPeloId(id);
-            ViewBag.Pratos = pratos;
+            ViewBag.Prato = pratos;
             return View();
         }
         [HttpGet]

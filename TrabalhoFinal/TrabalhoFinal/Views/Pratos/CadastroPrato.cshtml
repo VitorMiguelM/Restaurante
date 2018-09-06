@@ -50,7 +50,7 @@
             <div class="form-group" id="div-campo-Email">
                 <label form="Campo-Email">E-mail</label>
                 <span class="text-danger font-weight-bold">*</span>
-                <input type="text" class="form-control" name="Prato.Email" id="Campo-Email" placeholder="Digite seu E-mail" required="required" onfocus="ValidarCampoEmail()"
+                <input type="text" class="form-control" name="Prato.Email"  id="Campo-Email" placeholder="Digite seu E-mail" required="required" onfocus="ValidarCampoEmail()"
                        value="@ViewBag.Prato.Email" />
                 @Html.ValidationMessage("Pratos.Email", new { @class = "text-danger" })
             </div>
@@ -61,13 +61,13 @@
                        value="@ViewBag.Prato.Celular" />
                 @Html.ValidationMessage("Pratos.Celular", new { @class = "text-danger" })
             </div>
-            <div class="form-group" id="div-campo-Mensagem">
-                <label for="CampoMansagem">
+            <div class="form-group" id="div-campo-Descricao">
+                <label for="CampoDescricao">
                     Descrisao
                 </label>
-                <textarea type="text" class="from-control" name="Prato.Mensagem" id="Campo-Mensagem" style="width:100%; height:auto" placeholder="Digite sua Mensagem" required="required" onfocus="ValidarMensagem()"
-                          value="@ViewBag.Prato.Mensagem"></textarea>
-                @Html.ValidationMessage("Pratos.Mensagem", new { @class = "text-danger" })
+                <textarea type="text" class="from-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descricao" required="required" onfocus="ValidarDescricao()"
+                          >@ViewBag.Prato.Descricao</textarea>
+                @Html.ValidationMessage("Pratos.Descricao", new { @class = "text-danger" })
             </div>
 
             <button class="btn btn-dark" type="submit">

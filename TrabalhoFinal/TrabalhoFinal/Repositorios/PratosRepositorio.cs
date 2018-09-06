@@ -15,7 +15,7 @@ namespace TrabalhoFinal.Repositorio
         {
             List<Pratos> pratos = new List<Pratos>();
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT id, nome, modo_preparo, propriedades_nutricionais, preco, descricao FROM pratos";
+            command.CommandText = "SELECT id, nome, modo_preparo, propriedades_nutricionais, email, celular, preco, descricao FROM pratos";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
@@ -26,8 +26,10 @@ namespace TrabalhoFinal.Repositorio
                     Nome = linha[1].ToString(),
                     ModoDePreparo = linha[2].ToString(),
                     Propriedades_Nutricionais = linha[3].ToString(),
-                    preco = Convert.ToDouble(linha[4].ToString()),
-                    Mensagem = linha[5].ToString()
+                    Email=linha[4].ToString(),
+                    Celular=linha[5].ToString(),
+                    preco = Convert.ToDouble(linha[6].ToString()),
+                    Descricao = linha[7].ToString()
                 };
                 pratos.Add(prato);
             }
@@ -37,12 +39,14 @@ namespace TrabalhoFinal.Repositorio
         public int Cadastrar(Pratos pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES_NUTRICIONAIS, @PRECO, @DESCRICAO)";
+            command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais,email,celular, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES_NUTRICIONAIS,@EMAIL ,@CELULAR,@PRECO, @DESCRICAO)";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
             command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
+            command.Parameters.AddWithValue("@EMAIL", pratos.Email);
+            command.Parameters.AddWithValue("@CELULAR", pratos.Celular);
             command.Parameters.AddWithValue("@PRECO", pratos.preco);
-            command.Parameters.AddWithValue("@DESCRICAO", pratos.Mensagem);
+            command.Parameters.AddWithValue("@DESCRICAO", pratos.Descricao);
             int id = Convert.ToInt32(command.ExecuteScalar().ToString());
             return id;
         }
@@ -54,8 +58,10 @@ namespace TrabalhoFinal.Repositorio
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
             command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
+            command.Parameters.AddWithValue("@EMAIL", pratos.Email);
+            command.Parameters.AddWithValue("@CELULAR", pratos.Celular);
             command.Parameters.AddWithValue("@PRECO", pratos.preco);
-            command.Parameters.AddWithValue("@DESCRICAO", pratos.Mensagem);
+            command.Parameters.AddWithValue("@DESCRICAO", pratos.Descricao);
             command.Parameters.AddWithValue("@ID", pratos.Id);
             return command.ExecuteNonQuery() == 1;
         }
@@ -72,7 +78,7 @@ namespace TrabalhoFinal.Repositorio
         {
             Pratos prato = null;
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT nome, modo_preparo, propriedades_nutricionais, preco, descricao FROM pratos WHERE id = @ID";
+            command.CommandText = "SELECT nome, modo_preparo, propriedades_nutricionais,email,celular, preco, descricao FROM pratos WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
@@ -83,8 +89,10 @@ namespace TrabalhoFinal.Repositorio
                 prato.Nome = table.Rows[0][0].ToString();
                 prato.ModoDePreparo = table.Rows[0][1].ToString();
                 prato.Propriedades_Nutricionais = table.Rows[0][2].ToString();
-                prato.preco = Convert.ToDouble(table.Rows[0][3].ToString());
-                prato.Mensagem = table.Rows[0][4].ToString();
+                prato.Email = table.Rows[0][3].ToString();
+                prato.Celular = table.Rows[0][4].ToString();
+                prato.preco = Convert.ToDouble(table.Rows[0][5].ToString());
+                prato.Descricao = table.Rows[0][6].ToString();
             }
             return prato;
         }

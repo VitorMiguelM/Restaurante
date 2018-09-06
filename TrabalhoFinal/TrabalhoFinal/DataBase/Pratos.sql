@@ -7,6 +7,8 @@ CREATE TABLE pratos(
 	nome						VARCHAR(200) NOT NULL,
 	modo_preparo				VARCHAR(2000) NOT NULL,
 	propriedades_nutricionais	VARCHAR(500)NOT NULL,
+	email						VARCHAR(100)NOT NULL,
+	celular                     REAL NOT NULL,
 	preco						REAL NOT NULL,
 	descricao					TEXT ,
 );
