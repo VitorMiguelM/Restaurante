@@ -11,6 +11,12 @@ namespace TrabalhoFinal.Controllers
     public class ClienteController : Controller
     {
         // GET: Cliente
+        public ActionResult Login()
+        {
+            List<Clientes> clientes = new ClientesRepositorio().ObterTodos();
+            ViewBag.Clientes = clientes;
+            return View();
+        }
         
         public ActionResult Lista()
         {
