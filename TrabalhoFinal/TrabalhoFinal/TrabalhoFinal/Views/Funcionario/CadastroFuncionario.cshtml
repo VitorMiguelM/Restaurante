@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "~/Views/Master.cshtml";
+}
+
+
+<form action="/funcionarios/Store" method="post" onsubmit="validarFormulario()">
+    <div class="form-group" id="div-campo-nome">
+        <label for="campo-nome">Nome<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Nome" id="campo-nome" class="form-control" placeholder="Digite seu nome" required="required" onfocus="validarCampoNome()"/>
+        @Html.ValidationMessage("Funcionario.Nome", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="campo-sobrenome">Sobrenome<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Sobrenome" id="campo-sobrenome" class="form-control" placeholder="Digite seu sobrenome" required="required" onfocus="ValidarCampoSobrenome()" />
+        @Html.ValidationMessage("Funcionario.Sobrenome", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="campo-cpf">CPF<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionarios.CPF" id="campo-nome" class="form-control" placeholder="Digite sseu cpf" required="required" value="@ViewBag.Funcionario.CPF"/>
+        @Html.ValidationMessage("fFuncionario.CPF", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="campo-estado">Estado<span class="text-danger">*</span></label>
+        <select id="campo-estado" name="Funcionario.Estado" class="form-control" required="required">
+            <option class="acre">Acre AC</option>
+            <option class="alagoas">Alagoas AL</option>
+            <option class="amapa">Amapá AP</option>
+            <option class="amazonas">Amazonas AM</option>
+            <option class="bahia">Bahia BA</option>
+            <option class="ceara">Ceará CE</option>
+            <option class="distritofederal">Distrito Federal DF</option>
+            <option class="espiritosantos">Espírito Santo ES</option>
+            <option class="goias">Goiás GO</option>
+            <option class="maranhao">Maranhão MA</option>
+            <option class="matogrosso">Mato Grosso MT</option>
+            <option class="matogrossodosul">Mato Grosso do Sul MS</option>
+            <option class="minasgerais">Minas Gerais MG</option>
+            <option class="para">Pará PA</option>
+            <option class="paraiba">Paraíba PB</option>
+            <option class="parana">Paraná PR</option>
+            <option class="pernambuco">Pernambuco PE</option>
+            <option class="piaui">Piauí PI</option>
+            <option class="riodejaneiro">Rio de Janeiro RJ</option>
+            <option class="riograndedonorte">Rio Grande do Norte RN</option>
+            <option class="riograbdedosul">Rio Grande do Sul RS </option>
+            <option class="rondonia">Rondônia RO</option>
+            <option class="roraima">Roraima RR</option>
+            <option class="santacatarina">Santa Catarina SC</option>
+            <option class="saopaulo">São Paulo SP</option>
+            <option class="sergipe">Sergipe SE</option>
+            <option class="tocantins">Tocantins TO</option> 
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="campo-senha">Senha<span class="text-danger">*</span></label>
+        <input type="password" name="Fucnionario.Senha" id="campo-senha" class="form-control" placeholder="Digite dua senha" required="required" value="@ViewBag.Funcionario.Senha"/>
+        @Html.ValidationMessage("Funcionario.Senha", new { @class = "text-danger" })
+    </div>
+  <div class="form-group">
+      <label for="campo-celular">Celular<span class="text-danger">*</span></label>
+      <input type="tel" name="Funcionario.Celular" id="campo-celular" class="form-control" placeholder="Digite seu numero de telefone;" required="required" value="@ViewBag.Funcionario.Celular"/>
+      @Html.ValidationMessage("Funcionario.Celular", new { @class = "Text-danger" })
+  </div>
+    <div class="form-group">
+        <label for="campo-datadenascimento">Data deNascimento<span class="text-danger">*</span></label>
+        <input type="date" name="Funcionario.DataDeNascimento" id="campo-datadenascimento" class="form-control" placeholder="Informe sua data de nascimento" required="required" value="@ViewBag.Funcionario.DataDeNascimento"/>
+        @Html.ValidationMessage("Funcionario.DataDeNascimento", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+    <label for="campo-bairro">Bairro<span class="text-danger">*</span></label>
+    <input type="text" name="Funcionario.Bairro" id="campo-bairro" class="form-control" placeholder="informe seu bairrro" required="required" value="@ViewBag.Funcionario.Bairro"/>
+    @Html.ValidationMessage("Funcionario.Bairro", new { @class = "Text-danger"})
+    </div>
+    <div class="form-group">
+        <label for="campo-logradouro">Logradouro<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Logradouro" id="campo-bairro" class="form-control" placeholder="Informe seu logradouro" required="required" value="@ViewBag.Funcionario.Logradouro"/>
+        @Html.ValidationMessage("Funcionario.Logradouro")
+    </div>
+    <div class="form-group">
+        <label for="campo-cep">CEP<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.CEP" id="campo-cep" class="form-control" placeholder="Informe seu CEP" required="required" value="@ViewBag.Funcionario.CEP"/>
+        @Html.ValidationMessage("Funcionario.CEP")
+    </div>
+    <div class="form-group">
+        <label for="campo-cargo">Cargo<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Cargo" id="campo-cargo" class="form-control" placeholder="Informe o cargo pretendido"/>
+
+    </div>
+    <button class="btn btn-success" type="submit">
+        <i class="fa fa-save"></i> Cadastrar
+    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
