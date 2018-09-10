@@ -15,7 +15,7 @@ namespace TrabalhoFinal.Repositorios
         {
             List<Funcionarios> funcionarios = new List<Funcionarios>();
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT id, nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo FROM funcionarios";
+            command.CommandText = "SELECT id, nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo FROM funcionarios";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
@@ -31,9 +31,10 @@ namespace TrabalhoFinal.Repositorios
                     CPF = linha[6].ToString(),
                     Estado = linha[7].ToString(),
                     Cidade = linha[8].ToString(),
-                    Logradouro = linha[9].ToString(),
-                    CEP = linha[10].ToString(),
-                    Cargo = linha[11].ToString()
+                    Bairro = linha[9].ToString(),
+                    Logradouro = linha[10].ToString(),
+                    CEP = linha[11].ToString(),
+                    Cargo = linha[12].ToString()
                 };
                 funcionarios.Add(funcionario);
             }
@@ -43,7 +44,7 @@ namespace TrabalhoFinal.Repositorios
         public int Cadastrar(Funcionarios funcionarios)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @LOGRADOURO, @CEP, @CARGO)";
+            command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @BAIRRO, @LOGRADOURO, @CEP, @CARGO)";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
             command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
             command.Parameters.AddWithValue("@SENHA", funcionarios.Senha);
@@ -52,6 +53,7 @@ namespace TrabalhoFinal.Repositorios
             command.Parameters.AddWithValue("@CPF", funcionarios.CPF);
             command.Parameters.AddWithValue("@ESTADO", funcionarios.Estado);
             command.Parameters.AddWithValue("@CIDADE", funcionarios.Cidade);
+            command.Parameters.AddWithValue("@BAIRRO", funcionarios.Bairro);
             command.Parameters.AddWithValue("@LOGRADOURO", funcionarios.Logradouro);
             command.Parameters.AddWithValue("@CEP", funcionarios.CEP);
             command.Parameters.AddWithValue("@CARGO", funcionarios.Cargo);
@@ -62,7 +64,7 @@ namespace TrabalhoFinal.Repositorios
         public bool Alterar(Funcionarios funcionarios)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "UPDATE funcionarios SET nome = @NOME, sobrenome = @SOBRENOME, senha = @SENHA, celular = @CELULAR, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, logradouro = @LOGRADOURO, cep = @CEP, cargo = @CARGO WHERE id = @ID";
+            command.CommandText = "UPDATE funcionarios SET nome = @NOME, sobrenome = @SOBRENOME, senha = @SENHA, celular = @CELULAR, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO,  cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP, cargo = @CARGO WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
             command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
             command.Parameters.AddWithValue("@SENHA", funcionarios.Senha);
@@ -71,6 +73,7 @@ namespace TrabalhoFinal.Repositorios
             command.Parameters.AddWithValue("@CPF", funcionarios.CPF);
             command.Parameters.AddWithValue("@ESTADO", funcionarios.Estado);
             command.Parameters.AddWithValue("@CIDADE", funcionarios.Cidade);
+            command.Parameters.AddWithValue("@BAIRRO", funcionarios.Bairro);
             command.Parameters.AddWithValue("@LOGRADOURO", funcionarios.Logradouro);
             command.Parameters.AddWithValue("@CEP", funcionarios.CEP);
             command.Parameters.AddWithValue("@CARGO", funcionarios.Cargo);
@@ -106,9 +109,10 @@ namespace TrabalhoFinal.Repositorios
                 funcionario.CPF = table.Rows[0][5].ToString();
                 funcionario.Estado = table.Rows[0][6].ToString();
                 funcionario.Cidade = table.Rows[0][7].ToString();
-                funcionario.Logradouro = table.Rows[0][7].ToString();
-                funcionario.CEP = table.Rows[0][8].ToString();
-                funcionario.Cargo = table.Rows[0][9].ToString();
+                funcionario.Bairro = table.Rows[0][8].ToString();
+                funcionario.Logradouro = table.Rows[0][9].ToString();
+                funcionario.CEP = table.Rows[0][10].ToString();
+                funcionario.Cargo = table.Rows[0][11].ToString();
             }
             return funcionario;
         }
