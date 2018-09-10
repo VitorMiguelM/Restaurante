@@ -34,7 +34,7 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult Cadastro()
         {
-            ViewBag.TituloPagina = "Cadastro Cliente";
+            ViewBag.TituloPagina = "Cadastro - Cliente";
             ViewBag.Cliente = new Clientes();
             return View();
         }
@@ -43,22 +43,21 @@ namespace TrabalhoFinal.Controllers
         {
             Clientes clientes = new ClientesRepositorio().ObterPeloId(id);
             ViewBag.Cliente = clientes;
-            return View();
+            return RedirectToAction("Lista");
         }
         [HttpGet]
         public ActionResult Excluir(int id)
         {
             bool apagado = new ClientesRepositorio().Excluir(id);
-            return null;
+            return RedirectToAction("Lista");
         }
         [HttpPost]
         public ActionResult Store(Clientes cliente)
         {
-            if (ModelState.IsValid)
-            {
+            
                 int identificador = new ClientesRepositorio().Cadastrar(cliente);
                 return RedirectToAction("Editar", new { id = identificador });
-            }
+            
             ViewBag.cliente = cliente;
             return View("Cadastro");
         }
