@@ -97,6 +97,7 @@ namespace TrabalhoFinal.Repositorios
                 cliente.Id = id;
                 cliente.NomeCompleto = table.Rows[0]["nome_completo"].ToString();
                 cliente.Email = table.Rows[0]["email"].ToString();
+                cliente.Email = table.Rows[0]["login"].ToString();
                 cliente.Senha = table.Rows[0]["senha"].ToString();
                 cliente.Celular = table.Rows[0]["celular"].ToString();
                 cliente.CPF = table.Rows[0]["cpf"].ToString();
