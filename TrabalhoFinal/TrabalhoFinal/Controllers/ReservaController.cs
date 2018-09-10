@@ -14,9 +14,9 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<Reserva> reserva = new ReservaRepositorio().ObterTodos();
+            //List<Reserva> reserva = new ReservaRepositorio().ObterTodos();
             ViewBag.TituloPagina = "Reservas";
-            ViewBag.Reserva = reserva;
+            //ViewBag.Reserva = reserva;
             return View();
         }
 
@@ -52,15 +52,19 @@ namespace TrabalhoFinal.Controllers
         }
 
         [HttpPost]
-        public ActionResult Store(Reserva reservas)
+        public ActionResult Store(string login, string senha)
         {
-            if (ModelState.IsValid)
-            {
-                int identificador = new ReservaRepositorio().Cadastrar(reservas);
-                return RedirectToAction("Editar", new { id = identificador });
-            }
-            ViewBag.Reserva = reservas;
-            return View("Pedido");
+           var Identificador = new ReservaRepositorio(). ObterLogin(login, senha);
+           if (Identificador != null)
+           {
+               return RedirectToAction("Pedido");
+           }
+           else
+           {
+               string erro = "Usuario nao possue";
+           }
+           return View();
+            
         }
 
         [HttpPost]
