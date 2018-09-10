@@ -44,7 +44,7 @@ namespace TrabalhoFinal.Repositorios
         {
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = @"INSERT INTO clientes(nome_completo, email, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) OUTPUT INSERTED.ID VALUES (@NOME_COMPLETO, @EMAIL, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @BAIRRO, @LOGRADOURO, @CEP)";
-            command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
+           command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
 <<<<<<< HEAD
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
 =======
@@ -85,7 +85,7 @@ namespace TrabalhoFinal.Repositorios
             command.Parameters.AddWithValue("@ID", clientes.Id);
             return command.ExecuteNonQuery() == 1;
         }
-
+        
         public bool Excluir(int id)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
