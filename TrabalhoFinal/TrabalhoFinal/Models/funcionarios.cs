@@ -18,6 +18,12 @@ namespace TrabalhoFinal.Models
         [MaxLength(100, ErrorMessage = "Sobrenome deve conter no máximo 100 caracteres")]
         public string Sobrenome { get; set; }
 
+
+        [Required(ErrorMessage = "Login não deve estar vazio")]
+        [MinLength(6, ErrorMessage = "Login deve conter no minímo 6 caracteres")]
+        [MaxLength(100, ErrorMessage = "Login deve conter no maxímo 100 caracteres")]
+        public string Login { get; set; }
+
         [Required(ErrorMessage = "Senha não pode ser vazio")]
         public string Senha { get; set; }
         [Required(ErrorMessage = "Celular não pode ser vazio")]
