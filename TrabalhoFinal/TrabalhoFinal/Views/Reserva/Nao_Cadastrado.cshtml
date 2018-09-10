@@ -26,11 +26,6 @@
         @Html.ValidationMessage("Reserva.Cpf", new { @class = "text-danger" })
     </div>
     <div>
-        <label for="campo-horario">Horário da reserva</label>
-        <input type="time" name="Reserva.Horario" id="campo-horario" required="required" />
-        @Html.ValidationMessage("Reserva.Horario", new { @class = "text-danger" })
-    </div>
-    <div>
         <label for="campo-pagamento">Foma de pagamento</label>
         <select class="dropdown" required="required">
             <option value="dinheiro">Dineiro</option>
