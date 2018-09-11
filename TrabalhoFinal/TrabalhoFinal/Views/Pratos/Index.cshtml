@@ -18,23 +18,25 @@
             <thead>
                 <tr class="bg-secondary table-hover">
                     <th>Nome</th>
-                    <th>ModoDePreparo</th>
-                    <th>PropiedadesNaturais</th>
-                    <th>Email</th>
                     <th> Celular</th>
-                    <th>Descricao</th>
+                    <th>Email</th>
+                    <th>preço</th>
+                    <th>PropiedadesNaturais</th>
+                    <th>ModoDePreparo</th>
+                    <th>Descrição</th>
                 </tr>
             </thead>
             <tbody>
             @foreach (TrabalhoFinal.Models.Pratos Prato in @ViewBag.Pratos)
             {
                 <tr>
-                    <td>@Prato.Id</td>
+                   
                     <td>@Prato.Nome</td>
-                    <td>@Prato.ModoDePreparo</td>
-                    <td>@Prato.Propriedades_Nutricionais</td>
-                    <td>@Prato.Email</td>
                     <td>@Prato.Celular</td>
+                    <th>@Prato.Email</th>
+                    <th>@Prato.preco</th>
+                    <td>@Prato.Propriedades_Nutricionais</td>
+                    <td>@Prato.ModoDePreparo</td>
                     <td>@Prato.Descricao</td>
                     <td>
                         <a href="/Pratos/Excluir?id=@Prato.Id" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Excluir</a>
@@ -50,11 +52,12 @@
         <tfoot>
                 <tr class="bg-secondary text-white">
                     <th>Nome</th>
-                    <th>ModoDePreparo</th>
-                    <th>PropiedadesNaturais</th>
+                    <th> Celular</th>
                     <th>Email</th>
-                    <th>Celular</th>
-                    <th>deszcricao</th>
+                    <th>preço</th>
+                    <th>PropiedadesNaturais</th>
+                    <th>ModoDePreparo</th>
+                    <th>Descrição</th>
                 </tr>
             </tfoot>
         </table>
