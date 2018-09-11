@@ -31,13 +31,13 @@ namespace TrabalhoFinal.Controllers
         {
             Pratos pratos = new RestauranteRepositorio().ObterPeloId(id);
             ViewBag.Prato = pratos;
-            return View();
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Excluir(int id)
         {
             bool apagado = new RestauranteRepositorio().Excluir(id);
-            return null;
+            return RedirectToAction("Index");
         }
         [HttpPost]
         public ActionResult Store(Pratos prato)
