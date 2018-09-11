@@ -68,29 +68,33 @@
                 </div>
 
   <div class="form-group" id="div-campo-modo_preparo">
-      <label for="CampoModoDePreparo">
-          Modo de preparo
-      </label>
-      <textarea typeof="text" class="from-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" placeholder="Modo de preparo" required="required" onfocus="ValidarModoDePreparo()">
-          @ViewBag.Prato.ModoDePreparo
-      </textarea>
-      @Html.ValidationMessage("Pratos.ModoDePreparo", new { @class = "text-danger" })
-                <div class="form-group" id="div-campo-Descricao">
-                    <label for="CampoDescricao">
-                        Descrisao
-                    </label>
-                    </div>
-                    <textarea type="text" class="from-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descricao" required="required" onfocus="ValidarDescricao()">
-                        @ViewBag.Prato.Descricao
-                    </textarea>
-                    @Html.ValidationMessage("Pratos.Descricao", new { @class = "text-danger" })
-                </div>
+      <div class="col-md-6">
+          <label for="CampoModoDePreparo">
+              Modo de preparo
+          </label>
+          <textarea typeof="text" class="from-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" placeholder="Modo de preparo" required="required" onfocus="ValidarModoDePreparo()">
+              @ViewBag.Prato.ModoDePreparo
+          </textarea>
+          @Html.ValidationMessage("Pratos.ModoDePreparo", new { @class = "text-danger" })
+          </div>
+      <div class="col-md-6">
+          <div class="form-group" id="div-campo-Descricao">
+              <label for="CampoDescricao">
+                  Descrisao
+              </label>
+          </div>
+          <textarea type="text" class="from-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descricao" required="required" onfocus="ValidarDescricao()">
+              @ViewBag.Prato.Descricao
+          </textarea>
+          @Html.ValidationMessage("Pratos.Descricao", new { @class = "text-danger" })
+      </div>
+     </div>
 
-                <button class="btn btn-dark" type="submit">
-                    <i class="fa fa-save"></i> Cadastrar
-                </button>
-              
-</form>
+          <button class="btn btn-dark" type="submit">
+              <i class="fa fa-save"></i> Cadastrar
+          </button>
+
+          </form>
 
 
 </body>
