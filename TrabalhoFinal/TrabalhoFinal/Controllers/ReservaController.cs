@@ -52,7 +52,7 @@ namespace TrabalhoFinal.Controllers
         }
 
         [HttpPost]
-        public ActionResult Store(string login, string senha)
+        public ActionResult Index(string login, string senha)
         {
            var Identificador = new ReservaRepositorio(). ObterLogin(login, senha);
            if (Identificador != null)
@@ -61,7 +61,7 @@ namespace TrabalhoFinal.Controllers
            }
            else
            {
-               string erro = "Usuario nao possue";
+               ModelState.AddModelError("", "Usuario não possue um cadastro");
            }
            return View();
             
