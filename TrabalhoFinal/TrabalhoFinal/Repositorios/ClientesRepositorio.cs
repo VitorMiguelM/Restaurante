@@ -44,12 +44,14 @@ namespace TrabalhoFinal.Repositorios
         {
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = @"INSERT INTO clientes(nome_completo, email, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) OUTPUT INSERTED.ID VALUES (@NOME_COMPLETO, @EMAIL, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @BAIRRO, @LOGRADOURO, @CEP)";
+<<<<<<< HEAD
            command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
 <<<<<<< HEAD
-            command.Parameters.AddWithValue("@EMAIL", clientes.Email);
 =======
+            command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
+>>>>>>> 6333f6055203926545a1fbbf994ab4bb60378674
+            command.Parameters.AddWithValue("@EMAIL", clientes.Email);
             command.Parameters.AddWithValue("@LOGIN", clientes.Email);
->>>>>>> 965b76cf47edf99e53a6172e0ab02ead405438c9
             command.Parameters.AddWithValue("@SENHA", clientes.Senha);
             command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
             command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNascimento);
@@ -68,11 +70,8 @@ namespace TrabalhoFinal.Repositorios
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "UPDATE clientes SET nome_completo = @NOME_COMPLETO, email = @EMAIL, senha = @SENHA, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
-<<<<<<< HEAD
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
-=======
             command.Parameters.AddWithValue("@LOGIN", clientes.Email);
->>>>>>> 965b76cf47edf99e53a6172e0ab02ead405438c9
             command.Parameters.AddWithValue("@SENHA", clientes.Senha);
             command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
             command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNascimento);

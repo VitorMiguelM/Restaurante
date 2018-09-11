@@ -130,8 +130,10 @@
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
     <Content Include="DataBase\Clientes.sql" />
+    <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="DataBase\Funcionarios.sql" />
     <Content Include="DataBase\Pratos.sql" />
+    <Content Include="DataBase\Reserva.sql" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="imagens e icones\imagem-atendimento.png" />
@@ -140,9 +142,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Funcionarios\CadastroFuncionario.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Reserva\VerificacaodeLogin.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -155,8 +159,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\clientes.cs" />
+    <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\funcionarios.cs" />
+    <Compile Include="Models\LoginSenhaReserva.cs" />
     <Compile Include="Models\pratos.cs" />
     <Compile Include="Models\Reserva.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -208,7 +213,12 @@
     <Content Include="Views\Reserva\Pedido.cshtml" />
     <Content Include="Views\Funcionario\CadastroFuncionario.cshtml" />
     <Content Include="Views\Cliente\Editar.cshtml" />
+    <Content Include="Views\Cliente\Lista.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
+    <Content Include="Views\Cliente\CadastroCliente.cshtml" />
+    <Content Include="Views\Reserva\Nao_Cadastrado.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

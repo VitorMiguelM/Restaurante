@@ -34,10 +34,6 @@ namespace TrabalhoFinal.Models
 
         public string CPF { get; set; }
 
-        [Required(ErrorMessage = "Informe o horário")]
-
-        public DateTime Horario { get; set; }
-
         [Required(ErrorMessage = "Informe como vai ser o pagamento")]
 
         public string Pagamento { get; set; }

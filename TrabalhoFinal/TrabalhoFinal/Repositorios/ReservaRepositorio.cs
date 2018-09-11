@@ -15,7 +15,7 @@ namespace TrabalhoFinal.Repositorios
         {
             List<Reserva> reservas = new List<Reserva>();
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT id, nome, celular, cpf, horario, pagamento FROM reservas";
+            command.CommandText = "SELECT id, nome, celular, cpf, pagamento FROM reservas";
             DataTable table = new DataTable();
             
             table.Load(command.ExecuteReader());
@@ -27,8 +27,7 @@ namespace TrabalhoFinal.Repositorios
                     Nome = linha[1].ToString(),
                     Celular = linha[2].ToString(),
                     CPF = linha[3].ToString(),
-                    Horario = Convert.ToDateTime(linha[4].ToString()),
-                    Pagamento = linha[5].ToString()
+                    Pagamento = linha[4].ToString()
                 };
                 reservas.Add(reserva);
             }
@@ -38,11 +37,10 @@ namespace TrabalhoFinal.Repositorios
         public int Cadastrar(Reserva reserva)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO reservas (nome, celular, cpf, horario, pagamento) OUTPUT INSERTED.ID VALUES (@NOME, @CELULAR, @CPF, @HORARIO, @PAGAMENTO)";
+            command.CommandText = @"INSERT INTO reservas (nome, celular, cpf, pagamento) OUTPUT INSERTED.ID VALUES (@NOME, @CELULAR, @CPF, @HORARIO, @PAGAMENTO)";
             command.Parameters.AddWithValue("@NOME", reserva.Nome);
             command.Parameters.AddWithValue("@CELULAR", reserva.Celular);
             command.Parameters.AddWithValue("@CPF", reserva.CPF);
-            command.Parameters.AddWithValue("@HORARIO", reserva.Horario);
             command.Parameters.AddWithValue("@PAGAMENTO", reserva.Pagamento);
             int id = Convert.ToInt32(command.ExecuteScalar().ToString());
             return id;
@@ -51,11 +49,10 @@ namespace TrabalhoFinal.Repositorios
         public bool Alterar(Reserva reserva)
         {
             SqlCommand comando = new BancoDados().ObterConexcao();
-            comando.CommandText = "UPDATE reservas SET nome = @NOME, celular = @CELULAR, cpf = @CPF, horario = @HORARIO, pagamento = @PAGAMENTO WHERE id = @ID";
+            comando.CommandText = "UPDATE reservas SET nome = @NOME, celular = @CELULAR, cpf = @CPF, pagamento = @PAGAMENTO WHERE id = @ID";
             comando.Parameters.AddWithValue("@NOME", reserva.Nome);
             comando.Parameters.AddWithValue("@CELULAR", reserva.Celular);
             comando.Parameters.AddWithValue("@CPF", reserva.CPF);
-            comando.Parameters.AddWithValue("@HORARIO", reserva.Horario);
             comando.Parameters.AddWithValue("@PAGAMENTO", reserva.Pagamento);
             comando.Parameters.AddWithValue("@ID", reserva.Id);
             return comando.ExecuteNonQuery() == 1;
@@ -74,7 +71,7 @@ namespace TrabalhoFinal.Repositorios
         {
             Reserva reserva = null;
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT nome, celular, cpf, horario, pagamento FROM Reservas WHERE id = @ID";
+            command.CommandText = "SELECT nome, celular, cpf, pagamento FROM Reservas WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable tabela = new DataTable();
             tabela.Load(command.ExecuteReader());
@@ -85,10 +82,27 @@ namespace TrabalhoFinal.Repositorios
                 reserva.Nome = tabela.Rows[0][0].ToString();
                 reserva.Celular = tabela.Rows[0][1].ToString();
                 reserva.CPF = tabela.Rows[0][2].ToString();
-                reserva.Horario = Convert.ToDateTime(tabela.Rows[0][3].ToString());
-                reserva.Pagamento = tabela.Rows[0][4].ToString();
+                reserva.Pagamento = tabela.Rows[0][3].ToString();
             }
             return reserva;
+        }
+
+        public LoginSenhaReserva ObterLogin(string login, string senha)
+        {
+            LoginSenhaReserva loginsenha = null;
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "SELECT login, senha FROM reservas WHERE login = @LOGIN AND senha = @SENHA";
+            command.Parameters.AddWithValue("@LOGIN", login);
+            command.Parameters.AddWithValue("@SENHA", senha);
+            DataTable tabela = new DataTable();
+            tabela.Load(command.ExecuteReader());
+            if (tabela.Rows.Count == 1)
+            {
+                loginsenha = new LoginSenhaReserva();
+                loginsenha.Login = tabela.Rows[0][0].ToString();
+                loginsenha.Senha = tabela.Rows[0][0].ToString();
+            }
+            return loginsenha;
         }
     }
 }

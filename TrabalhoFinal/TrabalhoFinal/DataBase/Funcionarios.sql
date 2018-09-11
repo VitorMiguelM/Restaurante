@@ -13,5 +13,5 @@
 	cep					VARCHAR(9) NOT NULL,
 	cargo				VARCHAR(20) NOT NULL
 );
-INSERT INTO funcionarios VALUES('gaga','da costta', 123456789, '91364852', '2000/05/05', '515.854.546-99','Santa catarina', 'blumaenau', 'tribess','rua hermann tribes', '98468-999','faxineiro');
+INSERT INTO funcionarios VALUES('dsdgahsad','da s5ss8sfa3', 123456789, '91364852', '2000/05/05', '515.854.546-99','Santa catarina', 'blumaenau', 'tribess','rua hermann tribes', '98468-999','faxineiro');
 SELECT * FROM funcionarios;
