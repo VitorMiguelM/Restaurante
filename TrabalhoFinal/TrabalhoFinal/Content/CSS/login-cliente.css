@@ -72,3 +72,10 @@ h1 {
     background: #ffc107;
     color: #000;
 }
+
+.loginbox a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
