@@ -41,4 +41,30 @@
     <div class="text-center">
     </div>
 </form>
+<form>
+    <div class="mr-3 ml-3">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>ID</tr>
+                <tr>Funcionario</tr>
+                <tr>Cargo</tr>
+                <tr>Pontos</tr>
+            </thead>
+            <tbody>
+                @foreach (TrabalhoFinal.Models.Funcionarios funcionarios in @ViewBag.Funcionarios)
+                {
+                    <tr>
+                        <td>@funcionarios.Id</td>
+                        <td>@funcionarios.Nome</td>
+                        <td>@funcionarios.Cargo</td>
+                        <td>
+                            <a href="/funcionario/Excluir?id=@funcionarios" class="btn btn-outline-success"><i class="fa fa-trash"></i>Excluir</a>
+                            <a href="/funcionario/Editar?id=@funcionarios" class="btn btn-outline-success"><i class="fa fa-adjust"></i>Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>
 
