@@ -3,10 +3,11 @@
 }
 
 
-<form action="/funcionarios/Index" method="post" onsubmit="validarFormulario()">
+<form action="/funcionarios/PaginaPrincipal" method="post" onsubmit="validarFormulario()">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group" id="div-campo-nome">
         <label for="campo-nome">Nome<span class="text-danger">*</span></label>
-        <input type="text" name="Funcionario.Nome" id="campo-nome" class="form-control" placeholder="Digite seu nome" required="required" onfocus="validarCampoNome()"/>
+        <input type="text" name="Funcionario.Nome" id="campo-nome" class="form-control" placeholder="Digite seu nome" required="required" onfocus="validarCampoNome()" />
         @Html.ValidationMessage("Funcionario.Nome", new { @class = "text-danger" })
     </div>
     <div class="form-group">
@@ -16,8 +17,23 @@
     </div>
     <div class="form-group">
         <label for="campo-cpf">CPF<span class="text-danger">*</span></label>
-        <input type="text" name="Funcionarios.CPF" id="campo-nome" class="form-control" placeholder="Digite sseu cpf" required="required" value="@ViewBag.Funcionario.CPF"/>
+        <input type="text" name="Funcionarios.CPF" id="campo-nome" class="form-control" placeholder="Digite sseu cpf" required="required" value="@ViewBag.Funcionario.CPF" />
         @Html.ValidationMessage("fFuncionario.CPF", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="campo-senha">Senha<span class="text-danger">*</span></label>
+        <input type="password" name="Fucnionario.Senha" id="campo-senha" class="form-control" placeholder="Digite dua senha" required="required" value="@ViewBag.Funcionario.Senha" />
+        @Html.ValidationMessage("Funcionario.Senha", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="campo-celular">Celular<span class="text-danger">*</span></label>
+        <input type="tel" name="Funcionario.Celular" id="campo-celular" class="form-control" placeholder="Digite seu numero de telefone;" required="required" value="@ViewBag.Funcionario.Celular" />
+        @Html.ValidationMessage("Funcionario.Celular", new { @class = "Text-danger" })
+    </div>
+    <div class="form-group">
+        <label for="campo-datadenascimento">Data deNascimento<span class="text-danger">*</span></label>
+        <input type="date" name="Funcionario.DataDeNascimento" id="campo-datadenascimento" class="form-control" placeholder="Informe sua data de nascimento" required="required" value="@ViewBag.Funcionario.DataDeNascimento" />
+        @Html.ValidationMessage("Funcionario.DataDeNascimento", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         <label for="campo-estado">Estado<span class="text-danger">*</span></label>
@@ -48,42 +64,33 @@
             <option class="santacatarina">Santa Catarina SC</option>
             <option class="saopaulo">São Paulo SP</option>
             <option class="sergipe">Sergipe SE</option>
-            <option class="tocantins">Tocantins TO</option> 
+            <option class="tocantins">Tocantins TO</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="campo-senha">Senha<span class="text-danger">*</span></label>
-        <input type="password" name="Fucnionario.Senha" id="campo-senha" class="form-control" placeholder="Digite dua senha" required="required" value="@ViewBag.Funcionario.Senha"/>
-        @Html.ValidationMessage("Funcionario.Senha", new { @class = "text-danger" })
+        <label for="campo-cidade">Cidade<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Cidade" id="campo-cidade" class="form-control" placeholder="informe sua cidade" required="required" value="@ViewBag.Funcionario.Cidade" />
+        @Html.ValidationMessage("Funcionario.Cidade", new { @class = "Text-danger" })
     </div>
-  <div class="form-group">
-      <label for="campo-celular">Celular<span class="text-danger">*</span></label>
-      <input type="tel" name="Funcionario.Celular" id="campo-celular" class="form-control" placeholder="Digite seu numero de telefone;" required="required" value="@ViewBag.Funcionario.Celular"/>
-      @Html.ValidationMessage("Funcionario.Celular", new { @class = "Text-danger" })
-  </div>
+
     <div class="form-group">
-        <label for="campo-datadenascimento">Data deNascimento<span class="text-danger">*</span></label>
-        <input type="date" name="Funcionario.DataDeNascimento" id="campo-datadenascimento" class="form-control" placeholder="Informe sua data de nascimento" required="required" value="@ViewBag.Funcionario.DataDeNascimento"/>
-        @Html.ValidationMessage("Funcionario.DataDeNascimento", new { @class = "text-danger" })
-    </div>
-    <div class="form-group">
-    <label for="campo-bairro">Bairro<span class="text-danger">*</span></label>
-    <input type="text" name="Funcionario.Bairro" id="campo-bairro" class="form-control" placeholder="informe seu bairrro" required="required" value="@ViewBag.Funcionario.Bairro"/>
-    @Html.ValidationMessage("Funcionario.Bairro", new { @class = "Text-danger"})
+        <label for="campo-bairro">Bairro<span class="text-danger">*</span></label>
+        <input type="text" name="Funcionario.Bairro" id="campo-bairro" class="form-control" placeholder="informe seu bairro" required="required" value="@ViewBag.Funcionario.Bairro" />
+        @Html.ValidationMessage("Funcionario.Bairro", new { @class = "Text-danger" })
     </div>
     <div class="form-group">
         <label for="campo-logradouro">Logradouro<span class="text-danger">*</span></label>
-        <input type="text" name="Funcionario.Logradouro" id="campo-bairro" class="form-control" placeholder="Informe seu logradouro" required="required" value="@ViewBag.Funcionario.Logradouro"/>
+        <input type="text" name="Funcionario.Logradouro" id="campo-bairro" class="form-control" placeholder="Informe seu logradouro" required="required" value="@ViewBag.Funcionario.Logradouro" />
         @Html.ValidationMessage("Funcionario.Logradouro")
     </div>
     <div class="form-group">
         <label for="campo-cep">CEP<span class="text-danger">*</span></label>
-        <input type="text" name="Funcionario.CEP" id="campo-cep" class="form-control" placeholder="Informe seu CEP" required="required" value="@ViewBag.Funcionario.CEP"/>
+        <input type="text" name="Funcionario.CEP" id="campo-cep" class="form-control" placeholder="Informe seu CEP" required="required" value="@ViewBag.Funcionario.CEP" />
         @Html.ValidationMessage("Funcionario.CEP")
     </div>
     <div class="form-group">
         <label for="campo-cargo">Cargo<span class="text-danger">*</span></label>
-        <input type="text" name="Funcionario.Cargo" id="campo-cargo" class="form-control" placeholder="Informe o cargo pretendido"/>
+        <input type="text" name="Funcionario.Cargo" id="campo-cargo" class="form-control" placeholder="Informe o cargo pretendido" />
 
     </div>
     <button class="btn btn-success" type="submit">
