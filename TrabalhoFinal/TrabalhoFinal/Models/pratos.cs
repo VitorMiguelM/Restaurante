@@ -16,23 +16,25 @@ namespace TrabalhoFinal.Models
         public string Nome { get; set; }
 
     
-        [Required(ErrorMessage = "Modo de peparo deve  ser preenchido")]
+        [Required(ErrorMessage = "Campo modo de peparo deve  ser preenchido")]
         public string ModoDePreparo { get; set; }
 
        
-        [Required(ErrorMessage = "Propiedades deve preenchido")]
+        [Required(ErrorMessage = "Campo propiedades deve preenchido")]
         public string Propriedades_Nutricionais { get; set; }
 
-        [Required(ErrorMessage = "Preço deve ser preenchido")]
-        public double preco { get; set; }
-
-        [Required(ErrorMessage = "Preço deve preenchido")]
+        [Required(ErrorMessage = "Campo email deve preenchido")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Preço deve preenchido")]
+        [Required(ErrorMessage = "Campo celular deve preenchido")]
         public string Celular { get; set; }
 
-        [Required(ErrorMessage = "Preço deve preenchido")]
+        [Required(ErrorMessage = "Camppo preço deve ser preenchido")]
+        public decimal preco { get; set; }
+
+
+
+        [Required(ErrorMessage = "Campo descriçao deve preenchido")]
         public string Descricao { get; set; }
 
         

@@ -28,7 +28,7 @@ namespace TrabalhoFinal.Repositorio
                     Propriedades_Nutricionais = linha[3].ToString(),
                     Email=linha[4].ToString(),
                     Celular=linha[5].ToString(),
-                    preco = Convert.ToDouble(linha[6].ToString()),
+                    preco = Convert.ToDecimal(linha[6].ToString()),
                     Descricao = linha[7].ToString()
                 };
                 pratos.Add(prato);
@@ -39,7 +39,9 @@ namespace TrabalhoFinal.Repositorio
         public int Cadastrar(Pratos pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO pratos(nome, modo_preparo, propriedades_nutricionais,email,celular, preco, descricao) OUTPUT INSERTED.ID VALUES (@NOME, @MODO_PREPARO, @PROPRIEDADES_NUTRICIONAIS,@EMAIL ,@CELULAR,@PRECO, @DESCRICAO)";
+            command.CommandText = @"INSERT INTO pratos(nome,modo_preparo,propriedades_nutricionais,email,celular,preco,descricao) 
+                    OUTPUT INSERTED.ID 
+                    VALUES (@NOME,@MODO_PREPARO,@PROPRIEDADES_NUTRICIONAIS,@EMAIL,@CELULAR,@PRECO,@DESCRICAO)";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
             command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
@@ -54,7 +56,7 @@ namespace TrabalhoFinal.Repositorio
         public bool Alterar(Pratos pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "UPDATE pratos SET nome = @NOME, modo_preparo = @MODO_PREPARO, propriedades_nutricionais = @PROPRIEDADES_NUTRICIONAIS, preco = @PRECO, descricao = @DESCRICAO WHERE id = @ID";
+            command.CommandText = "UPDATE pratos SET nome = @NOME, modo_preparo = @MODO_PREPARO, propriedades_nutricionais = @PROPRIEDADES_NUTRICIONAIS,email=@EMAIL,celular=@CELULAR preco = @PRECO, descricao = @DESCRICAO WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
             command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
@@ -91,7 +93,7 @@ namespace TrabalhoFinal.Repositorio
                 prato.Propriedades_Nutricionais = table.Rows[0][2].ToString();
                 prato.Email = table.Rows[0][3].ToString();
                 prato.Celular = table.Rows[0][4].ToString();
-                prato.preco = Convert.ToDouble(table.Rows[0][5].ToString());
+                prato.preco = Convert.ToDecimal(table.Rows[0][5].ToString());
                 prato.Descricao = table.Rows[0][6].ToString();
             }
             return prato;

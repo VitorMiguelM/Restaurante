@@ -2,10 +2,11 @@
     Layout = "~/Views/Master.cshtml";
 }
 
-<form action="/Reserva/Store" method="post" onsubmit="validarFormulario()">
+<form action="/Reserva/Index" method="post" onsubmit="validarFormulario()">
     <div class="div-reserva col-md-4 col-md-offset-4" style="text-align:center;">
         <div class="row mt-10">
             <div class="col-md-12">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <h1 class="text-primary text-center text-dark">Login</h1>
             </div>
         </div>
