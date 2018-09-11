@@ -9,9 +9,10 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr class="bg-dark text-white">
-                <th>ID</th>
                 <th>Nome</th>
                 <th>CPF</th>
+                <th>Celular</th>
+                <th>Logradouro</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -19,9 +20,10 @@
             @foreach (TrabalhoFinal.Models.Clientes cliente in @ViewBag.Clientes)
             {
                 <tr>
-                    <td>@cliente.Id</td>
                     <td>@cliente.NomeCompleto</td>
                     <td>@cliente.CPF</td>
+                    <td>@cliente.Celular</td>
+                    <td>@cliente.Logradouro</td>
                     <td>
                         <a href="/Cliente/Editar?id=@cliente.Id" class="btn btn-outline-dark"><i class="fa fa-edit"></i>Editar</a>
                         <a href="/Cliente/Excluir?id=@cliente.Id" class="btn btn-outline-dark"><i class="fa fa-trash"></i>Excluir</a>
@@ -31,9 +33,10 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>ID</th>
                 <th>Nome</th>
                 <th>CPF</th>
+                <th>Celular</th>
+                <th>Logradouro</th>
                 <th>Ações</th>
             </tr>
         </tfoot>
