@@ -3,7 +3,7 @@
 }
 
 <form action="/Reserva/Store" method="post" onsubmit="validarFormulario()">
-    <div class="div-reserva text-center col-md-4 col-md-offset-4 text-left">
+    <div class="col-md-4 col-md-offset-4">
         <div class="row mt-10">
             <div class="col-md-12">
                 <h1 class="text-primary text-center text-dark">Reserva</h1>
@@ -11,17 +11,17 @@
         </div>
         <div>
             <label for="campo-nome">Nome</label>
-            <input type="text" name="Reserva.Nome" id="campo-nome" placeholder="Qual seu nome?" required="required" />
+            <input type="text" name="Reserva.Nome" id="campo-nome" class="form-group" placeholder="Qual seu nome?" required="required" />
             @Html.ValidationMessage("Reserva.Nome", new { @class = "text-danger" })
         </div>
         <div>
             <label for="campo-cpf">CPF</label>
-            <input type="text" name="Reserva.Cpf" id="campo-nome" placeholder="Informe seu CPF" required="required" />
+            <input type="text" name="Reserva.Cpf" id="campo-nome" class="form-group" placeholder="Informe seu CPF" required="required" />
             @Html.ValidationMessage("Reserva.Cpf", new { @class = "text-danger" })
         </div>
         <div>
             <label for="pagamento">Foma de pagamento</label>
-            <select class="dropdown">
+            <select class="dropdown form-group">
                 <option value="dinheiro">Dineiro</option>
                 <option value="cartao_debito">Cartão de Débito</option>
                 <option value="cartao_credito">Cartão de Crédito</option>
