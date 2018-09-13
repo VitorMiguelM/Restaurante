@@ -119,11 +119,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
-    <Content Include="DataBase\Clientes.sql" />
+    <Content Include="DataBase\Estrutura.sql" />
     <Content Include="DataBase\Estrutura_log.ldf" />
-    <Content Include="DataBase\Funcionarios.sql" />
-    <Content Include="DataBase\Pratos.sql" />
-    <Content Include="DataBase\Reserva.sql" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="imagens e icones\imagem-atendimento.png" />
