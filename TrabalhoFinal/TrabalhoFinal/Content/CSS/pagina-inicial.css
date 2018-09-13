@@ -13,3 +13,8 @@
     border-radius: 0 !important;
     
 }
+
+.carrossel {
+    height: 150px;
+    width: 150px;
+}
