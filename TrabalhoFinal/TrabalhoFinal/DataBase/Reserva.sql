@@ -9,6 +9,6 @@ CREATE TABLE reservas(
 	pagamento	VARCHAR(8)
 
 );
-INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('igorjuanW@gmail.com', '123456789', 'Ygor Juan Wasen', '(47) 99138-1934', '106.255.419-64', 'dinhero');
+INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcampos@gmail.com', '991310455', 'Henrique Mateus Dalfovo Campos', '(47) 991310455', '052.186.589-10', 'dinhero');
 
 SELECT * FROM reservas;
