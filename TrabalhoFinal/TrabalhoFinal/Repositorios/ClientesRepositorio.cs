@@ -47,7 +47,6 @@ namespace TrabalhoFinal.Repositorios
            command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
             command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
-            command.Parameters.AddWithValue("@LOGIN", clientes.Email);
             command.Parameters.AddWithValue("@SENHA", clientes.Senha);
             command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
             command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNascimento);
@@ -67,7 +66,6 @@ namespace TrabalhoFinal.Repositorios
             command.CommandText = "UPDATE clientes SET nome_completo = @NOME_COMPLETO, email = @EMAIL, senha = @SENHA, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
-            command.Parameters.AddWithValue("@LOGIN", clientes.Email);
             command.Parameters.AddWithValue("@SENHA", clientes.Senha);
             command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
             command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNascimento);
@@ -103,9 +101,9 @@ namespace TrabalhoFinal.Repositorios
                 cliente.Id = id;
                 cliente.NomeCompleto = table.Rows[0]["nome_completo"].ToString();
                 cliente.Email = table.Rows[0]["email"].ToString();
-                cliente.Email = table.Rows[0]["login"].ToString();
                 cliente.Senha = table.Rows[0]["senha"].ToString();
                 cliente.Celular = table.Rows[0]["celular"].ToString();
+                cliente.DataNascimento = Convert.ToDateTime(table.Rows[0]["data_nascimento"].ToString());
                 cliente.CPF = table.Rows[0]["cpf"].ToString();
                 cliente.Estado = table.Rows[0]["estado"].ToString();
                 cliente.Cidade = table.Rows[0]["cidade"].ToString();
