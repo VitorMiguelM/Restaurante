@@ -1,0 +1,71 @@
+﻿DROP TABLE clientes;
+CREATE TABLE clientes(
+	id					INT IDENTITY(1,1),
+	nome_completo		VARCHAR(100) NOT NULL,
+	[email]				VARCHAR(50) NOT NULL,
+	senha				VARCHAR(12) NOT NULL,
+	celular				VARCHAR(14) NOT NULL,
+	data_nascimento		DATE NOT NULL,
+	cpf					VARCHAR(14) NOT NULL,
+	estado				VARCHAR(50) NOT NULL,
+	cidade				VARCHAR(100) NOT NULL,
+	bairro				VARCHAR(50) NOT NULL,
+	logradouro			VARCHAR(250) NOT NULL,
+	cep					VARCHAR(9) NOT NULL
+);
+
+DROP TABLE reservas;
+CREATE TABLE reservas(
+	id			INT IDENTITY(1,1),
+	login		VARCHAR(50),
+	senha		VARCHAR(12),
+	nome		VARCHAR(100),
+	celular		VARCHAR(15),
+	cpf			VARCHAR(14),
+	pagamento	VARCHAR(8)
+
+);
+
+DROP TABLE ingredientes_pratos;
+DROP TABLE pratos;
+DROP TABLE ingredientes;
+CREATE TABLE pratos(
+	id							INT IDENTITY(1,1) PRIMARY KEY,
+	nome						VARCHAR(200) NOT NULL,
+	modo_preparo				VARCHAR(2000) NOT NULL,
+	propriedades_nutricionais	VARCHAR(500)NOT NULL,
+	email						VARCHAR(100),
+	celular                     VARCHAR(12) ,
+	preco					    DECIMAL(12,2),
+	descricao					TEXT ,
+);
+
+CREATE TABLE ingredientes(
+	id		INT IDENTITY(1,1) PRIMARY KEY,
+	nome	VARCHAR(500)
+);
+
+CREATE TABLE ingredientes_pratos(
+	id				INT IDENTITY(1,1),
+	id_prato		INT,
+	id_ingrediente	INT,
+	FOREIGN KEY (id_prato) REFERENCES pratos(id),
+	FOREIGN KEY (id_ingrediente) REFERENCES ingredientes(id)
+);
+
+DROP TABLE funcionarios;
+CREATE TABLE funcionarios(
+	id					INT IDENTITY(01,1),
+	nome				VARCHAR(20) NOT NULL,
+	sobrenome			VARCHAR(20) NOT NULL,
+	senha				VARCHAR(50) NOT NULL,
+	celular				VARCHAR(14) NOT NULL,
+	data_nascimento		DATE NOT NULL,
+	cpf					VARCHAR(14) NOT NULL,
+	estado				VARCHAR(50) NOT NULL,
+	cidade				VARCHAR(100) NOT NULL,
+	bairro				VARCHAR(50) NOT NULL,
+	logradouro			VARCHAR(100) NOT NULL,
+	cep					VARCHAR(9) NOT NULL,
+	cargo				VARCHAR(20) NOT NULL
+);
