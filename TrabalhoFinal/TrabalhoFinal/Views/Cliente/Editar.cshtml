@@ -12,40 +12,44 @@
      </div>       
         <input type="hidden" name="Cliente.Id" value="@ViewBag.Cliente.Id" /> 
      <div class="col-md-offset-1">
-         <div>
+         <div class="form-group">
              <div class="col-md-5" id="div-campo-nome">
                  <label label for="campo-nome">Nome</label>
                  <input type="text" class="form-control" name="Cliente.NomeCompleto" id="campo-nome" placeholder="Digite seu nome aqui" tabindex="1" required="required" value="@ViewBag.Cliente.NomeCompleto" />
+                 @Html.ValidationMessage("Cliente.NomeCompleto", new { @class = "text-danger" })
              </div>
          </div>
-         <div>
+         <div >
              <div class="col-md-5" id="div-campo-telefone">
                  <label label for="campo-telefone">Telefone(Celular)</label>
                  <input type="text" class="form-control" name="Cliente.Celular" id="campo-telefone" placeholder="Ex: 0000-0000" required="required" tabindex="2" value="@ViewBag.Cliente.Celular" />          
+                 @Html.ValidationMessage("Cliente.Celular", new { @class = "text-danger" })
              </div>
          </div>
          <div>
              <div class="col-md-5" id="div-campo-data-nascimento">
                  <label label for="campo-data-nascimento">Data de Nascimento</label>
                  <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" tabindex="3" value="@ViewBag.Cliente.DataNascimento" />
+                 @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
              </div>
          </div>
          <div>
              <div class="col-md-5 form-group" id="div-campo-cpf">
                  <label label for="campo-cpf">CPF</label>
                  <input type="text" class="form-control" name="Cliente.CPF" id="campo-cpf" required="required" tabindex="4" value="@ViewBag.Cliente.CPF" />
+                 @Html.ValidationMessage("Cliente.CPF", new { @class = "text-danger" })
              </div>
          </div>
          <div>
              <div class="col-md-5 form-group" id="div-campo-cep">
                  <label label for="campo-cep">CEP</label>
-                 <input type="text" class="form-control" name="Cliente.CEP" id="campo-cep" tabindex="5" value="@ViewBag.Cliente.CPF" />
+                 <input type="text" class="form-control" name="Cliente.CEP" id="campo-cep" tabindex="5" value="@ViewBag.Cliente.CEP" />
              </div>
          </div>
          <div>
              <div class="col-md-5 form-group" id="div-campo-estado">
                  <label label for="campo-estado">Estado</label>
-                 <input type="text" class="form-control" name="Cliente.Estado" id="campo-estado" tabindex="6" value="@ViewBag.Cliente.CPF" />
+                 <input type="text" class="form-control" name="Cliente.Estado" id="campo-estado" tabindex="6" value="@ViewBag.Cliente.Estado" />
              </div>
          </div>
          <div>
@@ -70,6 +74,12 @@
              <div class="col-md-5 " id="div-campo-email">
                  <label label for="campo-email">E-mail</label>
                  <input type="text" class="form-control" name="Cliente.Email" id="campo-email" placeholder="Exemplo@Exemplo.com" tabindex="10" value=@ViewBag.Cliente.Email />
+             </div>
+         </div>
+         <div>
+             <div class="col-md-5" id="div-campo-senha">
+                 <label label for="campo-senha">Senha</label>
+                 <input type="password" class="form-control" name="Cliente.Senha" id="campo-senha" tabindex="11" value="@ViewBag.Cliente.Senha">
              </div>
          </div>
 

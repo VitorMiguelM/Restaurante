@@ -43,7 +43,7 @@ namespace TrabalhoFinal.Controllers
         {
             Clientes clientes = new ClientesRepositorio().ObterPeloId(id);
             ViewBag.Cliente = clientes;
-            return RedirectToAction("Lista");
+            return View();
         }
         [HttpGet]
         public ActionResult Excluir(int id)
