@@ -123,6 +123,7 @@
     <Content Include="DataBase\Estrutura_log.ldf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="imagens e icones\avatar2.png" />
     <Content Include="imagens e icones\imagem-atendimento.png" />
     <Content Include="imagens e icones\imagem-cliente.png" />
     <Content Include="imagens e icones\prato01.png" />
@@ -192,10 +193,6 @@
     <Content Include="Views\Cliente\Lista.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Reserva\Nao_Cadastrado.cshtml">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="Views\Pratos\Editar.cshtml" />
-    <Content Include="Views\Pratos\Cadastro.cshtml">
       <SubType>Code</SubType>
     </Content>
     <None Include="Web.Debug.config">
