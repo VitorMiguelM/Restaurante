@@ -30,7 +30,7 @@ namespace TrabalhoFinal.Controllers
         public ActionResult Editar(int id)
         {
             Funcionarios funcionario = new FuncionariosRepositorio().ObterPeloId(id);
-            ViewBag.Funcionarios = funcionario;
+            ViewBag.Funcionario = funcionario;
             return View();
         }
         [HttpGet]
