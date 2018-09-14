@@ -1,5 +1,4 @@
-﻿DROP TABLE clientes;
-CREATE TABLE clientes(
+﻿CREATE TABLE clientes(
 	id					INT IDENTITY(1,1),
 	nome_completo		VARCHAR(100) NOT NULL,
 	[email]				VARCHAR(50) NOT NULL,
@@ -14,7 +13,6 @@ CREATE TABLE clientes(
 	cep					VARCHAR(9) NOT NULL
 );
 
-DROP TABLE reservas;
 CREATE TABLE reservas(
 	id			INT IDENTITY(1,1),
 	login		VARCHAR(50),
@@ -26,9 +24,6 @@ CREATE TABLE reservas(
 
 );
 
-DROP TABLE ingredientes_pratos;
-DROP TABLE pratos;
-DROP TABLE ingredientes;
 CREATE TABLE pratos(
 	id							INT IDENTITY(1,1) PRIMARY KEY,
 	nome						VARCHAR(200) NOT NULL,
@@ -53,7 +48,6 @@ CREATE TABLE ingredientes_pratos(
 	FOREIGN KEY (id_ingrediente) REFERENCES ingredientes(id)
 );
 
-DROP TABLE funcionarios;
 CREATE TABLE funcionarios(
 	id					INT IDENTITY(01,1),
 	nome				VARCHAR(20) NOT NULL,
@@ -69,3 +63,12 @@ CREATE TABLE funcionarios(
 	cep					VARCHAR(9) NOT NULL,
 	cargo				VARCHAR(20) NOT NULL
 );
+DROP TABLE funcionarios;
+DROP TABLE ingredientes_pratos;
+DROP TABLE pratos;
+DROP TABLE ingredientes;
+DROP TABLE reservas;
+DROP TABLE clientes;
+
+
+INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcampos@gmail.com','991310455','Henrique Mateus Dalfovo Campos','(47) 99131-0455','052.186.589-10','Dinheiro');
