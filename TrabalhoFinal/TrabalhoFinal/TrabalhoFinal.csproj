@@ -126,6 +126,7 @@
     <Content Include="imagens e icones\imagem-atendimento.png" />
     <Content Include="imagens e icones\imagem-cliente.png" />
     <Content Include="imagens e icones\prato01.png" />
+    <Content Include="Repositorios\TrabalhoFinal.csproj.user" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

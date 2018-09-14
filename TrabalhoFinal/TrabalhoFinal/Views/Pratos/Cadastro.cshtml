@@ -45,7 +45,7 @@
         </div>
         <div class="form-group" id="div-campo-Propiedades_Nutricionais">
             <div class="col-md-6">
-                <label form="campo-Propriedades-Nutricionais">Propriedades Nutricionais</label>
+                <label form="campo-Propriedades-Nutricionais">Ingredientes</label>
                <textarea type="text" class="form-control" name="Prato.Propriedades_Nutricionais" id=" campo-propriedades_nutricionais" style="width:100%; height:auto" 
                         required="required" onfocus="ValidarCampoPropiedadesNutricionais()">
                     @ViewBag.Prato.Propriedades_Nutricionais </textarea>
@@ -55,7 +55,7 @@
 
         <div class="form-group" id="div-campo-modo_preparo">
             <div class="col-md-6">
-                <label for="CampoModoDePreparo">
+                <label for="Campo-ModoDePreparo">
                     Modo de preparo
                 </label>
                 <textarea typeof="text" class="from-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" placeholder="Modo de preparo" required="required" onfocus="ValidarModoDePreparo()">
@@ -75,12 +75,13 @@
                 @Html.ValidationMessage("Pratos.Descricao", new { @class = "text-danger" })
             </div>
         </div>
-
+        
         <div class="form-group">
-            <label for="exampleFormControlFile1">Example file input</label>
+            <img src="..." class="rounded float-right" alt="...">
+           
             <input type="file" class="form-control-file" id="exampleFormControlFile1">
         </div>
-
+          
 
         <button class="btn btn-dark" type="submit">
             <i class="fa fa-save"></i> Cadastrar

@@ -56,7 +56,7 @@ namespace TrabalhoFinal.Repositorio
         public bool Alterar(Pratos pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "UPDATE pratos SET nome = @NOME, modo_preparo = @MODO_PREPARO, propriedades_nutricionais =@PROPRIEDADES_NUTRICIONAIS,email=@EMAIL,celular=@CELULAR, preco = @PRECO, descricao = @DESCRICAO WHERE id = @ID";
+            command.CommandText = "UPDATE pratos SET nome=@NOME, modo_preparo=@MODO_PREPARO, propriedades_nutricionais=@PROPRIEDADES_NUTRICIONAIS, email=@EMAIL,celular=@CELULAR, preco=@PRECO, descricao=@DESCRICAO WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
             command.Parameters.AddWithValue("@PROPRIEDADES_NUTRICIONAIS", pratos.Propriedades_Nutricionais);
