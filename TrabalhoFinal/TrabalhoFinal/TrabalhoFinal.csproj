@@ -119,11 +119,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Controllers\CSS\pagina-inicial.css" />
     <Content Include="Controllers\CSS\pagina-funcionario.css" />
-    <Content Include="DataBase\Clientes.sql" />
+    <Content Include="DataBase\Estrutura.sql" />
     <Content Include="DataBase\Estrutura_log.ldf" />
-    <Content Include="DataBase\Funcionarios.sql" />
-    <Content Include="DataBase\Pratos.sql" />
-    <Content Include="DataBase\Reserva.sql" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="imagens e icones\imagem-atendimento.png" />
@@ -137,6 +134,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Reserva\VerificacaodeLogin.js" />
+    <Content Include="Views\TrabalhoFinal.csproj.user" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +193,10 @@
     <Content Include="Views\Cliente\Lista.cshtml" />
     <Content Include="Views\Cliente\Login.cshtml" />
     <Content Include="Views\Reserva\Nao_Cadastrado.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Pratos\Editar.cshtml" />
+    <Content Include="Views\Pratos\Cadastro.cshtml">
       <SubType>Code</SubType>
     </Content>
     <None Include="Web.Debug.config">

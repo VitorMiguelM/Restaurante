@@ -16,14 +16,14 @@ namespace TrabalhoFinal.Controllers
         {
             List<Pratos> pratos = new RestauranteRepositorio().ObterTodos();
             ViewBag.Pratos = pratos;
-            ViewBag.tituloPagina = "Pratos";
+            ViewBag.TituloPagina = "Pratos";
             return View();
         }
         [HttpGet]
-        public ActionResult CadastroPrato()
+        public ActionResult Cadastro()
         {
             ViewBag.TituloPagina = "Pratos - CadastroPrato";
-           ViewBag.Prato = new Pratos();
+            ViewBag.Prato = new Pratos();
             return View();
         }
         [HttpGet]
@@ -31,7 +31,9 @@ namespace TrabalhoFinal.Controllers
         {
             Pratos pratos = new RestauranteRepositorio().ObterPeloId(id);
             ViewBag.Prato = pratos;
-            return RedirectToAction("Index");
+            ViewBag.TituloPagina = "Pratos";
+
+            return View();
         }
         [HttpGet]
         public ActionResult Excluir(int id)
@@ -49,7 +51,7 @@ namespace TrabalhoFinal.Controllers
             }
 
             ViewBag.Prato = prato;
-            return View("CadastroPrato");
+            return View("Cadastro");
         }
         [HttpPost]
         public ActionResult Update(Pratos prato)
