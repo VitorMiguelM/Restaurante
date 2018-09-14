@@ -1,6 +1,7 @@
 ﻿.div-reserva {
-    border-right: 10px groove #cfcfcfcf;
-    border-left: 10px groove #cfcfcfcf;
-    border-top: 10px groove #cfcfcfcf;
-    border-bottom: 10px groove #cfcfcfcf;
+    border-right: 10px double #cfcfcfcf;
+    border-left: 10px double #cfcfcfcf;
+    border-top: 10px double #cfcfcfcf;
+    border-bottom: 10px double #cfcfcfcf;
 }
+

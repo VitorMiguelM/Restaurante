@@ -24,7 +24,7 @@ namespace TrabalhoFinal.Controllers
         {
             ViewBag.TituloPagina = "Pratos - CadastroPrato";
             ViewBag.Prato = new Pratos();
-            return RedirectToAction("Index");
+            return View();
         }
         [HttpGet]
         public ActionResult Editar(int id)
