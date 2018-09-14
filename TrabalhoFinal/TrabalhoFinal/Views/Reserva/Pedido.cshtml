@@ -11,17 +11,18 @@
         </div>
         <div>
             <label for="campo-nome">Nome</label>
-            <input type="text" name="Reserva.Nome" id="campo-nome" class="form-group" placeholder="Qual seu nome?" required="required" />
+            <input type="text" name="Reserva.Nome" id="campo-nome" class="form-control" placeholder="Qual seu nome?" required="required" />
             @Html.ValidationMessage("Reserva.Nome", new { @class = "text-danger" })
         </div>
         <div>
             <label for="campo-cpf">CPF</label>
-            <input type="text" name="Reserva.Cpf" id="campo-nome" class="form-group" placeholder="Informe seu CPF" required="required" />
+            <input type="text" name="Reserva.Cpf" id="campo-nome" class="form-control" placeholder="Informe seu CPF" required="required" />
             @Html.ValidationMessage("Reserva.Cpf", new { @class = "text-danger" })
         </div>
         <div>
             <label for="pagamento">Foma de pagamento</label>
-            <select class="dropdown form-group">
+            <select class="dropdown form-control" required="required">
+                <option value="null"></option>
                 <option value="dinheiro">Dineiro</option>
                 <option value="cartao_debito">Cartão de Débito</option>
                 <option value="cartao_credito">Cartão de Crédito</option>
