@@ -24,7 +24,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position: absolute;
+    position:  absolute;
     top: -50px;
     left: calc(50% - 50%);
 }
