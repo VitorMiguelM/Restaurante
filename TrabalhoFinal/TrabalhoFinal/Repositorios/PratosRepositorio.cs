@@ -11,16 +11,16 @@ namespace TrabalhoFinal.Repositorio
 {
     public class RestauranteRepositorio
     {
-        public List<Pratos> ObterTodos()
+        public List<Prato> ObterTodos()
         {
-            List<Pratos> pratos = new List<Pratos>();
+            List<Prato> pratos = new List<Prato>();
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "SELECT id, nome, modo_preparo, propriedades_nutricionais, email, celular, preco, descricao FROM pratos";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
             foreach (DataRow linha in table.Rows)
             {
-                Pratos prato = new Pratos()
+                Prato prato = new Prato()
                 {
                     Id = Convert.ToInt32(linha[0].ToString()),
                     Nome = linha[1].ToString(),
@@ -36,7 +36,7 @@ namespace TrabalhoFinal.Repositorio
             return pratos;
         }
 
-        public int Cadastrar(Pratos pratos)
+        public int Cadastrar(Prato pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = @"INSERT INTO pratos(nome,modo_preparo,propriedades_nutricionais,email,celular,preco,descricao) 
@@ -53,7 +53,7 @@ namespace TrabalhoFinal.Repositorio
             return id;
         }
 
-        public bool Alterar(Pratos pratos)
+        public bool Alterar(Prato pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "UPDATE pratos SET nome=@NOME, modo_preparo=@MODO_PREPARO, propriedades_nutricionais=@PROPRIEDADES_NUTRICIONAIS, email=@EMAIL,celular=@CELULAR, preco=@PRECO, descricao=@DESCRICAO WHERE id = @ID";
@@ -76,9 +76,9 @@ namespace TrabalhoFinal.Repositorio
             return command.ExecuteNonQuery() == 1;
         }
 
-        public Pratos ObterPeloId(int id)
+        public Prato ObterPeloId(int id)
         {
-            Pratos prato = null;
+            Prato prato = null;
             SqlCommand command = new BancoDados().ObterConexcao();
             command.CommandText = "SELECT nome, modo_preparo, propriedades_nutricionais,email,celular, preco, descricao FROM pratos WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
@@ -86,7 +86,7 @@ namespace TrabalhoFinal.Repositorio
             table.Load(command.ExecuteReader());
             if (table.Rows.Count == 1)
             {
-                prato = new Pratos();
+                prato = new Prato();
                 prato.Id = id;
                 prato.Nome = table.Rows[0][0].ToString();
                 prato.ModoDePreparo = table.Rows[0][1].ToString();

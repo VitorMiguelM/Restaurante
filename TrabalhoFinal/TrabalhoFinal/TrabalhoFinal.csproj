@@ -151,8 +151,9 @@
     </Compile>
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\funcionarios.cs" />
+    <Compile Include="Models\Imagem.cs" />
     <Compile Include="Models\LoginSenhaReserva.cs" />
-    <Compile Include="Models\pratos.cs" />
+    <Compile Include="Models\Prato.cs" />
     <Compile Include="Models\Reserva.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -164,7 +165,9 @@
     <Compile Include="Repositorios\ReservaRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Master.cshtml" />

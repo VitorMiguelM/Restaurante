@@ -14,7 +14,7 @@ namespace TrabalhoFinal.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<Pratos> pratos = new RestauranteRepositorio().ObterTodos();
+            List<Prato> pratos = new RestauranteRepositorio().ObterTodos();
             ViewBag.Pratos = pratos;
             ViewBag.TituloPagina = "Pratos";
             return View();
@@ -23,13 +23,13 @@ namespace TrabalhoFinal.Controllers
         public ActionResult Cadastro()
         {
             ViewBag.TituloPagina = "Pratos - CadastroPrato";
-            ViewBag.Prato = new Pratos();
+            ViewBag.Prato = new Prato();
             return View();
         }
         [HttpGet]
         public ActionResult Editar(int id)
         {
-            Pratos pratos = new RestauranteRepositorio().ObterPeloId(id);
+            Prato pratos = new RestauranteRepositorio().ObterPeloId(id);
             ViewBag.Prato = pratos;
             ViewBag.TituloPagina = "Pratos";
 
@@ -42,7 +42,7 @@ namespace TrabalhoFinal.Controllers
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public ActionResult Store(Pratos prato)
+        public ActionResult Store(Prato prato)
         {
             if (ModelState.IsValid)
             {
@@ -54,12 +54,27 @@ namespace TrabalhoFinal.Controllers
             return View("Cadastro");
         }
         [HttpPost]
-        public ActionResult Update(Pratos prato)
+        public ActionResult Update(Prato prato)
         {
             bool alterado = new RestauranteRepositorio().Alterar(prato);
-            //return null;
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Foto(Imagem img, HttpPostedFileBase file)
+        {
+            if (ModelState.IsValid)
+            {
+                if (file != null)
+                {
+                    file.SaveAs(HttpContext.Server.MapPath("~/Imagens/")
+                    + file.FileName);
+                    img.Foto = file.FileName;
+                }
 
+                return RedirectToAction("Index");
+            }
+            return View(img);
+        }
     }
 }
