@@ -72,3 +72,6 @@ DROP TABLE clientes;
 
 
 INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcampos@gmail.com','991310455','Henrique Mateus Dalfovo Campos','(47) 99131-0455','052.186.589-10','Dinheiro');
+
+INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) VALUES('Ygor juan', 'Wasen', '91381934', '91381934', '2000/02/02', '106.265.419-64', 'Santa Catarina', 'Blumenau', 'tribess', 'loja salfer', '95684-888', 'Faxineiro');
+SELECT * FROM funcionarios;
