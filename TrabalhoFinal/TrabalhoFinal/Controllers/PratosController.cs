@@ -47,7 +47,7 @@ namespace TrabalhoFinal.Controllers
             if (ModelState.IsValid)
             {
                 int identificador = new RestauranteRepositorio().Cadastrar(prato);
-                return RedirectToAction("Editar", new { id = identificador });
+                return RedirectToAction("Index", new { id = identificador });
             }
 
             ViewBag.Prato = prato;
@@ -57,7 +57,9 @@ namespace TrabalhoFinal.Controllers
         public ActionResult Update(Pratos prato)
         {
             bool alterado = new RestauranteRepositorio().Alterar(prato);
-            return null;
+            //return null;
+            return RedirectToAction("Index");
         }
+
     }
 }
