@@ -26,8 +26,8 @@ namespace TrabalhoFinal.Repositorios
                     Nome = linha[1].ToString(),
                     Sobrenome = linha[2].ToString(),
                     Senha = linha[3].ToString(),
-                    Celular = Convert.ToInt32(linha[4].ToString()),
-                    DataDeNascimento = Convert.ToDateTime(linha[5].ToString()),
+                    Celular = linha[4].ToString(),
+                    DataDeNascimento = linha[5].ToString(),
                     CPF = linha[6].ToString(),
                     Estado = linha[7].ToString(),
                     Cidade = linha[8].ToString(),
@@ -93,7 +93,7 @@ namespace TrabalhoFinal.Repositorios
         {
             Funcionarios funcionario = null;
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, logradouro, cep, cargo FROM funcionarios WHERE id = @ID";
+            command.CommandText = "SELECT nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo FROM funcionarios WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
@@ -104,8 +104,8 @@ namespace TrabalhoFinal.Repositorios
                 funcionario.Nome = table.Rows[0][0].ToString();
                 funcionario.Sobrenome = table.Rows[0][1].ToString();
                 funcionario.Senha = table.Rows[0][2].ToString();
-                funcionario.Celular = Convert.ToDouble(table.Rows[0][3].ToString());
-                funcionario.DataDeNascimento = Convert.ToDateTime(table.Rows[0][4].ToString());
+                funcionario.Celular = table.Rows[0][3].ToString();
+                funcionario.DataDeNascimento = table.Rows[0][4].ToString();
                 funcionario.CPF = table.Rows[0][5].ToString();
                 funcionario.Estado = table.Rows[0][6].ToString();
                 funcionario.Cidade = table.Rows[0][7].ToString();
