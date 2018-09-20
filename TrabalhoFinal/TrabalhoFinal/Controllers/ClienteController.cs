@@ -54,9 +54,12 @@ namespace TrabalhoFinal.Controllers
         [HttpPost]
         public ActionResult Store(Clientes cliente)
         {
-            
+            if (ModelState.IsValid)
+            {
+                cliente.CPF = cliente.CPF.Replace(".", "").Replace("-", "");
                 int identificador = new ClientesRepositorio().Cadastrar(cliente);
-                return RedirectToAction("Editar", new { id = identificador });
+                    return RedirectToAction("Editar", new { id = identificador });   
+            }
 
             ViewBag.cliente = cliente;
             return View("Cadastro");
