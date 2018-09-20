@@ -43,17 +43,17 @@ namespace TrabalhoFinal.Controllers
         [HttpPost]
         public ActionResult Index(Funcionarios funcionario)
         {
-            var identificador = new FuncionariosRepositorio().Cadastrar(funcionario);
+           
             if (ModelState.IsValid)
             {
-                
+                 var identificador = new FuncionariosRepositorio().Cadastrar(funcionario);
                 return RedirectToAction("Editar", new { id = identificador });
             }
             else 
             {
-                ModelState.AddModelError("", "cadastrado com sucesso");
+                ModelState.AddModelError("Cadastrado com secesso", "cadastrado com sucesso");
             }
-            ViewBag.funcionario = funcionario;return View("Cadastro");
+            ViewBag.Funcionario = funcionario;return View("CadastroFuncionario");
             
         }
 
