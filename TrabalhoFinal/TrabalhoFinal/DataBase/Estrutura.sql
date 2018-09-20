@@ -1,7 +1,15 @@
-﻿CREATE TABLE clientes(
+﻿DROP TABLE funcionarios;
+DROP TABLE ingredientes_pratos;
+DROP TABLE pratos;
+DROP TABLE ingredientes;
+DROP TABLE reservas;
+DROP TABLE clientes;
+
+CREATE TABLE clientes(
 	id					INT IDENTITY(1,1),
 	nome_completo		VARCHAR(100) NOT NULL,
 	[email]				VARCHAR(50) NOT NULL,
+	login				VARCHAR(50) NOT NULL,
 	senha				VARCHAR(12) NOT NULL,
 	celular				VARCHAR(14) NOT NULL,
 	data_nascimento		DATE NOT NULL,
@@ -63,12 +71,12 @@ CREATE TABLE funcionarios(
 	cep					VARCHAR(9) NOT NULL,
 	cargo				VARCHAR(20) NOT NULL
 );
-DROP TABLE funcionarios;
-DROP TABLE ingredientes_pratos;
-DROP TABLE pratos;
-DROP TABLE ingredientes;
-DROP TABLE reservas;
-DROP TABLE clientes;
+
+
+
 
 
 INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcampos@gmail.com','991310455','Henrique Mateus Dalfovo Campos','(47) 99131-0455','052.186.589-10','Dinheiro');
+
+INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) VALUES('Ygor juan', 'Wasen', '91381934', '98659865', '2000/02/02', '106.265.419-64', 'Santa Catarina', 'Blumenau', 'tribess', 'loja magazineluiza', '95684-888', 'gerente');
+SELECT *  FROM funcionarios;

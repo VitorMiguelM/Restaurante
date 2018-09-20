@@ -19,9 +19,14 @@ namespace TrabalhoFinal.Models
         [Required(ErrorMessage = "E-mail não pode estar vazio.")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Login não pode estar vazio.")]
+        [MinLength(5, ErrorMessage = "O mínimo de caracteres para login é 5.")]
+        [MaxLength(15, ErrorMessage = "O máximo de caracteres para login é 15.")]
+        public string Login { get; set; }
+
         [Required(ErrorMessage = "Senha não pode estar vazio.")]
         [MinLength(4, ErrorMessage = "Senha deve conter no mínimo 4 carateres.")]
-        [MaxLength(6, ErrorMessage = "Senha deve conter no máximo 6 caracteres.")]
+        [MaxLength(6, ErrorMessage = "Senha deve conter no máximo 12 caracteres.")]
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Telefone Celular não pode estar vazio.")]
