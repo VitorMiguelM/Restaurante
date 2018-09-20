@@ -67,5 +67,20 @@ namespace TrabalhoFinal.Controllers
             bool alterado = new ClientesRepositorio().Alterar(cliente);
             return null;
         }
+
+        [HttpPost]
+        public ActionResult Login(string login, string senha)
+        {
+            var Identificador = new ReservaRepositorio().ObterLogin(login, senha);
+            if (Identificador != null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Usuário inválido!");
+            }
+            return View();
+        }
     }
 }
