@@ -22,8 +22,8 @@ namespace TrabalhoFinal.Models
        
         [Required(ErrorMessage = "Campo propiedades deve preenchido")]
         public string Propriedades_Nutricionais { get; set; }
-         [MinLength(8, ErrorMessage = "Campo celular deve conter no minimo 8 caracteres")]
-        [Required(ErrorMessage = "Campo email deve preenchido")]
+         [MinLength(8, ErrorMessage = "Campo Email deve conter no minimo 8 caracteres")]
+        [Required(ErrorMessage = "Campo Email deve preenchido")]
 
         public string Email { get; set; }
 

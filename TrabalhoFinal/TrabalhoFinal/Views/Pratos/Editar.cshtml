@@ -45,9 +45,6 @@
                 </textarea>
             </div>
 
-
-
-
             <div class="form-group">
                 <label for="CampoDescricao">Descrição</label>
                 <textarea type="text" class="from-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" required="required" onfocus="ValidarDescricao()">
@@ -65,7 +62,11 @@
 
         </form>
 
-
+        <form action="/Upload/UploadFile" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <br />
+            <input type="submit" value="Enviar" />
+        </form>
     </div>
 </div>
 

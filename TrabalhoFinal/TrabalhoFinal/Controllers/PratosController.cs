@@ -59,22 +59,7 @@ namespace TrabalhoFinal.Controllers
             bool alterado = new RestauranteRepositorio().Alterar(prato);
             return RedirectToAction("Index");
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Foto(Imagem img, HttpPostedFileBase file)
-        {
-            if (ModelState.IsValid)
-            {
-                if (file != null)
-                {
-                    file.SaveAs(HttpContext.Server.MapPath("~/Imagens/")
-                    + file.FileName);
-                    img.Foto = file.FileName;
-                }
-
-                return RedirectToAction("Index");
-            }
-            return View(img);
-        }
+       
+        
     }
 }
