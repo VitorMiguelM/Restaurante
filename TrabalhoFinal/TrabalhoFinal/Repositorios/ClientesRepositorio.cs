@@ -116,5 +116,26 @@ namespace TrabalhoFinal.Repositorios
             }
             return cliente;
         }
+
+        public LoginSenhaCliente ObterLogin(string login, string senha)
+        {
+            LoginSenhaCliente loginSenha = null;
+            SqlCommand command = new BancoDados().ObterConexcao();
+            command.CommandText = "SELECT login, senha FROM clientes WHERE login = @LOGIN AND senha = @SENHA";
+            command.Parameters.AddWithValue("@LOGIN", login);
+            command.Parameters.AddWithValue("@SENHA", senha);
+            DataTable tabela = new DataTable();
+            tabela.Load(command.ExecuteReader());
+            if (tabela.Rows.Count == 1)
+            {
+                loginSenha = new LoginSenhaCliente();
+                loginSenha.Login = tabela.Rows[0][0].ToString();
+                loginSenha.Senha = tabela.Rows[0][0].ToString();
+            }
+            return loginSenha;
+
+            return loginSenha;
+            
+        }
     }
 }
