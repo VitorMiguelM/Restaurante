@@ -2,21 +2,29 @@
 @{
     Layout = "~/Views/Master.cshtml";
 }
-   
-    <div class="loginbox">
-        <img src="~/imagens e icones/avatar2.png" class="avatar">
-        <h1>Fazer Login</h1>
-        <form>
-            <p>Login(E-mail)</p>
-            <input type="text" name="" placeholder="Digite seu E-mail">
-            <p>Senha</p>
-            <input type="password" name="" placeholder="Digite sua senha">
-            <input type="submit" name="" value="Login">
-            <a href="#">Esqueceu sua senha?</a><br>
-            <a href="~/Views/Cliente/Cadastro.cshtml">Não é cadastrado?</a>
-        </form>
-
-    </div>
+   <form action="~/Cliente/Login" method="post">
+        <div class="loginbox">
+            <img src="~/imagens e icones/avatar2.png" class="avatar">
+            <h1>Fazer Login</h1>
+            <div>
+                <p>Login(E-mail)</p>
+                <input type="text" name="" placeholder="Digite seu E-mail">
+                @Html.ValidationMessage("Cliente.Login", new { @class = "text-danger" })
+            </div>
+            <div>
+                <p>Senha</p>
+                <input type="password" name="" placeholder="Digite sua senha">
+                @Html.ValidationMessage("Cliente.Senha", new { @class = "text-danger" })
+            </div>
+            <div row class="h-hidden-native mb-15 text-center">
+                <label label for="remember_me" class="h-flex align-items-center fw-400"><span class="pl-3 lh-10%">Lembrar de mim</span></label>
+                <input type="checkbox" name="remember_me" id="remember_me" value="1" checked="checked"/>
+            </div>
+                <input type="submit" name="" value="Login">
+                <a href="#">Esqueceu sua senha?</a><br>
+                <a href="~/Views/Cliente/Cadastro.cshtml">Não é cadastrado?</a>
+        </div>
+    </form>
 
     @section css {
         <link rel="stylesheet" type="text/css" href="~/Content/CSS/login-cliente.css">
