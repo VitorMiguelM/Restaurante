@@ -64,11 +64,10 @@ namespace TrabalhoFinal.Repositorios
         public bool Alterar(Clientes clientes)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "UPDATE clientes SET nome_completo = @NOME_COMPLETO, email = @EMAIL, login = @LOGIN, senha = @SENHA, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP WHERE id = @ID";
+            command.CommandText = "UPDATE clientes SET nome_completo = @NOME_COMPLETO, email = @EMAIL, login = @LOGIN, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
             command.Parameters.AddWithValue("@LOGIN", clientes.Login);
-            command.Parameters.AddWithValue("@SENHA", clientes.Senha);
             command.Parameters.AddWithValue("@CELULAR", clientes.Celular);
             command.Parameters.AddWithValue("@DATA_NASCIMENTO", clientes.DataNascimento);
             command.Parameters.AddWithValue("@CPF", clientes.CPF);

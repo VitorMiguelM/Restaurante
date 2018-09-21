@@ -58,17 +58,17 @@ namespace TrabalhoFinal.Controllers
             {
                 cliente.CPF = cliente.CPF.Replace(".", "").Replace("-", "");
                 int identificador = new ClientesRepositorio().Cadastrar(cliente);
-                    return RedirectToAction("Editar", new { id = identificador });   
+                    return RedirectToAction("Index", new { id = identificador });   
             }
 
             ViewBag.cliente = cliente;
-            return View("Cadastro");
+            return Redirect("Index");
         }
         [HttpPost]
         public ActionResult Update(Clientes cliente)
         {
             bool alterado = new ClientesRepositorio().Alterar(cliente);
-            return null;
+            return Redirect("Lista");
         }
 
         [HttpPost]
