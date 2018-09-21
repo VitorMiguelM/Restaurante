@@ -1,54 +1,19 @@
 ﻿@{
     Layout = "~/Views/Master.cshtml";
 }
-
-<div class="mr-3 ml-3">
-
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr class="bg-secondary table-hover">
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>Celular</th>
-                <th>Cargo</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (TrabalhoFinal.Models.Funcionarios funcionario in @ViewBag.Funcionario)
-            {
-                <tr>
-
-                    <td>@funcionario.Nome</td>
-                    <td>@funcionario.Sobrenome</td>
-                    <th>@funcionario.Celular</th>
-                    <th>@funcionario.Cargo</th>
-                    <td>
-                        <a href="/Pratos/Excluir?id=@funcionario.Id" class="btn btn-outline-danger"><i class="fa fa-trash"></i>Excluir</a>
-
-                        <a href="/Pratos/Editar?id=@funcionario.Id" class="btn btn-outline-success"><i class="fa fa-adjust"></i> Editar</a>
-
-                    </td>
-
-                </tr>
-
-            }
-        </tbody>
-        <tfoot>
-            <tr class="bg-secondary text-white">
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>Email</th>
-                <th>preço</th>
-                <th>PropiedadesNaturais</th>
-                <th>ModoDePreparo</th>
-                <th>Descrição</th>
-                <th>Ação</th>
-            </tr>
-        </tfoot>
-    </table>
-
+<div class="loginbox">
+    <img src="~/imagens e icones/avatar2.png" class="avatar">
+    <h1>Fazer Login</h1>
+    <form action="/Funcionario/Editar">
+        <p>Login(E-mail)</p>
+        <input type="text" name="" placeholder="Digite seu E-mail">
+        <p>Senha</p>
+        <input type="password" name="" placeholder="Digite sua senha">
+        <input type="submit" name="" value="Login">
+        <a href="#">Esqueceu sua senha?</a><br>
+        <a href="~/Views/Cliente/Cadastro.cshtml">Não é cadastrado?</a>
+    </form>
 </div>
+@section css {
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/login-cliente.css">
+}

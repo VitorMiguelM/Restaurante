@@ -27,9 +27,9 @@ namespace TrabalhoFinal.Models
         [Required(ErrorMessage = "Senha não pode ser vazio")]
         public string Senha { get; set; }
         [Required(ErrorMessage = "Celular não pode ser vazio")]
-        public double Celular { get; set; }
+        public string Celular { get; set; }
         [Required(ErrorMessage = "Data de nacimento não pode ser vazio")]
-        public DateTime DataDeNascimento { get; set; }
+        public string DataDeNascimento { get; set; }
         [Required(ErrorMessage = "CPF não pode ser vazio")]
         public string CPF { get; set; }
         [Required(ErrorMessage = "Sobrenome não pode ser vazio")]

@@ -14,7 +14,6 @@ namespace TrabalhoFinal.DataBase
         static BancoDados()
         {
             connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-
         }
 
         public SqlCommand ObterConexcao()
@@ -25,6 +24,5 @@ namespace TrabalhoFinal.DataBase
             command.Connection = connection;
             return command;
         }
-
     }
 }
