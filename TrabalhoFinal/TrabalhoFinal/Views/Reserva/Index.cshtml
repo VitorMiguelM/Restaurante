@@ -1,9 +1,10 @@
 ﻿@{
     Layout = "~/Views/Master.cshtml";
 }
-<form action="~/Reserva/Login" method="post">
+<form action="~/Reserva/Login" method="post" onsubmit="validarFuncionario">
     <div class="loginbox">
         <img src="~/imagens e icones/avatar2.png" class="avatar">
+        @Html.ValidationSummary(true, "Usuário Inválido", new { @class = "text-danger" })
         <h1>Fazer Login</h1>
         <div>
             <p>Login(E-mail)</p>
