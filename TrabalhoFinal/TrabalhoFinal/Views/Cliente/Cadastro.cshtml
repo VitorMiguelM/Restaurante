@@ -5,7 +5,7 @@
 
 
 
-<form   action="/Cliente/Store" method="post">
+<form action="/Cliente/Store" method="post" id="form1">
     <div>
         <div class="row-mt-3">
             <div class="col-md-12">
@@ -34,67 +34,69 @@
                 <input type="date" class="form-control" name="Cliente.DataNascimento" id="campo-data-nascimento" required="required" tabindex="3" value="@ViewBag.Cliente.DataNascimento" />
                 @Html.ValidationMessage("Cliente.DataNascimento", new { @class = "text-danger" })
             </div>
-        </div>       
+        </div>
         <div class="form-group">
-            <div class="col-md-5 form-group" id="div-campo-cpf">
+            <div class="col-md-5" id="div-campo-cpf">
                 <label label for="campo-cpf">CPF<span class="text-danger font-weight-bold">*</span></label>
                 <input type="text" class="form-control" name="Cliente.CPF" id="campo-cpf" required="required" tabindex="4" value="@ViewBag.Cliente.CPF" />
                 @Html.ValidationMessage("Cliente.CPF", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-5 form-group" id="div-campo-cep">
+            <div class="col-md-5" id="div-campo-cep">
                 <label label for="campo-cep">CEP</label>
                 <input type="text" class="form-control" name="Cliente.CEP" id="campo-cep" tabindex="5" value="@ViewBag.Cliente.CEP" />
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-5 form-group" id="div-campo-estado">
+            <div class="col-md-5" id="div-campo-estado">
                 <label label for="campo-estado">Estado</label>
                 <input type="text" class="form-control" name="Cliente.Estado" id="campo-estado" tabindex="6" value="@ViewBag.Cliente.Estado" />
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-5 form-group" id="div-campo-cidade">
+            <div class="col-md-5" id="div-campo-cidade">
                 <label label for="campo-cidade">Cidade</label>
                 <input type="text" class="form-control" name="Cliente.Cidade" id="campo-cidade" tabindex="7" value="@ViewBag.Cliente.Cidade" />
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-5 form-group" id="div-campo-bairro">
+            <div class="col-md-5" id="div-campo-bairro">
                 <label label for="campo-bairro">Bairro</label>
-                <input type="text" class="form-contrl" name="Cliente.Bairro" id="campo-bairro" tabindex="8" value="@ViewBag.Cliente.Bairro" />
+                <input type="text" class="form-control" name="Cliente.Bairro" id="campo-bairro" tabindex="8" value="@ViewBag.Cliente.Bairro" />
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-5 form-group" id="div-campo-logradouro">
+            <div class="col-md-5" id="div-campo-logradouro">
                 <label label for="campo-logradouro">Logradouro</label>
                 <input type="text" class="form-control" name="Cliente.Logradouro" id="campo-logradouro" tabindex="9" value="@ViewBag.Cliente.Logradouro" />
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-5 " id="div-campo-email">
+            <div class="col-md-5" id="div-campo-email">
                 <label label for="campo-email">E-mail<span class="text-danger font-weight-bold">*</span></label>
                 <input type="text" class="form-control" name="Cliente.Email" id="campo-email" placeholder="Exemplo@Exemplo.com" tabindex="10" value=@ViewBag.Cliente.Email />
             </div>
-        </div>    
+        </div>
         <div class="form-group">
             <div class="col-md-5" id="div-campo-login">
-                <label label for="campo-login">Login<span class="text-danger font-weight-bold" >*</span></label>
-                <input type="text" class="form-control" name="Cliente.Login" id="campo-login" placeholder="Digite seu Login" tabindex="11"  value="@ViewBag.Cliente.Login" />
+                <label label for="campo-login">Login<span class="text-danger font-weight-bold">*</span></label>
+                <input type="text" class="form-control" name="Cliente.Login" id="campo-login" placeholder="Digite seu Login" tabindex="11" value="@ViewBag.Cliente.Login" />
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-5" id="div-campo-senha">
-                <label label for="campo-senha">Senha<span class="text-danger font-weight-bold">*</span></label>                
+                <label label for="campo-senha">Senha<span class="text-danger font-weight-bold">*</span></label>
                 <input type="password" class="form-control" name="Cliente.Senha" id="campo-senha" placeholder="Digite sua senha" tabindex="12" value="@ViewBag.Cliente.Senha" />
             </div>
-        </div>   
-        <div class="botao-submit ">
-            <button type="submit" class="btn btn-success" tabindex="11"><i class="fa fa-save">Cadastrar</i></button>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success" form="form1">Cadastrar</button>
         </div>
     </div>
 </form>
+ 
+
 
 
 @section css {

@@ -1,8 +1,9 @@
 ﻿body{
     margin: 0;
     padding: 0;
-    /*Inserir background (estilizar)*/
-    background-size: cover;
+    background-image: url('/imagens e icones/bacground-login-2.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
     background-position: center;
     font-family: sans-serif;
 }
@@ -20,13 +21,21 @@
     padding: 70px 30px;
 }
 
-.avatar {
+.avatar2 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position:  absolute;
-    top: -50px;
     left: calc(50% - 50%);
+}
+
+.avatar {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    width: 100px;
+    height: 100px;
+    margin-top: -250px;
+    border-radius: 50%;
 }
 
 h1 {
