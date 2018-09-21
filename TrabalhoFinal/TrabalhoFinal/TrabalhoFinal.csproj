@@ -204,6 +204,8 @@
     <Content Include="Views\Reserva\Nao_Cadastrado.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Views\Pratos\Cadastro.cshtml" />
+    <Content Include="Views\Pratos\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
