@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -124,6 +126,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="imagens e icones\avatar2.png" />
+    <Content Include="imagens e icones\bacground-login-2.jpg" />
+    <Content Include="imagens e icones\bacground-login.jpg" />
     <Content Include="imagens e icones\imagem-atendimento.png" />
     <Content Include="imagens e icones\imagem-cliente.png" />
     <Content Include="imagens e icones\prato01.png" />
