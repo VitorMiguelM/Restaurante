@@ -98,20 +98,22 @@ namespace TrabalhoFinal.Repositorios
             table.Load(command.ExecuteReader());
             if (table.Rows.Count == 1)
             {
-                cliente = new Clientes();
-                cliente.Id = id;
-                cliente.NomeCompleto = table.Rows[0]["nome_completo"].ToString();
-                cliente.Email = table.Rows[0]["email"].ToString();
-                cliente.Login = table.Rows[0]["login"].ToString();
-                cliente.Senha = table.Rows[0]["senha"].ToString();
-                cliente.Celular = table.Rows[0]["celular"].ToString();
-                cliente.DataNascimento = Convert.ToDateTime(table.Rows[0]["data_nascimento"].ToString());
-                cliente.CPF = table.Rows[0]["cpf"].ToString();
-                cliente.Estado = table.Rows[0]["estado"].ToString();
-                cliente.Cidade = table.Rows[0]["cidade"].ToString();
-                cliente.Bairro = table.Rows[0]["bairro"].ToString();
-                cliente.Logradouro = table.Rows[0]["logradouro"].ToString();
-                cliente.CEP = table.Rows[0]["cep"].ToString();
+                cliente = new Clientes
+                {
+                    Id = id,
+                    NomeCompleto = table.Rows[0]["nome_completo"].ToString(),
+                    Email = table.Rows[0]["email"].ToString(),
+                    Login = table.Rows[0]["login"].ToString(),
+                    Senha = table.Rows[0]["senha"].ToString(),
+                    Celular = table.Rows[0]["celular"].ToString(),
+                    DataNascimento = Convert.ToDateTime(table.Rows[0]["data_nascimento"].ToString()),
+                    CPF = table.Rows[0]["cpf"].ToString(),
+                    Estado = table.Rows[0]["estado"].ToString(),
+                    Cidade = table.Rows[0]["cidade"].ToString(),
+                    Bairro = table.Rows[0]["bairro"].ToString(),
+                    Logradouro = table.Rows[0]["logradouro"].ToString(),
+                    CEP = table.Rows[0]["cep"].ToString()
+                };
             }
             return cliente;
         }
@@ -127,9 +129,11 @@ namespace TrabalhoFinal.Repositorios
             tabela.Load(command.ExecuteReader());
             if (tabela.Rows.Count == 1)
             {
-                loginSenha = new Clientes();
-                loginSenha.Login = tabela.Rows[0][0].ToString();
-                loginSenha.Senha = tabela.Rows[0][0].ToString();
+                loginSenha = new Clientes
+                {
+                    Login = tabela.Rows[0]["login"].ToString(),
+                    Senha = tabela.Rows[0]["senha"].ToString()
+                };
             }
             return loginSenha;
             
