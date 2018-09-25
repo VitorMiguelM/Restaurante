@@ -38,26 +38,34 @@
             <nav id="links-menu" class="collapse navbar-collapse navbar-expand-sm ">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/Cliente/Index">Início</a></li>
-                    <li><a href="#">Cliente</a>
-                        <ul>
-                            <li><a href="/Cliente/Cadastro">Cadastrar-se</a></li>
-                            <li><a href="/Cliente/Login">Fazer Login</a></li>
-                            <li><a href="/Cliente/Lista">Lista de Clientes</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Pratos</a>
-                        <ul>
-                            <li><a href="/Pratos/Cadastro">Cadastrar Prato</a></li>
-                            <li><a href="/Pratos/Index">Lista de pratos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Funcionário</a>
-                    <ul>
-                        <li><a href="/Funcionario/Index">Área Restrita</a></li>
-                    </ul>
-                    </li>
                     <li><a href="/Reserva/Index">Reserva</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cliente
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/Cliente/Cadastro">Cadastrar-se</a>
+                            <a class="dropdown-item" href="/Cliente/Login">Fazer Login</a>
+                            <a class="dropdown-item" href="/Cliente/Lista">Lista de Clientes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pratos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/Pratos/Cadastro">Cadastrar Prato</a>
+                            <a class="dropdown-item" href="/Pratos/Index">Lista de Pratos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Funcionário
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/Funcionario/Index">Área Restrita</a>                    
+                        </div>
+                    </li>
 
                 </ul>
             </nav>
