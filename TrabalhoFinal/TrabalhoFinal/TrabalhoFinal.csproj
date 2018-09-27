@@ -114,6 +114,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CSS\cadastro-cliente.css" />
+    <Content Include="Content\CSS\css-lista-cliente.css" />
     <Content Include="Content\CSS\login-cliente.css" />
     <Content Include="Content\CSS\pagina-funcionario.css" />
     <Content Include="Content\CSS\pagina-inicial.css" />
@@ -128,9 +129,7 @@
     <Content Include="imagens e icones\avatar2.png" />
     <Content Include="imagens e icones\bacground-login-2.jpg" />
     <Content Include="imagens e icones\bacground-login.jpg" />
-    <Content Include="imagens e icones\restaurante1.jpg" />
-    <Content Include="imagens e icones\restaurante2.jpg" />
-    <Content Include="imagens e icones\restaurante3.jpg" />
+    <Content Include="imagens e icones\backgroundhd.jpg" />
     <Content Include="Repositorios\TrabalhoFinal.csproj.user" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
