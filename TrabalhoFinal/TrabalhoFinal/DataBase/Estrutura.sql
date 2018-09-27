@@ -80,3 +80,7 @@ INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcam
 
 INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) VALUES('Ygor juan', 'Wasen', '91381934', '98659865', '2000/02/02', '106.265.419-64', 'Santa Catarina', 'Blumenau', 'tribess', 'loja magazineluiza', '95684-888', 'gerente');
 SELECT *  FROM reservas;
+
+SELECT nome_completo, email, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep FROM clientes WHERE id = 1;
+
+SELECT * FROM clientes;
