@@ -12,14 +12,12 @@
                        value="@ViewBag.Prato.Nome" />
                 @Html.ValidationMessage("Prato.Nome", new { @class = "text-danger" })
             </div>
-
             <div class="form-group" id="div-campo-Celular">
                 <label for="Campo-Celular">Telefone Celular <span class="text-danger font-weight-bold">*</span></label>
 
                 <input type="text" class="form-control" name="Prato.Celular" id="Campo-Celular" placeholder="Digite seu Celular" required="required" onfocus="ValidarCampoCelular()" value="@ViewBag.Prato.Celular">
                 @Html.ValidationMessage("Prato.Celular", new { @class = "text-danger" })
             </div>
-
         </div>
         <div class="form-group" id="div-campo-Email">
             <div class="col-md-6">
@@ -30,8 +28,6 @@
                 @Html.ValidationMessage("Prato.Email", new { @class = "text-danger" })
             </div>
         </div>
-
-
         <div class="form-group" id="div-campo-preco">
             <div class="col-md-6">
                 <label for="Campo-Preco">
@@ -53,13 +49,12 @@
                 @Html.ValidationMessage("Prato.Propiedades_Nutricionais", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group" id="div-campo-modo_preparo">
             <div class="col-md-6">
                 <label for="Campo-ModoDePreparo">
                     Modo de preparo
                 </label>
-                <textarea typeof="text" class="from-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" placeholder="Modo de preparo" required="required" onfocus="ValidarModoDePreparo()">
+                <textarea typeof="text" class="form-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" placeholder="Modo de preparo" required="required" onfocus="ValidarModoDePreparo()">
                     @ViewBag.Prato.ModoDePreparo
                 </textarea>
                 @Html.ValidationMessage("Prato.ModoDePreparo", new { @class = "text-danger" })
@@ -70,19 +65,19 @@
                         Descrição
                     </label>
                 </div>
-                <textarea type="text" class="from-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descricao" required="required" onfocus="ValidarDescricao()">
+                <textarea type="text" class="form-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descrição" required="required" onfocus="ValidarDescricao()">
                     @ViewBag.Prato.Descricao
                 </textarea>
                 @Html.ValidationMessage("Prato.Descricao", new { @class = "text-danger" })
             </div>
         </div>
-    
-
-
-<button class="btn btn-dark" type="submit">
-    <i class="fa fa-save"></i> Cadastrar
-</button>
+        <button class="btn btn-dark" type="submit">
+            <i class="fa fa-save"></i> Cadastrar
+        </button>
 
     </form>
 </div>
 
+@section css {
+    <link rel="stylesheet" href="~/Content/CSS/css-lista-cliente.css" />
+}
