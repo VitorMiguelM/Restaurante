@@ -10,7 +10,7 @@ using TrabalhoFinal.Models;
 namespace TrabalhoFinal.Repositorio
 {
     public class RestauranteRepositorio
-    {
+    {//para index
         public List<Prato> ObterTodos()
         {
             List<Prato> pratos = new List<Prato>();
@@ -39,7 +39,7 @@ namespace TrabalhoFinal.Repositorio
         public int Cadastrar(Prato pratos)
         {
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = @"INSERT INTO pratos(nome,modo_preparo,propriedades_nutricionais,email,celular,preco,descricao) 
+            command.CommandText = @"INSERT INTO pratos(nome,modo_preparo,propriedades_nutricionais,email,celular ,preco,descricao) 
                     OUTPUT INSERTED.ID 
                     VALUES (@NOME,@MODO_PREPARO,@PROPRIEDADES_NUTRICIONAIS,@EMAIL,@CELULAR,@PRECO,@DESCRICAO)";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);

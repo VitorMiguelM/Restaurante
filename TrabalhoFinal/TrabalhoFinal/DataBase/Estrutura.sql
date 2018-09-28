@@ -45,7 +45,7 @@ CREATE TABLE pratos(
 
 CREATE TABLE ingredientes(
 	id		INT IDENTITY(1,1) PRIMARY KEY,
-	nome	VARCHAR(500)
+	nome	VARCHAR(200)
 );
 
 CREATE TABLE ingredientes_pratos(
