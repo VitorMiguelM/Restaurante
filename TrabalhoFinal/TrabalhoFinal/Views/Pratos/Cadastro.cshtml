@@ -2,81 +2,72 @@
     Layout = "~/Views/Master.cshtml";
 }
 
-<div>
-    <form action="/pratos/Store" method="post" onsubmit=" validarFormulario();">
-        <div class="col-md-6">
-            <div class="form-group" id="div-campo-nome">
+<form action="/pratos/Store" method="post" onsubmit=" validarFormulario();">
+    <div>
+        <div class="row-mt-3">
+            <div class="col-md-12">
+                <h1 class="text-dark text-center">Cadastro de Prato</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-offset-1 campos">
+        <div class="form-group">
+            <div class="col-md-5" id="div-campo-nome">
                 <label for="campo-nome"> Nome</label>
                 <span class="text-danger font-weight-bold">*</span>
-                <input type="text" class="form-control" name="Prato.Nome" id="campo-nome" placeholder="Digite o seu nome" required="required" onfocus="validarCampoNome()"
-                       value="@ViewBag.Prato.Nome" />
+                <input type="text" class="form-control" name="Prato.Nome" id="campo-nome" placeholder="Digite o seu nome" required="required" onpaste="return false;" value="@ViewBag.Prato.Nome" />
                 @Html.ValidationMessage("Prato.Nome", new { @class = "text-danger" })
             </div>
-            <div class="form-group" id="div-campo-Celular">
+        </div>
+        <div class="form-group">
+            <div class="col-md-5" id="div-campo-Celular">
                 <label for="Campo-Celular">Telefone Celular <span class="text-danger font-weight-bold">*</span></label>
-
-                <input type="text" class="form-control" name="Prato.Celular" id="Campo-Celular" placeholder="Digite seu Celular" required="required" onfocus="ValidarCampoCelular()" value="@ViewBag.Prato.Celular">
+                <input type="text" class="form-control" name="Prato.Celular" id="Campo-Celular" placeholder="(DDD) 90000-0000" maxlength="16" onkeypress="this.value = FormataTelefone(event)" onpaste="return false;" required="required" value="@ViewBag.Prato.Celular">
                 @Html.ValidationMessage("Prato.Celular", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group" id="div-campo-Email">
-            <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-md-5" id="div-campo-Email">
                 <label form="Campo-Email">E-mail</label>
                 <span class="text-danger font-weight-bold">*</span>
-                <input type="text" class="form-control" name="Prato.Email" id="Campo-Email" placeholder="name@example.com" required="required" onfocus="ValidarCampoEmail()"
-                       value="@ViewBag.Prato.Email" />
+                <input type="text" class="form-control" name="Prato.Email" id="Campo-Email" placeholder="exemplo@exemplo.com" required="required" onpaste="return false;" value="@ViewBag.Prato.Email" />
                 @Html.ValidationMessage("Prato.Email", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group" id="div-campo-preco">
-            <div class="col-md-6">
-                <label for="Campo-Preco">
-                    Preço
-                </label>
+        <div class="form-group">
+            <div class="col-md-5" id="div-campo-preco">
+                <label for="Campo-Preco">Preço</label>
                 <span class="text-danger font-weight-bold">*</span>
-                <input type="text" class="form-control" name="Prato.preco" id="Campo-Preco" required="required" onfocus="ValidarCampoPreco()"
-                       value="@ViewBag.Prato.preco" />
+                <input type="text" class="form-control" name="Prato.preco" id="Campo-Preco" required="required" value="@ViewBag.Prato.preco" />
                 @Html.ValidationMessage("Prato.preco", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group" id="div-campo-Propiedades_Nutricionais">
-            <div class="col-md-6">
+        <div class="form-group">
+            <div class="col-md-5" id="div-campo-igredientes">
                 <label form="campo-Propriedades-Nutricionais">Ingredientes</label>
-                <textarea type="text" class="form-control" name="Prato.Propriedades_Nutricionais" id=" campo-propriedades_nutricionais" style="width:100%; height:auto"
-                          required="required" onfocus="ValidarCampoPropiedadesNutricionais()">
-                    @ViewBag.Prato.Propriedades_Nutricionais
-                </textarea>
+                <textarea type="text" class="form-control" name="Prato.Propriedades_Nutricionais" id=" campo-propriedades_nutricionais" style="width:100%; height:auto" required="required">@ViewBag.Prato.Propriedades_Nutricionais</textarea>
                 @Html.ValidationMessage("Prato.Propiedades_Nutricionais", new { @class = "text-danger" })
             </div>
         </div>
-        <div class="form-group" id="div-campo-modo_preparo">
-            <div class="col-md-6">
-                <label for="Campo-ModoDePreparo">
-                    Modo de preparo
-                </label>
-                <textarea typeof="text" class="form-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" placeholder="Modo de preparo" required="required" onfocus="ValidarModoDePreparo()">
-                    @ViewBag.Prato.ModoDePreparo
-                </textarea>
+        <div class="form-group">
+            <div class="col-md-5" id="div-campo-modo-preparo">
+                <label for="Campo-ModoDePreparo">Modo de preparo</label>
+                <textarea typeof="text" class="form-control" name="Prato.ModoDePreparo" id="Campo-ModoDePreparo" style="width:100%;height:auto" required="required">@ViewBag.Prato.ModoDePreparo</textarea>
                 @Html.ValidationMessage("Prato.ModoDePreparo", new { @class = "text-danger" })
             </div>
-            <div class="col-md-6">
-                <div class="form-group" id="div-campo-Descricao">
-                    <label for="CampoDescricao">
-                        Descrição
-                    </label>
-                </div>
-                <textarea type="text" class="form-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descrição" required="required" onfocus="ValidarDescricao()">
-                    @ViewBag.Prato.Descricao
-                </textarea>
+        </div>
+        <div class="form-group">
+            <div class="col-md-5" id="campo-descricao">
+                <label for="CampoDescricao">Descrição</label>
+                <textarea type="text" class="form-control" name="Prato.Descricao" id="Campo-Descricao" style="width:100%; height:auto" placeholder="Digite sua Descrição" required="required">@ViewBag.Prato.Descricao</textarea>
                 @Html.ValidationMessage("Prato.Descricao", new { @class = "text-danger" })
             </div>
         </div>
-        <button class="btn btn-dark" type="submit">
-            <i class="fa fa-save"></i> Cadastrar
-        </button>
-
-    </form>
-</div>
+        <div>
+            <button class="btn btn-success" type="submit"><i class="fa fa-save"></i> Cadastrar</button>
+        </div>
+    </div>
+</form>
 
 @section css {
     <link rel="stylesheet" href="~/Content/CSS/css-lista-cliente.css" />
