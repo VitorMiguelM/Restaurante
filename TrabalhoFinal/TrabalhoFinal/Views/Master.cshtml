@@ -18,6 +18,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     @RenderSection("css", false)
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        function verificaNumero(e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+        }
+        $(document).ready(function () {
+            $("#campo-cpf").keypress(verificaNumero);
+            $("#campo-telefone").keypress(verificaNumero);
+            $("#campo-cep").keypress(verificaNumero);
+            $("#Campo-Celular").keypress(verificaNumero);
+            
+        });
+
+        function FormataCpf(evt) {
+            vr = (navigator.appName == 'Netscape') ? evt.target.value : evt.srcElement.value;
+            if (vr.length == 3) vr = vr + ".";
+            if (vr.length == 7) vr = vr + ".";
+            if (vr.length == 11) vr = vr + "-";
+            return vr;
+            
+        }
+
+        function FormataTelefone(evt) {
+            vr = (navigator.appName == 'Netscape') ? evt.target.value : evt.srcElement.value; 
+            if (vr.length == 0) vr = vr + "(";
+            if (vr.length == 4) vr = vr + ") ";
+            if (vr.length == 11) vr = vr + "-";
+            return vr;
+        }
+        function FormataCep(evt) {
+            vr = (navigator.appName == 'Netscape') ? evt.target.value : evt.srcElement.value;
+            if (vr.length == 5) vr = vr + "-";
+            return vr;
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
