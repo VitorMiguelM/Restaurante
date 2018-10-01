@@ -11,7 +11,7 @@ CREATE TABLE clientes(
 	[email]				VARCHAR(50) NOT NULL,
 	login				VARCHAR(50) NOT NULL,
 	senha				VARCHAR(12) NOT NULL,
-	celular				VARCHAR(14) NOT NULL,
+	celular				VARCHAR(16) NOT NULL,
 	data_nascimento		DATE NOT NULL,
 	cpf					VARCHAR(14) NOT NULL,
 	estado				VARCHAR(50) NOT NULL,
@@ -71,9 +71,6 @@ CREATE TABLE funcionarios(
 	cep					VARCHAR(9) NOT NULL,
 	cargo				VARCHAR(20) NOT NULL
 );
-
-
-
 
 
 INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcampos@gmail.com','991310455','Henrique Mateus Dalfovo Campos','(47) 99131-0455','052.186.589-10','Dinheiro');

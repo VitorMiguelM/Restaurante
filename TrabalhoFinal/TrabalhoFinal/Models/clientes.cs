@@ -11,7 +11,7 @@ namespace TrabalhoFinal.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Nome não pode estar vazio.")]
-        [MinLength(3,ErrorMessage = "Nome deve conter no mínimo 10 caracteres. (nome e sobrenome).")]
+        [MinLength(3, ErrorMessage = "Nome deve conter no mínimo 10 caracteres. (nome e sobrenome).")]
         [MaxLength(50, ErrorMessage = "Nome deve conter no máximo 50 caracteres.")]
         public string NomeCompleto { get; set; }
 
@@ -26,16 +26,16 @@ namespace TrabalhoFinal.Models
 
         [Required(ErrorMessage = "Senha não pode estar vazio.")]
         [MinLength(4, ErrorMessage = "Senha deve conter no mínimo 4 carateres.")]
-        [MaxLength(6, ErrorMessage = "Senha deve conter no máximo 12 caracteres.")]
+        [MaxLength(12, ErrorMessage = "Senha deve conter no máximo 12 caracteres.")]
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Telefone Celular não pode estar vazio.")]
         [MinLength(12, ErrorMessage = "Esse número é inválido.")]
-        [MaxLength(14, ErrorMessage = "Esse número é invalido.")]
+        [MaxLength(16, ErrorMessage = "Esse número é invalido.")]
         public string Celular { get; set; }
- 
+
         [Required(ErrorMessage = "Data de nascimento não pode estar vazio.")]
-        public DateTime DataNascimento{ get; set; }
+        public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "CPF deve ser preenchido!")]
         [MinLength(14, ErrorMessage = "Esse CPF é inválido!")]
@@ -46,7 +46,7 @@ namespace TrabalhoFinal.Models
         public string Estado { get; set; }
 
         [Required(ErrorMessage = "Cidade não pode estar vazio.")]
-        public string Cidade  { get; set; }
+        public string Cidade { get; set; }
 
         [Required(ErrorMessage = "Bairro não pode esar vazio.")]
         public string Bairro { get; set; }
@@ -58,6 +58,7 @@ namespace TrabalhoFinal.Models
         [MinLength(8, ErrorMessage = "CEP deve conter no mínimo 8 caracteres")]
         [MaxLength(9, ErrorMessage = "CEP deve conter no máximo 9 caracteres")]
         public string CEP { get; set; }
+
 
         
     }
