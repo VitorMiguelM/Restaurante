@@ -91,7 +91,7 @@ namespace TrabalhoFinal.Repositorios
         {
             LoginSenhaReserva loginsenha = null;
             SqlCommand command = new BancoDados().ObterConexcao();
-            command.CommandText = "SELECT login, senha FROM reservas WHERE login = @LOGIN AND senha = @SENHA";
+            command.CommandText = "SELECT [login], senha FROM reservas WHERE [login] = @LOGIN AND senha = @SENHA";
             command.Parameters.AddWithValue("@LOGIN", login);
             command.Parameters.AddWithValue("@SENHA", senha);
             DataTable tabela = new DataTable();
