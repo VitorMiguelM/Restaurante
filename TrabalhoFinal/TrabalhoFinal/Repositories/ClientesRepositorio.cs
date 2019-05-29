@@ -14,7 +14,7 @@ namespace TrabalhoFinal.Repositorios
         public List<Clientes> ObterTodos()
         {
             List<Clientes> clientes = new List<Clientes>();
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT id, nome_completo, email, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep FROM clientes";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
@@ -43,7 +43,7 @@ namespace TrabalhoFinal.Repositorios
 
         public int Cadastrar(Clientes clientes)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = @"INSERT INTO clientes(nome_completo, email, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) OUTPUT INSERTED.ID VALUES (@NOME_COMPLETO, @EMAIL, @LOGIN, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @BAIRRO, @LOGRADOURO, @CEP)";
             command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
@@ -63,7 +63,7 @@ namespace TrabalhoFinal.Repositorios
 
         public bool Alterar(Clientes clientes)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "UPDATE clientes SET nome_completo = @NOME_COMPLETO, email = @EMAIL, login = @LOGIN, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO, cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME_COMPLETO", clientes.NomeCompleto);
             command.Parameters.AddWithValue("@EMAIL", clientes.Email);
@@ -82,7 +82,7 @@ namespace TrabalhoFinal.Repositorios
         
         public bool Excluir(int id)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "DELETE FROM clientes WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             return command.ExecuteNonQuery() == 1;
@@ -91,7 +91,7 @@ namespace TrabalhoFinal.Repositorios
         public Clientes ObterPeloId(int id)
         {
             Clientes cliente = null;
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT nome_completo, email, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep FROM clientes WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable table = new DataTable();
@@ -121,7 +121,7 @@ namespace TrabalhoFinal.Repositorios
         public Clientes ObterLogin(string login, string senha)
         {
             Clientes loginSenha = null;
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT login, senha FROM clientes WHERE login = @LOGIN AND senha = @SENHA";
             command.Parameters.AddWithValue("@LOGIN", login);
             command.Parameters.AddWithValue("@SENHA", senha);

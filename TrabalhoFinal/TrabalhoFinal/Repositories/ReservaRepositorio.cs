@@ -14,7 +14,7 @@ namespace TrabalhoFinal.Repositorios
         public List<Reserva> ObterTodos()
         {
             List<Reserva> reservas = new List<Reserva>();
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT id, nome, celular, cpf, pagamento FROM reservas";
             DataTable table = new DataTable();
             
@@ -36,7 +36,7 @@ namespace TrabalhoFinal.Repositorios
         
         public int Cadastrar(Reserva reserva)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = @"INSERT INTO reservas (nome, celular, cpf, pagamento) OUTPUT INSERTED.ID VALUES (@NOME, @CELULAR, @CPF, @HORARIO, @PAGAMENTO)";
             command.Parameters.AddWithValue("@NOME", reserva.Nome);
             command.Parameters.AddWithValue("@CELULAR", reserva.Celular);
@@ -48,7 +48,7 @@ namespace TrabalhoFinal.Repositorios
 
         public bool Alterar(Reserva reserva)
         {
-            SqlCommand comando = new BancoDados().ObterConexcao();
+            SqlCommand comando = new BancoDados().ObterConexcao;
             comando.CommandText = "UPDATE reservas SET nome = @NOME, celular = @CELULAR, cpf = @CPF, pagamento = @PAGAMENTO WHERE id = @ID";
             comando.Parameters.AddWithValue("@NOME", reserva.Nome);
             comando.Parameters.AddWithValue("@CELULAR", reserva.Celular);
@@ -61,7 +61,7 @@ namespace TrabalhoFinal.Repositorios
         public bool Excluir(int id)
         {
 
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "DELETE FROM reservas WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             return command.ExecuteNonQuery() == 1;
@@ -70,7 +70,7 @@ namespace TrabalhoFinal.Repositorios
         public Reserva ObterPeloId(int id)
         {
             Reserva reserva = null;
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT nome, celular, cpf, pagamento FROM Reservas WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable tabela = new DataTable();
@@ -90,7 +90,7 @@ namespace TrabalhoFinal.Repositorios
         public LoginSenhaReserva ObterLogin(string login, string senha)
         {
             LoginSenhaReserva loginsenha = null;
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT [login], senha FROM reservas WHERE [login] = @LOGIN AND senha = @SENHA";
             command.Parameters.AddWithValue("@LOGIN", login);
             command.Parameters.AddWithValue("@SENHA", senha);

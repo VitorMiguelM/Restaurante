@@ -11,18 +11,17 @@ namespace TrabalhoFinal.DataBase
     {
         private static string connectionString;
 
-        static BancoDados()
+        static BancoDados() => connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        public SqlCommand ObterConexcao
         {
-            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        }
-
-        public SqlCommand ObterConexcao()
-        {
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            SqlCommand command = new SqlCommand();
-            command.Connection = connection;
-            return command;
+            get
+            {
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                return command;
+            }
         }
     }
 }

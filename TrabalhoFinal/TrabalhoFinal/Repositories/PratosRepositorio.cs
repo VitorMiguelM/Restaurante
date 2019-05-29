@@ -14,7 +14,7 @@ namespace TrabalhoFinal.Repositorio
         public List<Prato> ObterTodos()
         {
             List<Prato> pratos = new List<Prato>();
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT id, nome, modo_preparo, propriedades_nutricionais, email, celular, preco, descricao FROM pratos";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
@@ -38,7 +38,7 @@ namespace TrabalhoFinal.Repositorio
 
         public int Cadastrar(Prato pratos)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = @"INSERT INTO pratos(nome,modo_preparo,propriedades_nutricionais,email,celular ,preco,descricao) 
                     OUTPUT INSERTED.ID 
                     VALUES (@NOME,@MODO_PREPARO,@PROPRIEDADES_NUTRICIONAIS,@EMAIL,@CELULAR,@PRECO,@DESCRICAO)";
@@ -55,7 +55,7 @@ namespace TrabalhoFinal.Repositorio
 
         public bool Alterar(Prato pratos)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "UPDATE pratos SET nome=@NOME, modo_preparo=@MODO_PREPARO, propriedades_nutricionais=@PROPRIEDADES_NUTRICIONAIS, email=@EMAIL,celular=@CELULAR, preco=@PRECO, descricao=@DESCRICAO WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", pratos.Nome);
             command.Parameters.AddWithValue("@MODO_PREPARO", pratos.ModoDePreparo);
@@ -70,7 +70,7 @@ namespace TrabalhoFinal.Repositorio
 
         public bool Excluir(int id)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "DELETE FROM pratos WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             return command.ExecuteNonQuery() == 1;
@@ -79,7 +79,7 @@ namespace TrabalhoFinal.Repositorio
         public Prato ObterPeloId(int id)
         {
             Prato prato = null;
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT nome, modo_preparo, propriedades_nutricionais,email,celular, preco, descricao FROM pratos WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable table = new DataTable();

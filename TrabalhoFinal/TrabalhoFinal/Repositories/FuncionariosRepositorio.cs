@@ -14,7 +14,7 @@ namespace TrabalhoFinal.Repositorios
         public List<Funcionarios> ObterTodos()
         {
             List<Funcionarios> funcionarios = new List<Funcionarios>();
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT id, nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo FROM funcionarios";
             DataTable table = new DataTable();
             table.Load(command.ExecuteReader());
@@ -43,7 +43,7 @@ namespace TrabalhoFinal.Repositorios
 
         public int Cadastrar(Funcionarios funcionarios)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = @"INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) OUTPUT INSERTED.ID VALUES(@NOME, @SOBRENOME, @SENHA, @CELULAR, @DATA_NASCIMENTO, @CPF, @ESTADO, @CIDADE, @BAIRRO, @LOGRADOURO, @CEP, @CARGO)";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
             command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
@@ -63,7 +63,7 @@ namespace TrabalhoFinal.Repositorios
 
         public bool Alterar(Funcionarios funcionarios)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "UPDATE funcionarios SET nome = @NOME, sobrenome = @SOBRENOME, senha = @SENHA, celular = @CELULAR, data_nascimento = @DATA_NASCIMENTO, cpf = @CPF, estado = @ESTADO,  cidade = @CIDADE, bairro = @BAIRRO, logradouro = @LOGRADOURO, cep = @CEP, cargo = @CARGO WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", funcionarios.Nome);
             command.Parameters.AddWithValue("@SOBRENOME", funcionarios.Sobrenome);
@@ -83,7 +83,7 @@ namespace TrabalhoFinal.Repositorios
 
         public bool Excluir(int id)
         {
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "DELETE FROM funcionarios WHERE id - @ID";
             command.Parameters.AddWithValue("@ID", id);
             return command.ExecuteNonQuery() == 1;
@@ -92,7 +92,7 @@ namespace TrabalhoFinal.Repositorios
         public Funcionarios ObterPeloId(int id)
         {
             Funcionarios funcionario = null;
-            SqlCommand command = new BancoDados().ObterConexcao();
+            SqlCommand command = new BancoDados().ObterConexcao;
             command.CommandText = "SELECT nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo FROM funcionarios WHERE id = @ID";
             command.Parameters.AddWithValue("@ID", id);
             DataTable table = new DataTable();

@@ -21,15 +21,20 @@ CREATE TABLE clientes(
 	cep					VARCHAR(9) NOT NULL
 );
 
-CREATE TABLE reservas(
-	id			INT IDENTITY(1,1),
-	login		VARCHAR(50),
-	senha		VARCHAR(12),
-	nome		VARCHAR(100),
-	celular		VARCHAR(15),
-	cpf			VARCHAR(14),
-	pagamento	VARCHAR(8)
-
+CREATE TABLE funcionarios(
+	id					INT IDENTITY(01,1),
+	nome				VARCHAR(20) NOT NULL,
+	sobrenome			VARCHAR(20) NOT NULL,
+	senha				VARCHAR(50) NOT NULL,
+	celular				VARCHAR(14) NOT NULL,
+	data_nascimento		DATE NOT NULL,
+	cpf					VARCHAR(14) NOT NULL,
+	estado				VARCHAR(50) NOT NULL,
+	cidade				VARCHAR(100) NOT NULL,
+	bairro				VARCHAR(50) NOT NULL,
+	logradouro			VARCHAR(100) NOT NULL,
+	cep					VARCHAR(9) NOT NULL,
+	cargo				VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE pratos(
@@ -56,28 +61,23 @@ CREATE TABLE ingredientes_pratos(
 	FOREIGN KEY (id_ingrediente) REFERENCES ingredientes(id)
 );
 
-CREATE TABLE funcionarios(
-	id					INT IDENTITY(01,1),
-	nome				VARCHAR(20) NOT NULL,
-	sobrenome			VARCHAR(20) NOT NULL,
-	senha				VARCHAR(50) NOT NULL,
-	celular				VARCHAR(14) NOT NULL,
-	data_nascimento		DATE NOT NULL,
-	cpf					VARCHAR(14) NOT NULL,
-	estado				VARCHAR(50) NOT NULL,
-	cidade				VARCHAR(100) NOT NULL,
-	bairro				VARCHAR(50) NOT NULL,
-	logradouro			VARCHAR(100) NOT NULL,
-	cep					VARCHAR(9) NOT NULL,
-	cargo				VARCHAR(20) NOT NULL
+CREATE TABLE reservas(
+	id			INT IDENTITY(1,1),
+	login		VARCHAR(50),
+	senha		VARCHAR(12),
+	nome		VARCHAR(100),
+	celular		VARCHAR(15),
+	cpf			VARCHAR(14),
+	pagamento	VARCHAR(8)
+
 );
 
+INSERT INTO clientes(nome_completo, email, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep) VALUES('Carlos Grew de souza', 'CarlosGrew@gmail.com', 'CarlosG', '123', '4796065334', '20000202', '10626541964', 'Santa Catarina', 'Blumenau', 'Tribess', 'Rua São Francisco', '95684888');
 
-INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('hmdcampos@gmail.com','991310455','Henrique Mateus Dalfovo Campos','(47) 99131-0455','052.186.589-10','Dinheiro');
+INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) VALUES('Carlos', 'Grew', '91381934', '98659865', '20000202', '10626541964', 'Santa Catarina', 'Blumenau', 'Tribess', 'Rua São Francisco', '95684888', 'Caixa'); 
 
-INSERT INTO funcionarios(nome, sobrenome, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep, cargo) VALUES('Ygor juan', 'Wasen', '91381934', '98659865', '2000/02/02', '106.265.419-64', 'Santa Catarina', 'Blumenau', 'tribess', 'loja magazineluiza', '95684-888', 'gerente');
-SELECT *  FROM reservas;
-
-SELECT nome_completo, email, login, senha, celular, data_nascimento, cpf, estado, cidade, bairro, logradouro, cep FROM clientes WHERE id = 1;
+INSERT INTO reservas(login, senha, nome, celular, cpf, pagamento) VALUES('Reserva@gmail.com','991310455','','(47) 99131-0455','052.186.589-10','Dinheiro');
 
 SELECT * FROM clientes;
+SELECT * FROM funcionarios;
+SELECT * From reservas;
